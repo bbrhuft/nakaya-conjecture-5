@@ -1,0 +1,16 @@
+run_extended.py 2000   (PARI/GP 2.17.2 via cypari2, 26 October 2026; stored relations from PARI/GP 2.15.4)
+N=3: 301 primes, 7s
+N=5: 300 primes, 8s
+N=7: 300 primes, 9s
+N=11: 300 primes, 12s
+N=13: 300 primes, 13s
+N=17: 300 primes, 17s
+N=19: 300 primes, 18s
+N=23: 300 primes, 20s
+N=29: 300 primes, 27s
+N=31: 300 primes, 27s
+N=41: 300 primes, 44s
+N=47: 300 primes, 53s
+N=59: 300 primes, 68s
+N=71: 300 primes, 63s
+total 4201 mismatches []

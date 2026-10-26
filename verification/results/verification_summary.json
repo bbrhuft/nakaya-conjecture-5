@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-26",
+  "software": "PARI/GP 2.15.4",
+  "requested_cases": 827,
+  "mismatches": 0,
+  "N2_supplement_cases": 60,
+  "N2_mismatches": 0,
+  "elapsed_seconds": 10.495,
+  "levels": {
+    "3": 60,
+    "5": 59,
+    "7": 59,
+    "11": 59,
+    "13": 59,
+    "17": 59,
+    "19": 59,
+    "23": 59,
+    "29": 59,
+    "31": 59,
+    "41": 59,
+    "47": 59,
+    "59": 59,
+    "71": 59
+  },
+  "fixed_point_independence": "Explicit reduced primitive positive definite binary quadratic forms and enumerated local eigenlines; RHS uses PARI qfbclassno. This is independent implementation, not an independent proof of Ogg.",
+  "script_sha256": "58d59775b7e632804c12d163cdd39e321a26945eb0868c17d50c00679342a840"
+}

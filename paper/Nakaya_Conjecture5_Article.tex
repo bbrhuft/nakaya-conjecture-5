@@ -1,0 +1,463 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathrsfs,booktabs,array}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{listings,needspace}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,keepspaces=true}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\Q}{\mathbb Q}\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\kk}{\overline{\mathbb F}_p}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\leg}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\ho}{h_{\mathrm{ord}}}
+\newcommand{\hK}[1]{h\bigl(\Q(\sqrt{-#1})\bigr)}
+\title{Nakaya's conjecture on linear factors of\\Fricke supersingular polynomials}
+\author{[Author name]\\\small [Affiliation]\\\small [Email address]}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We deduce Nakaya's class-number formula for the number of linear factors of Fricke supersingular polynomials at every level in his Conjecture 5. The geometric input is the classical identification of the bad-prime Atkin--Lehner action with Frobenius on the supersingular locus. For any positive integer $N$, any prime $p\geq5$ not dividing $N$, and any Atkin--Lehner subgroup $W$ at level $N$, the number of rational supersingular points on $X_0(N)/W$ is half the number of fixed points of the induced $w_p$ on $X_0(Np)/W$ in characteristic zero. For the Fricke quotient this becomes $(r_p(Np)+r_{Np}(Np))/4$. Specializing the classical fixed-point formula gives Nakaya's conjecture, with its field-class-number normalization. We explain the treatment of rational quotient points with non-rational lifts and provide reproducible exact computations for all 827 admissible pairs with $p\leq300$.
+\end{abstract}
+\noindent\textbf{2020 Mathematics Subject Classification.} 11G20, 11F03, 14G35, 11R29.
+
+\noindent\textbf{Keywords.} Supersingular polynomial; Fricke involution; Atkin--Lehner quotient; imaginary quadratic class number; modular curve.
+
+\section{Introduction}
+Deuring's class-number formulas relate supersingular elliptic curves over a prime field to imaginary quadratic orders. Nakaya \cite{Nakaya} proposed analogous formulas for supersingular values of Hauptmoduli of Fricke groups. His Conjecture 5 concerns the prime levels
+\[
+\mathfrak S=\{2,3,5,7,11,13,17,19,23,29,31,41,47,59,71\}.
+\]
+For $N\in\mathfrak S$, the curve $X_0(N)^+=X_0(N)/\langle w_N\rangle$ has genus zero. Nakaya defines a squarefree polynomial $ss_p^{(N*)}$ from its supersingular Hauptmodul values and denotes its number of linear factors over $\Fp$ by $L^{(N*)}(p)$.
+
+The point-counting identity behind the conjecture does not require genus zero. For a positive integer $M$ and an exact divisor $d\mid M$, write
+\[
+r_d(M)=\#\Fix\bigl(w_d\mid X_0(M)(\C)\bigr),
+\]
+whenever $w_d$ is nonidentity. For a good-reduction quotient curve $Y$, let $\lambda_p(Y)$ denote the number of geometric supersingular points belonging to $Y(\Fp)$; precise definitions are given in Section~\ref{sec:prelim}.
+
+\Needspace{20\baselineskip}
+\begin{theorem}\label{thm:main}
+Let $N\geq1$, let $p\geq5$ be prime with $p\nmid N$, and let $W$ be a subgroup of the Atkin--Lehner group of $X_0(N)$. Put
+\[
+X=X_0(N)/W,\quad A=X_0(Np)/W,\quad
+B=X_0(Np)/\langle W,w_p\rangle.
+\]
+The involution $w_p$ induces a nonidentity involution $\bar w_p$ on $A$, and
+\begin{equation}\label{eq:general}
+\lambda_p(X)=1+g(A)-2g(B)
+=\frac12\#\Fix\bigl(\bar w_p\mid A(\C)\bigr).
+\end{equation}
+For the Fricke quotient, if $N>1$, this specializes to
+\begin{equation}\label{eq:fricke}
+\lambda_p\bigl(X_0(N)^+\bigr)
+=\frac{r_p(Np)+r_{Np}(Np)}4.
+\end{equation}
+For $N=1$, the corresponding statement is $\lambda_p(X_0(1))=r_p(p)/2$.
+\end{theorem}
+
+Here and below the genera and fixed-point counts are in characteristic zero, whereas $\lambda_p$ counts points on the indicated good-reduction curve. The notation $X_0(1)^+=X_0(1)$ is understood when discussing the level-one case.
+
+\begin{corollary}[Nakaya's Conjecture 5]\label{cor:nakaya}
+Let $N\in\mathfrak S\setminus\{2\}$ and let $p\geq5$ be prime with $p\ne N$. Then
+\begin{align}
+L^{(N*)}(p)
+&=\frac12\left(1+\leg{-p}{N}\right)L(p)\notag\\
+&\quad+\frac18\left\{2+\left(1-\leg{-1}{Np}\right)
+\left(2+\leg{-2}{Np}\right)\right\}\hK{Np},\label{eq:nakaya}
+\end{align}
+where $L(p)$ is the number of rational classical supersingular $j$-invariants. The symbols with denominator $Np$ are Jacobi symbols; they equal Nakaya's products of the two Legendre symbols. The quantity $\hK{Np}$ is a field class number.
+\end{corollary}
+
+\paragraph{Relation to previous work.}
+The mechanism is classical, rather than a new construction of Frobenius. Deligne--Rapoport \cite[VI, Theorem 6.9]{DR} describe the two components and their Frobenius gluing. Ogg's reduction argument \cite{OggRed} is extended to Atkin--Lehner quotients by Aricheta \cite[Theorem 3.1]{Aricheta}, using the quotient model of Furumoto--Hasegawa \cite[Section 5]{FH}. Aricheta already observes \cite[Section 1]{Aricheta} that his theorem settles Nakaya's conjectured characterization of the primes for which $ss_p^{(N*)}$ splits completely at $N=5,7$, the Harada--Norton and Held cases; Corollary~\ref{cor:nakaya} is the corresponding refinement from complete splitting to the exact number of linear factors. Gross \cite[Proposition 2.7(3)]{Gross} describes the corresponding supersingular Frobenius permutation in the Brandt-matrix setting; Ribet \cite[Proposition 3.8(i), p.~446]{Ribet} explicitly states the component exchange and Frobenius action at prime-to-characteristic level. Theorem~\ref{thm:main} is an explicit fixed-point reformulation of this geometry and Aricheta's genus identity. When the total level $Np$ is squarefree, which is always the case in Corollary~\ref{cor:nakaya}, it also follows from Beneish--Wen \cite[Theorem 6.5]{BW} together with characteristic-zero Riemann--Hurwitz; their scope and this implication are discussed in Section~\ref{sec:prior}. Nakaya's Theorem 4 already gives the $N=2,3$ formulas. Morton proves the $N=5$ count through Hasse-invariant factor counts \cite{Morton5a,Morton5b}. His published $E_7$ article \cite{Morton7} proves linear and cubic factor counts and states additional quadratic and sextic conjectures. In the arXiv version \cite{Morton7arXiv}, these are Theorem~A (proving his Conjecture~1) and Conjectures~2 and~3, and Section~3 shows that Conjectures~1--3 imply Nakaya's Conjecture~5 for $N=7$. Corollary~\ref{cor:nakaya} gives the case $N=7$ unconditionally, without proving Morton's finer Conjectures~2 and~3. The contribution here is the uniform deduction of \eqref{eq:nakaya}, its general quotient formulation, and a reproducible verification, without a claim of priority for the underlying geometric identity.
+
+\section{Supersingular quotient points and integral models}\label{sec:prelim}
+An exact divisor $d$ of $M$ satisfies $\gcd(d,M/d)=1$. On a non-cuspidal point $(E,C_M)$, with $C_d$ the unique order-$d$ subgroup of $C_M$, the Atkin--Lehner involution is
+\[
+w_d(E,C_M)=\bigl(E/C_d,(C_M+E[d])/C_d\bigr).
+\]
+In particular $w_M$ replaces the cyclic isogeny by its dual. The involutions commute and satisfy $w_dw_e=w_{de/\gcd(d,e)^2}$; they generate the elementary abelian two-group indexed by exact divisors. We use their standard extensions to the compactified models. The modular curves throughout are coarse curves; a field-valued point therefore refers to the moduli orbit, without requiring a representative with all its structure defined over that field.
+
+Let $p\geq5$, $p\nmid N$, and $W$ be as in Theorem~\ref{thm:main}. Let $\mathscr X_0(N)$ be the standard smooth proper coarse modular curve over $R=\Z_{(p)}$, and put $\mathscr X=\mathscr X_0(N)/W$. The order of $W$ is a power of two and is invertible in $R$. The quotient is proper and flat over $R$. Indeed, locally its coordinate ring is the invariant subring of an $R$-flat ring, and the averaging idempotent makes this subring a direct summand. The same averaging argument shows that invariants commute with base change. Each geometric fibre of $\mathscr X$ is therefore a quotient of a smooth curve by a finite tame group. Such a quotient is normal and, over a perfect field, smooth. Consequently $\mathscr X$ is smooth over $R$.
+
+Define $S_p(X)$ to be the image in $X(\kk)$ of the supersingular non-cuspidal points of $X_0(N)(\kk)$. A point of $X_0(N)$ represents a pair $(E,C_N)$ with $C_N$ cyclic of order $N$. Isogenous elliptic curves have the same supersingularity status, so $S_p(X)$ is well-defined on the quotient. These are geometric points of the coarse curve, with no automorphism weights. Define once and for all
+\begin{equation}\label{eq:counts}
+D=\#S_p(X),\qquad
+Q_p(X)=\#\bigl(S_p(X)\setminus X(\Fp)\bigr),\qquad
+\lambda_p(X)=\#\bigl(S_p(X)\cap X(\Fp)\bigr).
+\end{equation}
+Thus $D=\lambda_p(X)+Q_p(X)$.
+
+These definitions agree with Aricheta's. In Section 3.1 of \cite{Aricheta}, he defines $Q_p(X)$ as ``the number of supersingular points of $X$ modulo $p$ that are not defined over $\mathbb F_p$.'' The curve $X$ there is already the quotient, not its covering modular curve. In particular, the counts refer to geometric points of the coarse quotient. This convention also follows directly from the two-copy quotient model used in his proof.
+
+For clarity we restate the full statement of Aricheta's Theorem 3.1, with its notation expanded. Take any positive integer $N$, any exact divisors $e,f,\ldots$ of $N$, and $X=X_0(N)+e,f,\ldots$, the quotient by the group they generate. For any prime $p$ not dividing $N$, put $X^p=X_0(Np)+p,e,f,\ldots$, with all products of these involutions included in the quotient group. Then
+\begin{equation}\label{eq:aricheta}
+\tfrac12Q_p(X)=g(X^p)-g(X).
+\end{equation}
+In particular, all supersingular points on $X$ are rational precisely when these genera are equal. Aricheta's statement permits primes smaller than $5$; our proof uses only the tame range $p\geq5$. Aricheta's proof is a brief sketch: it takes the two-copy model of $X_0(Np)+e,f,\ldots$ modulo $p$ from \cite[Section 5]{FH}, notes that $w_p$ exchanges the components and acts as Frobenius on their intersection, and follows Ogg's genus count \cite{OggRed}. Lemmas~\ref{lem:total} and~\ref{lem:single} below supply the flatness, base-change and local-ring details for the quotients used here.
+
+There is a relevant distinction between rational points upstairs and downstairs. If $P$ is a supersingular point of $X_0(N)(\kk)$ with $P^{(p)}=w_N(P)\ne P$, its image $x$ in $X_0(N)^+$ satisfies $x^{(p)}=x$. It contributes one to $\lambda_p(X_0(N)^+)$ and zero to $Q_p(X_0(N)^+)$. Requiring a rational lift would give an incorrect count. For an arbitrary $W$, the analogous condition is that the $W$-orbit of $P$ is Frobenius-stable.
+
+\section{The geometric fixed-point lemma}\label{sec:geometry}
+We give the flat-family argument explicitly, both to fix the point-counting convention and to avoid any use of a regular resolution.
+
+\begin{lemma}\label{lem:total}
+With $X,A$ as in Theorem~\ref{thm:main} and $D$ as in \eqref{eq:counts},
+\begin{equation}\label{eq:total}
+g(A)=2g(X)+D-1.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $\mathscr C$ be the proper flat Deligne--Rapoport model of $X_0(Np)$ over $R$. Its geometric special fibre is the union of two copies of $X_0(N)_{\kk}$, with supersingular points glued using Frobenius. The coarse-curve statement, including the completed local form at an intersection, is \cite[VI, Theorem 6.9(ii)--(iii), Corollary 6.10]{DR}. The modular crossings description is also treated by the Crossings Theorem of Katz--Mazur \cite[Theorem 13.1.3, p.~390]{KM}; a further accessible formulation is \cite[Theorem 2.7]{Niles}.
+
+The quotient $\mathscr A=\mathscr C/W$ is proper and flat. Since $|W|$ is a unit, formation of its invariant rings commutes with reduction modulo $p$. Thus $\mathscr A_{\kk}=\mathscr C_{\kk}/W$. Every element of $W$ acts on prime-to-$p$ level structure and preserves each Deligne--Rapoport component. The normalized components of the quotient are consequently two copies of $X_{\kk}$.
+
+At a node, write its completed special-fibre local ring as
+\[
+\kk[[x,y]]/(xy)
+=\kk[[x]]\mathbin{\times}_{\kk}\kk[[y]].
+\]
+A stabilizer $H\subseteq W$ preserves the branches. Its invariant ring is
+\[
+\kk[[x]]^H\mathbin{\times}_{\kk}\kk[[y]]^H
+\simeq\kk[[u]]\mathbin{\times}_{\kk}\kk[[v]]
+\simeq\kk[[u,v]]/(uv).
+\]
+Here the invariants on each formal branch form a complete discrete valuation ring with residue field $\kk$. Therefore each orbit of intersection points gives exactly one ordinary double point. There are $D$ such orbits, the very same supersingular points used in \eqref{eq:counts}.
+
+The fibres are reduced and connected. The Euler characteristic of the structure sheaf is constant in this proper flat family. On the special fibre, the normalization sequence gives
+\[
+\chi(\mathcal O_{\mathscr A_{\kk}})
+=2\chi(\mathcal O_{X_{\kk}})-D=2(1-g(X))-D.
+\]
+Its arithmetic genus is therefore $2g(X)+D-1$, which equals the genus of the generic fibre $A$.
+\end{proof}
+
+\begin{lemma}\label{lem:single}
+The first equality and the fixed-point equality in \eqref{eq:general} hold.
+\end{lemma}
+\begin{proof}
+In Aricheta's notation, $X^p=B$. Subtract \eqref{eq:aricheta} from the expression for $D$ in \eqref{eq:total}. This gives
+\[
+\lambda_p(X)=D-Q_p(X)=1+g(A)-2g(B).
+\]
+The involution $\bar w_p$ is nonidentity: in the quotient model it exchanges the two components, whereas $W$ preserves them. As $B=A/\langle\bar w_p\rangle$, Riemann--Hurwitz for this single involution gives
+\[
+2g(A)-2=2\bigl(2g(B)-2\bigr)
++\#\Fix(\bar w_p\mid A(\C)).
+\]
+Rearranging proves the assertion.
+\end{proof}
+
+In the model underlying \eqref{eq:aricheta}, a Frobenius-fixed quotient point corresponds to a fixed node at which $\bar w_p$ exchanges branches. A non-rational conjugate pair instead yields a self-intersection after quotienting. Thus the points with non-rational lifts described in Section~\ref{sec:prelim} are treated correctly by the same genus calculation.
+
+\begin{lemma}\label{lem:lift}
+If $N>1$, then
+\[
+\#\Fix\bigl(\bar w_p\mid X_0(Np)/\langle w_N\rangle\bigr)
+=\tfrac12\bigl(r_p(Np)+r_{Np}(Np)\bigr).
+\]
+\end{lemma}
+\begin{proof}
+Put $C=X_0(Np)$, $u=w_N$ and $v=w_p$. The involutions are independent and commute, so generate a Klein four-group, with $uv=w_{Np}$. Independence may be seen from their action on the $p$-part and prime-to-$p$ part of cusp labels.
+
+No point of $C(\C)$ is fixed by both $u$ and $v$. The stabilizer of a point in a finite automorphism group of a compact Riemann surface injects, by its derivative, into $\C^*$, and is therefore cyclic. Injectivity follows because a finite-order automorphism with derivative one is the identity in characteristic zero. A Klein four-group cannot be such a stabilizer.
+
+Equivalently, every ramified point for the Klein-group quotient has stabilizer of order two, is fixed by exactly one nonidentity element, and contributes one to its Riemann--Hurwitz ramification sum. The proof here only needs the single-involution formula.
+
+A point $[P]$ of $C/\langle u\rangle$ is fixed by $\bar v$ exactly when $vP=P$ or $vP=uP$. Thus its preimage lies in $\Fix(v)\cup\Fix(uv)$. These sets are disjoint by the preceding paragraph. Also $u$ acts freely on each, since a common fixed point would be fixed by the whole Klein group. Every resulting quotient point is therefore counted twice upstairs. This proves the formula.
+\end{proof}
+
+Lemmas~\ref{lem:single} and \ref{lem:lift} prove Theorem~\ref{thm:main} for $N>1$. When $N=1$, $W$ is trivial, $A=X_0(p)$, and \eqref{eq:general} already gives $r_p(p)/2$. No Klein-group argument is used in that case.
+
+\subsection{Relation to the recent quotient-model formulas}\label{sec:prior}
+Beneish and Wen's preprint \cite{BW} is by Lea Beneish and Boya Wen, submitted on 30 September 2026 as arXiv:2609.39725v1. It concerns squarefree total levels divisible by a prime $p\geq5$. Its Theorem 6.5, stated as Theorem~A in its introduction, describes both a quotient by an Atkin--Lehner subgroup preserving the two components and a further quotient containing a component-exchanging involution. Apply these two parts at total level $Np$, first with $H=W$ and then with $H=\langle W,w_p\rangle$. Their counts are expressed through the numbers $F(d)$ of $w_d$-fixed supersingular points on the special fibre. Their two-component intersection count $|W|^{-1}\sum_{w_d\in W}F(d)$ is $D$ by Burnside's lemma. Since $w_{dp}$ acts on supersingular points as $w_d$ composed with Frobenius, the same lemma shows that $|W|^{-1}\sum_{w_d\in W}F(dp)=\lambda_p(X)$, so their self-crossing count $(2|W|)^{-1}\sum_{w_d\in W}\bigl(F(d)-F(dp)\bigr)$ is $(D-\lambda_p(X))/2=Q_p(X)/2$. Their genus formulas therefore give \eqref{eq:general}; single-involution Riemann--Hurwitz and Lemma~\ref{lem:lift} give \eqref{eq:fricke}. Hence their theorem already implies the fixed-point identity in the squarefree case. This deduction does not use their Proposition 3.16 or its additional hypotheses in certain ramified cases. The arbitrary-level version above uses the older general model and Aricheta's theorem. It is not presented as a new reduction theorem. Beneish and Wen also record the characteristic-zero genus formula through Ogg's fixed-point counts \cite[Remark 6.6]{BW}; they do not discuss Nakaya's supersingular polynomials.
+
+\section{Characteristic-zero fixed points and class numbers}\label{sec:class}
+For a negative quadratic discriminant $\Delta$, let $\ho(\Delta)$ denote the proper ideal class number of the order of discriminant $\Delta$. It is distinct from the field class number when the order is nonmaximal.
+
+We record the full squarefree-level specialization of the classical fixed-point formula before applying it. Let $M$ be squarefree, $Q\mid M$, and $Q\geq5$. For each odd prime $\ell\mid M/Q$, put
+\[
+c_1(\ell)=c_2(\ell)=1+\leg{-Q}{\ell}.
+\]
+If $2\mid M/Q$, then $Q$ is odd and
+\[
+c_1(2)=\begin{cases}1,&Q\equiv1\pmod4,\\2,&Q\equiv3\pmod4,\end{cases}
+\qquad c_2(2)=1+\leg{-Q}{2}\quad(Q\equiv3\pmod4).
+\]
+The formula is
+\begin{align}
+r_Q(M)&=\ho(-4Q)\prod_{\ell\mid M/Q}c_1(\ell)\notag\\
+&\quad+\begin{cases}
+\ho(-Q)\displaystyle\prod_{\ell\mid M/Q}c_2(\ell),&Q\equiv3\pmod4,\\
+0,&Q\not\equiv3\pmod4.
+\end{cases}\label{eq:ogg}
+\end{align}
+Ogg gives the odd-complement formula on p.~454 of \cite{Ogg}, for $Q>3$ and $M/Q$ odd, with class numbers of primitive forms, that is, of orders; his local factor $1+\leg{-4Q}{\ell}$ equals $c_1(\ell)$ because $4$ is a square. The factors at $2$ and the exceptional small divisors appear explicitly in \cite[Proposition 2.1]{IJK}. At squarefree level the cusps are labelled by divisors of $M$, and $w_Q$ toggles the primes dividing $Q$ in that label. Consequently a nonidentity $w_Q$ fixes no cusp, in agreement with \cite[Proposition 3]{Ogg}. Formula~\eqref{eq:ogg} is an unweighted count of geometric fixed points.
+
+For an odd squarefree integer $d>3$, define
+\[
+V(d)=\begin{cases}
+\ho(-4d),&d\equiv1\pmod4,\\
+\ho(-4d)+\ho(-d),&d\equiv3\pmod4.
+\end{cases}
+\]
+Now let $N$ be any odd prime distinct from $p\geq5$. For $Q=p$, the only complementary prime in \eqref{eq:ogg} is $N$. It does not divide either discriminant: $N\nmid4p$. At an odd complementary prime the factors for the two possible orders coincide, since multiplication of the discriminant by $4$ does not change its Legendre symbol. Thus
+\begin{align}
+r_p(Np)
+&=\left(1+\leg{-p}{N}\right)
+\begin{cases}\ho(-4p),&p\equiv1\pmod4,\\
+\ho(-4p)+\ho(-p),&p\equiv3\pmod4,\end{cases}\notag\\
+&=\left(1+\leg{-p}{N}\right)V(p).\label{eq:rp}
+\end{align}
+For $Q=Np$, the complementary product is empty, so
+\begin{equation}\label{eq:rnp}
+r_{Np}(Np)=V(Np).
+\end{equation}
+Both divisors exceed $3$, even if $N=3$. No exceptional $w_2$ or $w_3$ term enters these two counts.
+
+Deuring's formula, with field class numbers, is
+\begin{equation}\label{eq:deuring}
+L(p)=\begin{cases}
+\tfrac12\hK{p},&p\equiv1\pmod4,\\
+2\hK{p},&p\equiv3\pmod8,\\
+\hK{p},&p\equiv7\pmod8.
+\end{cases}
+\end{equation}
+See also the statement preceding \cite[Theorem 1.2]{Morton5b}. In particular $V(p)=2L(p)$. When $d\equiv1\pmod4$, the discriminant $-4d$ is fundamental. When $d\equiv3\pmod4$, $-d$ is fundamental and the conductor-two class-number formula gives
+\[
+\ho(-4d)=\left(2-\leg{-d}{2}\right)\ho(-d).
+\]
+The unit index is one because $d>3$; the only imaginary quadratic fields with additional units would correspond to $d=1$ or $3$. It follows that
+\begin{equation}\label{eq:Vfield}
+\frac{V(d)}4=\begin{cases}
+\tfrac14\hK{d},&d\equiv1\pmod4,\\
+\hK{d},&d\equiv3\pmod8,\\
+\tfrac12\hK{d},&d\equiv7\pmod8.
+\end{cases}
+\end{equation}
+Checking the four odd residue classes modulo $8$ identifies this coefficient with
+\begin{equation}\label{eq:coefficient}
+\frac18\left\{2+\left(1-\leg{-1}{d}\right)
+\left(2+\leg{-2}{d}\right)\right\}.
+\end{equation}
+
+\section{Hauptmodul coordinates and the conjecture}\label{sec:haupt}
+For $N\in\mathfrak S$, write $T_{N+}=q^{-1}+O(q)$ for the normalized principal modulus of $\Gamma_0(N)^+$. This is the Conway--Norton McKay--Thompson function for the prime Fricke group. Nakaya's normalizations are
+\begin{center}
+\begin{tabular}{ccl}\toprule
+$N$ & $j_N^*$ & Constant coefficient\\\midrule
+$3$ & $T_{3+}+42$ & $42$\\
+$5$ & $T_{5+}+16$ & $16$\\
+$7$ & $T_{7+}+9$ & $9$\\
+$11,13,17,19,23,29,31,41,47,59,71$ & $T_{N+}$ & $0$\\\bottomrule
+\end{tabular}
+\end{center}
+These are the displayed definitions preceding Proposition 4 in \cite[Section 4.1]{Nakaya} and the immediately following zero-constant convention. At the eta-quotient levels $N=2,3,5,7,13$, if $e=24/(N-1)$, then
+\begin{equation}\label{eq:eta}
+T_{N+}=\left(\frac{\eta(\tau)}{\eta(N\tau)}\right)^e
++e+N^{e/2}\left(\frac{\eta(N\tau)}{\eta(\tau)}\right)^e.
+\end{equation}
+For the auxiliary level $2$, Nakaya takes $j_2^*=T_{2+}+104$.
+
+The integral Fourier expansions used by Nakaya in the proof of his Proposition 4 also follow from the moonshine realization \cite{CN,Borcherds}: the normalized principal moduli are graded traces, and their rational coefficients are algebraic integers, hence integers. Borcherds's Theorem 1.1 identifies the traces with the Conway--Norton Hauptmoduli. The shifts displayed above preserve integrality. No unproved moonshine assertion is needed.
+
+\begin{proposition}\label{prop:coordinate}
+For prime $N\in\mathfrak S$ and $p\geq5$, $p\nmid N$, the function $j_N^*$ gives an isomorphism $X_0(N)^+_{\Z_{(p)}}\simeq\mathbb P^1_{\Z_{(p)}}$. Under it, $S_p(X_0(N)^+)$ corresponds exactly to the roots of Nakaya's squarefree polynomial, and
+\begin{equation}\label{eq:identify}
+L^{(N*)}(p)=\lambda_p(X_0(N)^+).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The smoothness and base-change assertions for the tame quotient were proved in Section~\ref{sec:prelim}. Its fibres have genus zero and it has a rational cusp section $c$, the image of $0$ and $\infty$. Relative Riemann--Roch gives a free rank-two module $H^0(\mathscr X,\mathcal O(c))$ and a coordinate $t$ with principal part $q^{-1}$ at $c$. The associated map identifies $\mathscr X$ with $\mathbb P^1_R$.
+
+On the generic fibre, $j_N^*-t$ is constant, since both functions have exactly that simple pole and principal part. Its constant Fourier coefficient is in $R$, so this constant is in $R$. Therefore $j_N^*$ is also an integral degree-one coordinate. This is the degree-one case of Fourier-expansion descent; the general $q$-expansion principle is \cite[VII, Theorem 3.9]{DR}. One can instead apply that principle on a full-level cover: the expansions at both cusp orbits are integral by Fricke invariance, and translations introduce only roots of unity and prime-to-$p$ changes of parameter. The relative Riemann--Roch argument above verifies the descent directly in the present situation.
+
+Every finite Hauptmodul value now labels one point of the coarse quotient. That point is supersingular if and only if any representative elliptic curve is supersingular, since the representatives related by $w_N$ are isogenous. A point has its value in $\Fp$ if and only if it belongs to $X(\Fp)$. The cusp corresponds to infinity and is excluded. Taking distinct values, as in Nakaya's definition, proves \eqref{eq:identify}.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:nakaya}]
+Combine \eqref{eq:fricke}, \eqref{eq:identify}, \eqref{eq:rp}, and \eqref{eq:rnp}:
+\[
+L^{(N*)}(p)=\frac14\left(1+\leg{-p}{N}\right)V(p)+\frac14V(Np).
+\]
+Substitute $V(p)=2L(p)$ and use \eqref{eq:Vfield}--\eqref{eq:coefficient} with $d=Np$. This is exactly \eqref{eq:nakaya}.
+\end{proof}
+
+\section{Consistency checks and a worked example}\label{sec:examples}
+\begin{remark}[Level one]
+When $N=1$, Theorem~\ref{thm:main} gives $\lambda_p(X_0(1))=r_p(p)/2=V(p)/2=L(p)$, recovering Deuring. If one formally sets $r_{Np}(Np)=r_p(p)$ in \eqref{eq:fricke}, the same formula results; these are equal counts, not two independent involutions.
+\end{remark}
+
+\begin{remark}[Why level two has a different shape]\label{rem:two}
+Nakaya's Theorem 4 proves both the $N=2$ and $N=3$ explicit linear-factor formulas, as Morton also records in \cite{MortonFricke}. At level $2p$, \eqref{eq:ogg} gives
+\[
+r_p(2p)=\begin{cases}
+\ho(-4p),&p\equiv1\pmod4,\\
+2\ho(-4p)+\bigl(1+\leg{-p}{2}\bigr)\ho(-p),&p\equiv3\pmod4,
+\end{cases}
+\qquad r_{2p}(2p)=\ho(-8p).
+\]
+Substitution in Theorem~\ref{thm:main} and the conductor-two conversion give
+\begin{equation}\label{eq:two}
+L^{(2*)}(p)=\frac18\left\{2+\left(1-\leg{-1}{p}\right)
+\left(4+\leg{-2}{p}\right)\right\}\hK{p}
++\tfrac14\hK{2p}.
+\end{equation}
+This is Nakaya's formula. The separate exceptional small-divisor formula is
+\[
+r_2(2p)=\bigl(1+\leg{-8}{p}\bigr)\ho(-8)
++\bigl(1+\leg{-4}{p}\bigr)
+=2+\leg{-2}{p}+\leg{-1}{p}.
+\]
+It is present if the original Klein-group genus calculation is performed, but cancels out; it does not appear in the single-involution proof. The different shape of \eqref{eq:two} comes from the local factors at the complementary prime $2$ in $r_p(2p)$. They are not the odd-prime factor $1+(-p/N)$ used in \eqref{eq:rp}. This explains the exclusion of $2$ from the uniform conjecture.
+\end{remark}
+
+\paragraph{The pair $N=11$, $p=13$.}
+Here $j_{11}^*=T_{11+}$ has constant coefficient zero. The classical supersingular polynomial is $ss_{13}(X)=X-5$. Using the Hauptmodul relation constructed in Appendix~\ref{app:computation}, its distinct supersingular values give
+\begin{align*}
+ss_{13}^{(11*)}(T)
+&=T^8+T^7+5T^6+5T^5+T^4+4T^3+2T^2+9T+11\\
+&=(T+2)(T+4)(T+5)(T+6)(T+11)(T+12)(T^2+2)
+\end{align*}
+in $\mathbb F_{13}[T]$. The quadratic factor is irreducible, so there are six linear factors. On the class-number side,
+\[
+L(13)=1,\quad \leg{-13}{11}=1,\quad
+\leg{-1}{143}=-1,\quad \leg{-2}{143}=-1,\quad \hK{143}=10.
+\]
+The two summands of \eqref{eq:nakaya} are consequently
+\[
+\tfrac12(1+1)\cdot1=1,\qquad
+\tfrac18\{2+(1+1)(2-1)\}\cdot10=5.
+\]
+Their sum is $6$. Independently, enumeration of primitive reduced forms gives $\ho(-52)=2$, $\ho(-143)=10$, and $\ho(-572)=10$. Therefore
+\[
+r_{13}(143)=4,\qquad r_{143}(143)=20,\qquad (4+20)/4=6.
+\]
+A further modular-form check gives the same fixed-point counts from $r_d(M)=2-2\operatorname{tr}(w_d\mid S_2(\Gamma_0(M)))$.
+
+\begin{remark}[What the count does not determine]
+Morton's Hasse-invariant factor-count results imply the relevant Fricke linear-factor counts, but this implication cannot in general be reversed: the count is an aggregate of several factor types. Thus Corollary~\ref{cor:nakaya} does not by itself prove his finer quadratic and sextic assertions for $E_7$. The published abstract of \cite{Morton7} still states those formulas as conjectural; they are Conjectures~2 and~3 of \cite{Morton7arXiv}. Complete splitting of a genus-zero supersingular polynomial is equivalent to $\lambda_p=D$, hence to Aricheta's rationality condition; identifying the associated sporadic-prime lists is already part of Aricheta's results. No new moonshine classification follows here.
+\end{remark}
+
+\appendix
+\section{Exact computational verification}\label{app:computation}
+The accompanying standalone file \texttt{verify\_nakaya.gp} requires PARI/GP only. It constructs the Hauptmoduli and modular relations internally, without imports or coefficient tables. It was executed with PARI/GP 2.15.4 on 26 October 2026. The default survey contains $60$ primes for $N=3$ and $59$ primes for each of the other thirteen levels, giving $827$ pairs. All three counts below agreed in every case. A separate run for $N=2$ verified \eqref{eq:two} for all $60$ primes. Full polynomials, relations, a CSV, and the run log accompany the source.
+
+\subsection{Construction of the principal moduli}
+For each prime level set
+\[
+k=\operatorname{lcm}\left(2,\frac{24}{\gcd(N+1,24)}\right),\quad
+m=\frac{k(N+1)}{24},\quad F_N=(\eta(\tau)\eta(N\tau))^k.
+\]
+The form $F_N$ has weight $k$, trivial character, no zero in the upper half-plane, order $m$ at each cusp, and Fricke eigenvalue $(-1)^{k/2}$. Compute the eigenspace with that eigenvalue in $M_k(\Gamma_0(N))$ using exact rational matrices. Division by $F_N$ identifies this eigenspace with the functions on the genus-zero quotient having pole order at most $m$ at its cusp. Its dimension is $m+1$.
+
+If $c_N$ is the constant coefficient specified in Section~\ref{sec:haupt}, the numerator $f_N=j_N^*F_N$ is uniquely characterized by the coefficients
+\[
+[q^i]f_N=0\ (0\leq i<m-1),\quad
+[q^{m-1}]f_N=1,\quad [q^m]f_N=c_N-k.
+\]
+The last equality uses $F_N=q^m(1-kq+O(q^2))$. Solving these linear conditions gives $j_N^*=f_N/F_N$ exactly. The code checks the dimension, leading coefficient, constant coefficient, and integrality of the retained Fourier coefficients.
+
+Pole-part elimination then constructs the polynomials $a_N,b_N$ satisfying
+\[
+j(\tau)+j(N\tau)=a_N(j_N^*),\qquad
+j(\tau)j(N\tau)=b_N(j_N^*).
+\]
+They have degrees $N$ and $N+1$. Matching the entire principal part and constant coefficient certifies these identities: the difference is a holomorphic function on the compact quotient and vanishes at the cusp. Additional positive coefficients are checked as a safeguard. The corresponding quadratic is $R_N(X,T)=X^2-a_N(T)X+b_N(T)$.
+
+\subsection{The three computations}
+For the direct polynomial computation use the classical supersingular polynomial. An explicit formula, also used in \cite{Morton5b}, is obtained by setting $n=\lfloor p/12\rfloor$, $\delta=(1-(-3/p))/2$, $\varepsilon=(1-(-1/p))/2$ and taking the monic normalization of
+\[
+X^\delta(X-1728)^\varepsilon
+\sum_{j=0}^{n}\binom{2n+\varepsilon}{2j+\varepsilon}
+\binom{2n-2j}{n-j}(-432)^{n-j}(X-1728)^j.
+\]
+The desired polynomial is computed as the radical of
+\[
+\operatorname{Res}_X\bigl(ss_p(X),R_N(X,T)\bigr).
+\]
+The radical routine handles derivative-zero factors by extracting $p$th roots, so multiplicities divisible by $p$ are not lost. The number of distinct rational roots is
+\[
+\deg\gcd\bigl(ss_p^{(N*)}(T),T^p-T\bigr).
+\]
+Separately, the program evaluates \eqref{eq:nakaya} with field discriminants and PARI's \texttt{qfbclassno}.
+
+For the independent arithmetic fixed-point computation, it enumerates primitive positive definite reduced forms $[a,b,c]$ with $b^2-4ac=\Delta$, $|b|\leq a\leq c$, the usual boundary sign convention, and $\gcd(a,b,c)=1$. At odd complementary primes it enumerates the solutions of $z^2+Q=0$ rather than inserting a precomputed Legendre symbol. The separate local rule at $2$ is used for the supplementary run. This computes the characteristic-zero counts in \eqref{eq:ogg} without calling \texttt{qfbclassno}. Independence here means separate arithmetic implementations; it is not a second proof of the fixed-point classification. Every computed polynomial is also checked to split over $\mathbb F_{p^2}$.
+
+\begin{table}[ht]
+\centering
+\caption{Representative exact checks. The last two columns are independently enumerated fixed-point counts; their sum divided by four equals both middle counts.}
+\label{tab:checks}
+\begin{tabular}{rrrrrrr}\toprule
+$N$&$p$&$\deg ss_p^{(N*)}$&Direct roots&\eqref{eq:nakaya}&$r_p(Np)$&$r_{Np}(Np)$\\\midrule
+3 & 13 & 2 & 2 & 2 & 0 & 8 \\
+5 & 13 & 4 & 2 & 2 & 0 & 8 \\
+7 & 13 & 5 & 3 & 3 & 4 & 8 \\
+11 & 13 & 8 & 6 & 6 & 4 & 20 \\
+13 & 17 & 10 & 6 & 6 & 8 & 16 \\
+17 & 13 & 9 & 5 & 5 & 4 & 16 \\
+19 & 13 & 12 & 4 & 4 & 4 & 12 \\
+23 & 13 & 12 & 8 & 8 & 0 & 32 \\
+29 & 13 & 15 & 5 & 5 & 4 & 16 \\
+31 & 13 & 19 & 3 & 3 & 4 & 8 \\
+41 & 13 & 25 & 3 & 3 & 0 & 12 \\
+47 & 13 & 29 & 11 & 11 & 4 & 40 \\
+59 & 13 & 36 & 12 & 12 & 4 & 44 \\
+71 & 13 & 43 & 11 & 11 & 4 & 40 \\
+\bottomrule\end{tabular}
+\end{table}
+
+\subsection{Reproduction}
+Run the following command in a fresh directory containing the script:
+\begin{lstlisting}
+gp -fq -s 256000000 verify_nakaya.gp
+\end{lstlisting}
+It writes \texttt{verification.csv}, \texttt{relation\_N.gp}, and \texttt{polynomials\_N.gp}, with one relation and polynomial file for each level. The final output must be \texttt{ALL PASSED: 827 cases}. To run the level-two supplement from an interactive session in another directory, use
+\begin{lstlisting}
+NK_MAXP=300; NK_LEVELS=[2]; read("verify_nakaya.gp");
+\end{lstlisting}
+To load functions without running a survey set \texttt{NK\_NO\_RUN=1} before \texttt{read}. A direct trace check for the worked example is
+\begin{lstlisting}
+mf=mfinit([143,2],1);
+at=mfatkininit(mf,13); print(2-2*trace(at[2]/at[3]));
+at=mfatkininit(mf,143); print(2-2*trace(at[2]/at[3]));
+\end{lstlisting}
+The output is $4$ and $20$. The complete program uses no companion Python module, Sage installation, or network access.
+
+\subsection{Version note and extended check}
+Under PARI/GP 2.17.2 the Hauptmodul construction stops at $N=13$ with the message \texttt{unexpected Hauptmodul dimension}, because the matrix returned by \texttt{mfatkininit} for the full weight-$12$ space is not an involution in that version; levels $3,5,7,11$ run unchanged. Users of later versions can instead load the stored files \texttt{relation\_N.gp} produced under 2.15.4, set \texttt{NK\_NO\_RUN=1}, and call \texttt{nk\_polynomial}, \texttt{nk\_rhs} and \texttt{nk\_fixed} directly. Run in this way under PARI 2.17.2, using the stored relations, the three counts agreed for all $14$ levels and every prime $5\leq p\leq2000$ with $p\neq N$, a total of $4201$ pairs.
+
+\section*{Declaration of generative AI assistance}
+OpenAI ChatGPT/Codex assisted with literature retrieval, development and checking of the mathematical exposition, preparation and execution of verification code, and manuscript editing. Anthropic Claude assisted with checking the cited statements of Aricheta, Ogg, Beneish--Wen and Morton against the original sources, the extended verification run, and copy-editing. Authorial responsibility for the mathematical claims, references, computations, and final text rests with the human authors.
+
+\begin{thebibliography}{99}\small
+\bibitem{Aricheta} V. M. Aricheta, Supersingular elliptic curves and moonshine, \emph{SIGMA} \textbf{15} (2019), 007, 17 pp. \href{https://doi.org/10.3842/SIGMA.2019.007}{doi:10.3842/SIGMA.2019.007}.
+\bibitem{BW} L. Beneish and B. Wen, Atkin--Lehner quotients of modular curves at primes of bad reduction, preprint (2026), arXiv:2609.39725v1. \href{https://doi.org/10.48550/arXiv.2609.39725}{doi:10.48550/arXiv.2609.39725}.
+\bibitem{Borcherds} R. E. Borcherds, Monstrous moonshine and monstrous Lie superalgebras, \emph{Invent. Math.} \textbf{109} (1992), 405--444. \href{https://doi.org/10.1007/BF01232032}{doi:10.1007/BF01232032}.
+\bibitem{CN} J. H. Conway and S. P. Norton, Monstrous moonshine, \emph{Bull. London Math. Soc.} \textbf{11} (1979), 308--339. \href{https://doi.org/10.1112/blms/11.3.308}{doi:10.1112/blms/11.3.308}.
+\bibitem{DR} P. Deligne and M. Rapoport, Les sch\'emas de modules de courbes elliptiques, in \emph{Modular Functions of One Variable II}, Lecture Notes in Math. \textbf{349}, Springer, 1973, 143--316. \href{https://doi.org/10.1007/978-3-540-37855-6_4}{doi:10.1007/978-3-540-37855-6\_4}.
+\bibitem{FH} M. Furumoto and Y. Hasegawa, Hyperelliptic quotients of modular curves $X_0(N)$, \emph{Tokyo J. Math.} \textbf{22} (1999), 105--125. \href{https://doi.org/10.3836/tjm/1270041616}{doi:10.3836/tjm/1270041616}.
+\bibitem{Gross} B. H. Gross, Heights and the special values of $L$-series, in \emph{Number Theory (Montreal, 1985)}, CMS Conf. Proc. \textbf{7}, Amer. Math. Soc., 1987, 115--187. \href{https://wstein.org/papers/bib/Gross-Heights_and_the_Special_Values_of_L-series.pdf}{Available scan}.
+\bibitem{IJK} B.-H. Im, D. Jeon and C. H. Kim, Notes on Weierstrass points of modular curves $X_0(N)$, preprint (2015), arXiv:1509.03400. \href{https://doi.org/10.48550/arXiv.1509.03400}{doi:10.48550/arXiv.1509.03400}.
+\bibitem{KM} N. M. Katz and B. Mazur, \emph{Arithmetic Moduli of Elliptic Curves}, Annals of Math. Studies \textbf{108}, Princeton Univ. Press, 1985. Electronic reissue: \href{https://doi.org/10.1515/9781400881710}{doi:10.1515/9781400881710}.
+\bibitem{Morton5a} P. Morton, On the Hasse invariants of the Tate normal forms $E_5$ and $E_7$, \emph{J. Number Theory} \textbf{218} (2021), 234--271. \href{https://doi.org/10.1016/j.jnt.2020.07.008}{doi:10.1016/j.jnt.2020.07.008}.
+\bibitem{Morton5b} P. Morton, The Hasse invariant of the Tate normal form $E_5$ and the class number of $\Q(\sqrt{-5l})$, \emph{J. Number Theory} \textbf{227} (2021), 94--143. \href{https://doi.org/10.1016/j.jnt.2021.03.006}{doi:10.1016/j.jnt.2021.03.006}.
+\bibitem{MortonFricke} P. Morton, Supersingular conjectures for the Fricke group, \emph{Int. J. Number Theory} \textbf{19} (2023), 803--828. \href{https://doi.org/10.1142/S1793042123500409}{doi:10.1142/S1793042123500409}.
+\bibitem{Morton7} P. Morton, The Hasse invariant of the Tate normal form $E_7$ and the supersingular polynomial for the Fricke group $\Gamma_0^*(7)$, \emph{Ramanujan J.} \textbf{63} (2024), 339--385; published online 1 August 2023. \href{https://doi.org/10.1007/s11139-023-00764-8}{doi:10.1007/s11139-023-00764-8}.
+\bibitem{Morton7arXiv} P. Morton, The Hasse invariant of the Tate normal form $E_7$ and the supersingular polynomial for the Fricke group $\Gamma_0^*(7)$, preprint, arXiv:2206.09801v5 (3 June 2023). \href{https://arxiv.org/abs/2206.09801v5}{arXiv:2206.09801v5}.
+\bibitem{Nakaya} T. Nakaya, The number of linear factors of supersingular polynomials and sporadic simple groups, \emph{J. Number Theory} \textbf{204} (2019), 471--496. \href{https://doi.org/10.1016/j.jnt.2019.04.015}{doi:10.1016/j.jnt.2019.04.015}.
+\bibitem{Niles} A. Niles, Moduli of elliptic curves via twisted stable maps, \emph{Algebra Number Theory} \textbf{7} (2013), 2141--2202. \href{https://doi.org/10.2140/ant.2013.7.2141}{doi:10.2140/ant.2013.7.2141}.
+\bibitem{Ogg} A. P. Ogg, Hyperelliptic modular curves, \emph{Bull. Soc. Math. France} \textbf{102} (1974), 449--462. \href{https://doi.org/10.24033/bsmf.1789}{doi:10.24033/bsmf.1789}.
+\bibitem{OggRed} A. P. Ogg, On the reduction modulo $p$ of $X_0(pM)$, in \emph{US--Japan Seminar on Applications of Automorphic Forms to Number Theory}, University of Michigan, Ann Arbor, 1975, 204--211.
+\bibitem{Ribet} K. A. Ribet, On modular representations of $\operatorname{Gal}(\overline\Q/\Q)$ arising from modular forms, \emph{Invent. Math.} \textbf{100} (1990), 431--476. \href{https://doi.org/10.1007/BF01231195}{doi:10.1007/BF01231195}.
+\end{thebibliography}
+\end{document}
