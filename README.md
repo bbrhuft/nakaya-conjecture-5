@@ -12,6 +12,8 @@ Manuscript and exact PARI/GP verification for a deduction of **Nakaya's Conjectu
 
 For N = 7 this settles the case that Morton (arXiv:2206.09801v5, §3) had reduced to his open Conjectures 2–3. It does not prove those finer conjectures.
 
+Only step 1 needs N ∈ 𝔖. The same class-number formula therefore counts the rational supersingular points on X₀(N)⁺ at **every odd prime level N** (Corollary 5.2), including levels where X₀(N)⁺ has positive genus.
+
 ## Repository layout
 
 | Path | Contents |
@@ -19,6 +21,7 @@ For N = 7 this settles the case that Morton (arXiv:2206.09801v5, §3) had reduce
 | `paper/` | LaTeX source of the article (compile with `pdflatex` twice; no external files needed) |
 | `verification/verify_nakaya.gp` | Self-contained PARI/GP verification: builds the Hauptmoduli from modular-form spaces, computes ss_p^(N*), and compares the direct root count with Nakaya's formula and with independently enumerated fixed-point counts |
 | `verification/run_extended.py` | cypari2 runner that reuses the stored relations (works on PARI 2.17) and extends the range |
+| `verification/verify_general.gp` | Independent direct count at prime levels inside and outside 𝔖, from the modular polynomial Φ_N only (no Hauptmodul, genus or fixed-point formula) |
 | `verification/trace_example.gp` | Characteristic-zero Atkin–Lehner trace check of the worked example N = 11, p = 13 |
 | `verification/relations/`, `polynomials/` | Exact modular relations and supersingular polynomials for each level |
 | `verification/n2/` | Supplementary level-2 run |
@@ -48,6 +51,11 @@ python run_extended.py 2000
 | `verify_nakaya.gp` | 2.15.4 | p ≤ 300 | 827 | 0 |
 | level-2 supplement | 2.15.4 | p ≤ 300 | 60 | 0 |
 | `run_extended.py` | 2.17.2 | p ≤ 2000 | 4201 | 0 |
+| `verify_general.gp`, levels 11–23 (control) | 2.17.2 | p ≤ 1300, p ≡ 1 (mod 12) | 230 | 0 |
+| `verify_general.gp`, levels 37–73 (outside 𝔖) | 2.17.2 | p ≤ 1300, p ≡ 1 (mod 12) | 238 | 0 |
+| `verify_general.gp`, levels 79–127 (outside 𝔖) | 2.17.2 | p ≤ 600, p ≡ 1 (mod 12) | 58 | 0 |
+
+**General-level check** (Appendix A.5 of the paper). Run in PARI/GP with `gp -fq -s 512000000 verify_general.gp`, or set `VG_LEVELS` and `VG_MAXP` before `read`. Points over a Frobenius-stable pair (j, j′) with several isogenies are separated by the branch tangents of Φ_N(x, y) = 0; 10,881 such points were resolved. 237 small pairs (all with p < 4N) had a repeated tangent slope and were skipped and reported, not guessed. Primes p ≢ 1 (mod 12) are not covered by this check. Full log: `results/general_levels_run.log`.
 
 Finite agreement checks the implementation and normalisations; it is not a substitute for the proof.
 
