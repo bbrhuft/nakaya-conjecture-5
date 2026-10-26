@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-26",
+  "runtime": "PARI/GP 2.15.4",
+  "baseline_through_300": {
+    "comparisons": 178,
+    "mismatches": 0,
+    "raw_cyclic_kernels": 70572,
+    "coarse_X0_points": 67084,
+    "swapped_lift_rational_orbits": 2417,
+    "pairs_with_special_j": 142,
+    "naive_j_triple_mismatches": 145
+  },
+  "extended_through_1000": {
+    "comparisons": 496,
+    "mismatches": 0,
+    "raw_cyclic_kernels": 630054,
+    "coarse_X0_points": 620470,
+    "swapped_lift_rational_orbits": 12077,
+    "pairs_with_special_j": 388,
+    "naive_j_triple_mismatches": 394
+  },
+  "heldout_primes": [
+    1009,
+    2003,
+    5003
+  ],
+  "heldout": {
+    "comparisons": 9,
+    "mismatches": 0,
+    "raw_cyclic_kernels": 65660,
+    "coarse_X0_points": 65436,
+    "swapped_lift_rational_orbits": 431,
+    "pairs_with_special_j": 6,
+    "naive_j_triple_mismatches": 7
+  },
+  "unique": {
+    "comparisons": 505,
+    "mismatches": 0,
+    "raw_cyclic_kernels": 695714,
+    "coarse_X0_points": 685906,
+    "swapped_lift_rational_orbits": 12508,
+    "pairs_with_special_j": 394,
+    "naive_j_triple_mismatches": 401
+  },
+  "middle_pair_crosschecks": 505,
+  "middle_pair_mismatches": 0,
+  "rational_middle_j_fibres_checked": 5260,
+  "skips_of_admissible_cases": 0,
+  "excluded_characteristics": [
+    2,
+    3
+  ],
+  "excluded_pairs": [
+    [
+      5,
+      5
+    ],
+    [
+      7,
+      7
+    ]
+  ],
+  "class_numbers_used_in_direct_count": false,
+  "modular_form_traces_used": false,
+  "characteristic_zero_fixed_point_formula_used": false,
+  "hauptmodul_polynomials_computed": false,
+  "all_automorphisms_included": true,
+  "all_frobenius_fricke_involution_and_commutation_checks_passed": true,
+  "all_degree_ell_dual_rational_map_identities_passed": true,
+  "all_fibre_aut_eigenline_checks_passed": true,
+  "baseline_repeated_with_same_aggregate_results": true,
+  "current_source_sha256": "7e4b1c886c184d067bc403fa1d4158dff3f0ab813383607202ddd5a16b7391e3",
+  "csv_sha256": {
+    "square_heldout.csv": "00e77dac48ef0572546438625dfe5a71d3672049f39d686dd8a7f23605b37184",
+    "square_extended.csv": "4e644fabedfcb9dba5495f69cb9ed35f04506091fc98612524f3dbc17500f559",
+    "square_direct.csv": "8d6abeb450e1085ff57fd79ed0e8665f2880b870efbdb8e2424f66abb7eb77b2"
+  },
+  "per_level": {
+    "9": {
+      "comparisons": 169,
+      "mismatches": 0,
+      "raw_cyclic_kernels": 85200,
+      "coarse_X0_points": 83968,
+      "swapped_lift_rational_orbits": 2269,
+      "pairs_with_special_j": 132,
+      "naive_j_triple_mismatches": 119
+    },
+    "25": {
+      "comparisons": 168,
+      "mismatches": 0,
+      "raw_cyclic_kernels": 212970,
+      "coarse_X0_points": 209998,
+      "swapped_lift_rational_orbits": 4248,
+      "pairs_with_special_j": 131,
+      "naive_j_triple_mismatches": 141
+    },
+    "49": {
+      "comparisons": 168,
+      "mismatches": 0,
+      "raw_cyclic_kernels": 397544,
+      "coarse_X0_points": 391940,
+      "swapped_lift_rational_orbits": 5991,
+      "pairs_with_special_j": 131,
+      "naive_j_triple_mismatches": 141
+    }
+  },
+  "prime_residue_classes_mod_12": {
+    "1": 111,
+    "5": 131,
+    "7": 131,
+    "11": 132
+  }
+}
+| p | L(p) | level 9 | level 25 | level 49 |
+|---:|---:|---:|---:|---:|
+| 5 | 1 | 2 | excluded | 4 |
+| 7 | 1 | 2 | 3 | excluded |
+| 11 | 2 | 4 | 6 | 8 |
+| 13 | 1 | 2 | 3 | 4 |
+| 37 | 1 | 2 | 3 | 4 |
+| 101 | 7 | 14 | 21 | 28 |
+| 293 | 9 | 18 | 27 | 36 |
+| 997 | 7 | 14 | 21 | 28 |
+| 1009 | 10 | 20 | 30 | 40 |
+| 2003 | 18 | 36 | 54 | 72 |
+| 5003 | 30 | 60 | 90 | 120 |
+

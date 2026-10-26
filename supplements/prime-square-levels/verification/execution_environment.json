@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-26",
+  "PARI_GP": "2.15.4",
+  "full_range_source_sha256": "7e4b1c886c184d067bc403fa1d4158dff3f0ab813383607202ddd5a16b7391e3",
+  "source_matches_immutable_full_range_run": true,
+  "extended_seed": 20261026,
+  "heldout_seed": 20261027,
+  "mathematics": "all arithmetic exact over finite fields; no class numbers or modular-form traces in the direct counts",
+  "files": "all distinct case coverage is checked by audit_square_results.py"
+}

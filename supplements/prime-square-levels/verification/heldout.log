@@ -1,0 +1,10 @@
+PASS p=1009 ell=3 direct=20 expected=20
+PASS p=1009 ell=5 direct=30 expected=30
+PASS p=1009 ell=7 direct=40 expected=40
+PASS p=2003 ell=3 direct=36 expected=36
+PASS p=2003 ell=5 direct=54 expected=54
+PASS p=2003 ell=7 direct=72 expected=72
+PASS p=5003 ell=3 direct=60 expected=60
+PASS p=5003 ell=5 direct=90 expected=90
+PASS p=5003 ell=7 direct=120 expected=120
+ALL PASSED: 9 direct square-level comparisons

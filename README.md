@@ -28,6 +28,7 @@ Only step 1 needs N ∈ 𝔖. The same class-number formula therefore counts the
 | `verification/results/` | CSV, logs, summary JSON, and the original package's SHA-256 manifest |
 | `notes/` | Source audit and author notes |
 | `exploratory/` | Pre-proof numerical experiments (history only) |
+| `supplements/prime-square-levels/` | Separate note proving λ_p(X₀(ℓ²)⁺) = (ℓ+1)/2 · L(p), with its own direct-enumeration verification package (not part of the main paper) |
 
 ## Reproducing the verification
 

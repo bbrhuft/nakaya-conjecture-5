@@ -1,0 +1,28 @@
+Independent rerun by Claude, 26 October 2026, PARI/GP 2.17.2 (cypari2), package as supplied.
+
+verify_square_direct.gp with SD_PRIMES=[13,17,23,101,409,1201], setrand(7):
+PASS p=13 ell=3 direct=2 expected=2
+PASS p=13 ell=5 direct=3 expected=3
+PASS p=13 ell=7 direct=4 expected=4
+PASS p=17 ell=3 direct=4 expected=4
+PASS p=17 ell=5 direct=6 expected=6
+PASS p=17 ell=7 direct=8 expected=8
+PASS p=23 ell=3 direct=6 expected=6
+PASS p=23 ell=5 direct=9 expected=9
+PASS p=23 ell=7 direct=12 expected=12
+PASS p=101 ell=3 direct=14 expected=14
+PASS p=101 ell=5 direct=21 expected=21
+PASS p=101 ell=7 direct=28 expected=28
+PASS p=409 ell=3 direct=16 expected=16
+PASS p=409 ell=5 direct=24 expected=24
+PASS p=409 ell=7 direct=32 expected=32
+PASS p=1201 ell=3 direct=16 expected=16
+PASS p=1201 ell=5 direct=24 expected=24
+PASS p=1201 ell=7 direct=32 expected=32
+ALL PASSED: 18 direct square-level comparisons
+
+Cross-check of L(p) by class numbers (p = 1 mod 4: L(p) = h(-4p)/2):
+L(101) = 7, L(409) = 8, L(1201) = 8
+
+verify_middle_pairs.gp (full default run):
+MIDDLE PAIRS ALL PASSED: 505

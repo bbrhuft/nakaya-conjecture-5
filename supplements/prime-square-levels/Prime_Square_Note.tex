@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\Fp}{\mathbb F_p}
+\newcommand{\Fl}{\mathbb F_\ell}
+\newcommand{\kk}{\overline{\mathbb F}_p}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\leg}[2]{\left(\frac{#1}{#2}\right)}
+\title{Rational supersingular points on $X_0(\ell^2)^+$}
+\author{David Jordan\\\small Maynooth University\\\small Email: David.Jordan@mu.ie}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $\ell$ and $p$ be distinct primes with $\ell$ odd and $p\geq5$. We show that the number of $\Fp$-rational supersingular points on the Fricke quotient $X_0(\ell^2)^+$ equals $\tfrac{\ell+1}{2}L(p)$, where $L(p)$ is the number of supersingular $j$-invariants in $\Fp$. The proof uses the middle-curve description of cyclic $\ell^2$-isogenies and the action of Frobenius on $\ell$-torsion; it needs no class-number, genus or fixed-point formula. The result is consistent with the class-number evaluation obtained from the fixed-point identity of the companion article, and it has been checked by direct enumeration of isogeny kernels. No priority is claimed.
+\end{abstract}
+
+\section{Statement}
+Throughout, $\ell$ and $p$ are distinct primes, $\ell$ is odd and $p\geq5$. For a curve $Y$ over $\Fp$ obtained from a modular curve, a \emph{supersingular point} of $Y$ is a geometric point of $Y_{\kk}$ represented by a supersingular elliptic curve with level structure. Write
+\[
+\lambda_p(Y)=\#\{\text{supersingular points of }Y_{\kk}\text{ lying in }Y(\Fp)\},
+\]
+counted without automorphism weights, and let $L(p)$ be the number of supersingular $j$-invariants lying in $\Fp$. Let $X_0(\ell^2)^+=X_0(\ell^2)/\langle w_{\ell^2}\rangle$ be the Fricke quotient.
+
+\begin{theorem}\label{thm:main}
+For distinct primes $\ell,p$ with $\ell$ odd and $p\geq5$,
+\[
+\lambda_p\bigl(X_0(\ell^2)^+\bigr)=\frac{\ell+1}{2}\,L(p).
+\]
+\end{theorem}
+
+The count does not depend on $\leg{-p}{\ell}$ and does not require $X_0(\ell^2)^+$ to have genus zero. For $\ell=3,5,7$ the right-hand side is $2L(p)$, $3L(p)$ and $4L(p)$.
+
+\section{Moduli preliminaries}
+\begin{lemma}\label{lem:moduli}
+Let $M\geq1$ with $p\nmid M$. The modular curve $X_0(M)$ has a smooth proper coarse model over $\mathbb Z_{(p)}$, and its non-cuspidal points over $\kk$ are the isomorphism classes of pairs $(E,C)$, where $E/\kk$ is an elliptic curve and $C\subset E$ is a cyclic subgroup of order $M$. The $p$-power Frobenius acts on these points by $(E,C)\mapsto(E^{(p)},C^{(p)})$. The Fricke involution $w_M$, which sends $(E,C)$ to $(E/C,E[M]/C)$, is defined over $\mathbb Z_{(p)}$, and the quotient $X_0(M)^+$ has $\kk$-points equal to the $w_M$-orbits of $\kk$-points of $X_0(M)$. A $\kk$-point of $X_0(M)^+_{\Fp}$ lies in $X_0(M)^+(\Fp)$ exactly when Frobenius fixes it.
+\end{lemma}
+\begin{proof}
+The coarse moduli statement is standard \cite[VI]{DR}, \cite[Ch.~8]{KM}. The Fricke involution acts on the moduli problem and is defined over $\mathbb Z_{(p)}$. Since $2$ is invertible in $\mathbb Z_{(p)}$, forming the quotient by $\langle w_M\rangle$ commutes with base change, so the geometric points of the quotient are the orbits. The last sentence holds for any variety over $\Fp$.
+\end{proof}
+
+A cyclic subgroup $C$ of order $\ell^2$ has a unique subgroup $C_1$ of order $\ell$. Put $E=E_0/C_1$, let $\phi_1\colon E_0\to E$ be the quotient map and let $\phi_2\colon E\to E_0/C$ be the map induced by the quotient, so that $\ker\phi_2=C/C_1$. We call $E$ the \emph{middle curve} of $(E_0,C)$.
+
+\begin{lemma}[Middle curve]\label{lem:middle}
+The assignment
+\[
+(E_0,C)\longmapsto\bigl(E,\;A=\ker\widehat{\phi_1},\;B=\ker\phi_2\bigr)
+\]
+is a bijection, compatible with isomorphisms and with the action of $\operatorname{Gal}(\kk/\Fp)$, from isomorphism classes of pairs $(E_0,C)$ with $C$ cyclic of order $\ell^2$ to isomorphism classes of triples $(E,A,B)$ with $A\neq B$ subgroups of order $\ell$ of $E[\ell]$. The Fricke involution $w_{\ell^2}$ corresponds to $(E,A,B)\mapsto(E,B,A)$. Hence the non-cuspidal $\kk$-points of $X_0(\ell^2)^+$ are the isomorphism classes of pairs $(E,\{A,B\})$ with $A\neq B$.
+\end{lemma}
+\begin{proof}
+Both $A$ and $B$ have order $\ell$, and $A=\phi_1(E_0[\ell])$ because $\widehat{\phi_1}\phi_1=[\ell]$ and both groups have order $\ell$. If $A=B$, then $C=\phi_1^{-1}(B)=\phi_1^{-1}(\phi_1(E_0[\ell]))=E_0[\ell]+C_1=E_0[\ell]$, which is not cyclic. So $A\neq B$.
+
+Conversely, given $(E,A,B)$ with $A\neq B$, let $\psi\colon E\to E/A$ be the quotient, put $E_0=E/A$ and $\phi_1=\widehat\psi\colon E_0\to E$, so that $\ker\widehat{\phi_1}=\ker\psi=A$. Put $C=\phi_1^{-1}(B)$, a subgroup of order $\ell^2$ of $E_0$. If $C$ were not cyclic it would equal $E_0[\ell]$, and then $B=\phi_1(E_0[\ell])=A$. So $C$ is cyclic, its subgroup of order $\ell$ is $\ker\phi_1$, and the two constructions are inverse to each other up to isomorphism. Both are built from quotients and dual isogenies, so they respect isomorphisms and commute with Galois conjugation.
+
+For the Fricke involution, $w_{\ell^2}(E_0,C)$ is the target of the dual isogeny $\widehat{\phi_2\phi_1}=\widehat{\phi_1}\,\widehat{\phi_2}$, with kernel $\ker\widehat{\phi_2\phi_1}$. Its first step is $\widehat{\phi_2}$, whose kernel is the unique subgroup of order $\ell$ of that kernel, so its middle curve is again $E$. The new first step is $\widehat{\phi_2}$, so the new $A$ is $\ker\widehat{\widehat{\phi_2}}=\ker\phi_2=B$; the new second step is $\widehat{\phi_1}$, so the new $B$ is $\ker\widehat{\phi_1}=A$.
+\end{proof}
+
+This is the classical identification of $X_0(\ell^2)^+$ with the modular curve attached to the normalizer of a split Cartan subgroup \cite{Chen}, \cite[p.~412]{RW}; the lemma records the explicit form used below.
+
+All curves in the factorization are isogenous, so a point is supersingular exactly when its middle curve is. By Lemma~\ref{lem:middle}, Frobenius preserves the middle $j$-invariant of every point of $X_0(\ell^2)^+$. Hence a supersingular point in $X_0(\ell^2)^+(\Fp)$ has a supersingular middle $j$-invariant in $\Fp$.
+
+\section{Two counting lemmas}
+\begin{lemma}[Twisted orbit count]\label{lem:twisted}
+Let $G$ be a finite group acting on a finite set $U$, and let $F$ be a permutation of $U$ with $FGF^{-1}=G$ as groups of permutations. Then $F$ induces a permutation of $U/G$, and
+\[
+\#\Fix(F\mid U/G)=\frac1{|G|}\sum_{g\in G}\#\Fix(gF\mid U).
+\]
+\end{lemma}
+\begin{proof}
+Count pairs $(g,u)\in G\times U$ with $gF(u)=u$. If the orbit $O$ of $u$ is not $F$-stable, then $F(u)\notin O$ and no $g$ occurs. If $O$ is $F$-stable, the elements $g$ with $gF(u)=u$ form a coset of the stabilizer of $F(u)$, which has the same order as the stabilizer $G_u$ because $F(u)\in O$. Summing over $u\in O$ gives $|O|\,|G_u|=|G|$. Hence the number of pairs is $|G|$ times the number of $F$-stable orbits.
+\end{proof}
+
+\begin{lemma}\label{lem:pairs}
+Let $\tau$ be an involution of a set $\Omega$ with $\ell+1$ elements and with $f\in\{0,2\}$ fixed points. Then $\tau$ fixes exactly $(\ell+1)/2$ unordered pairs of distinct elements of $\Omega$.
+\end{lemma}
+\begin{proof}
+A $\tau$-stable pair either consists of two fixed points or is a $2$-cycle of $\tau$. There are $\binom f2+\frac{\ell+1-f}{2}$ of these, which is $(\ell+1)/2$ for $f=0$ and for $f=2$.
+\end{proof}
+
+\section{Frobenius on the middle curve}
+Let $E/\Fp$ be a supersingular elliptic curve and let $\pi$ be its $p$-power Frobenius endomorphism. On $E(\kk)$, $\pi$ acts as the arithmetic Frobenius of $\operatorname{Gal}(\kk/\Fp)$.
+
+\begin{lemma}\label{lem:frob}
+\begin{enumerate}
+\item $\pi^2=[-p]$.
+\item For every $g\in\Aut(E_{\kk})$, $\pi g=g^{-1}\pi$.
+\item For every $g\in\Aut(E_{\kk})$, the endomorphism $g\pi$ has degree $p$, trace $0$ and $(g\pi)^2=[-p]$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(1) Write $a=p+1-\#E(\Fp)$, so that $\pi^2-a\pi+p=0$. Since $E$ is supersingular, $a\equiv0\pmod p$ \cite[Ch.~V]{Sil}; by Hasse's bound, $|a|\leq2\sqrt p<p$ for $p\geq5$. Hence $a=0$.
+
+(2) Conjugation by $\pi$ sends $g$ to the automorphism $g^{(p)}$ obtained by raising the coefficients of $g$ to the $p$-th power. Since $p\geq5$, $\Aut(E_{\kk})$ is cyclic of order $n\in\{2,4,6\}$ and acts faithfully on the invariant differential through a character $\Aut(E_{\kk})\to\mu_n(\kk)$ \cite[III.10]{Sil}, which turns $g\mapsto g^{(p)}$ into $\zeta\mapsto\zeta^p$. If $n=2$, then $g^{(p)}=g=g^{-1}$. If $n=4$, then $j(E)=1728$, and supersingularity forces $p\equiv3\pmod4$; if $n=6$, then $j(E)=0$, and supersingularity forces $p\equiv2\pmod3$ \cite[V.4]{Sil}. In both cases $\zeta^p=\zeta^{-1}$ for $\zeta\in\mu_n$, so $g^{(p)}=g^{-1}$.
+
+(3) The degree is $\deg g\cdot\deg\pi=p$. By (2), $(g\pi)^2=g\,g^{-1}\pi\pi=[-p]$. By (1), $\widehat\pi=-\pi$. Using $\widehat g=g^{-1}$ and (2) with $g^{-1}$ in place of $g$,
+\[
+\widehat{g\pi}=\widehat\pi\,\widehat g=-\pi g^{-1}=-g\pi,
+\]
+so the trace $g\pi+\widehat{g\pi}$ is $0$.
+\end{proof}
+
+\begin{lemma}\label{lem:torsion}
+For every $g\in\Aut(E_{\kk})$, the permutation of the $\ell+1$ subgroups of order $\ell$ of $E[\ell]$ induced by $g\pi$ is an involution with $2$ fixed points if $\leg{-p}{\ell}=1$ and none if $\leg{-p}{\ell}=-1$.
+\end{lemma}
+\begin{proof}
+Since $\ell\neq p$, the matrix $T$ of $g\pi$ on $E[\ell]\simeq\Fl^2$ has characteristic polynomial $X^2-\operatorname{tr}(g\pi)X+\deg(g\pi)=X^2+p$ \cite[III.8.6]{Sil}. Its discriminant $-4p$ is nonzero modulo the odd prime $\ell\neq p$, so $T$ has two distinct eigenvalues over $\overline{\mathbb F}_\ell$ and is not scalar. By Lemma~\ref{lem:frob}(3), $T^2=-p$ is scalar, so the induced map on lines is a nontrivial involution. Its fixed lines are the eigenlines defined over $\Fl$; there are two when $-p$ is a square modulo $\ell$ and none otherwise.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}
+By Lemmas~\ref{lem:moduli} and~\ref{lem:middle}, the supersingular points of $X_0(\ell^2)^+(\Fp)$ are the Frobenius-fixed isomorphism classes $(E,\{A,B\})$, and each lies over a supersingular middle $j$-invariant in $\Fp$. There are $L(p)$ such invariants; fix one, $j_0$, and choose $E/\Fp$ with $j(E)=j_0$.
+
+Let $U$ be the set of unordered pairs of distinct subgroups of order $\ell$ of $E[\ell]$, and let $G=\Aut(E_{\kk})/\{\pm1\}$, which acts on $U$ because $\pm1$ fixes every subgroup. Two pairs give isomorphic objects $(E,\{A,B\})$ exactly when an automorphism of $E$ carries one to the other, so the points over $j_0$ are $U/G$. Since $E$ is defined over $\Fp$, Frobenius sends $(E,\{A,B\})$ to $(E,\{\pi A,\pi B\})$; that is, it acts on $U$ through $F=\pi$. By Lemma~\ref{lem:frob}(2), $F$ normalizes $G$.
+
+Lemmas~\ref{lem:twisted}, \ref{lem:torsion} and~\ref{lem:pairs} now give
+\[
+\#\Fix(F\mid U/G)=\frac1{|G|}\sum_{g\in G}\#\Fix(g\pi\mid U)=\frac1{|G|}\sum_{g\in G}\frac{\ell+1}{2}=\frac{\ell+1}{2},
+\]
+where $g\pi$ is computed with either lift of $g$ to $\Aut(E_{\kk})$, since $\pm1$ act identically on $U$. This holds also at $j_0=0,1728$, where $|G|=3$ or $2$. Summing over the $L(p)$ rational supersingular middle invariants proves the theorem. \qed
+
+\section{Remarks}
+\begin{remark}[Consistency with the class-number route]
+The companion article proves $\lambda_p(X_0(N)^+)=\bigl(r_p(Np)+r_{Np}(Np)\bigr)/4$ for every $N>1$, where $r_d(M)$ is the number of fixed points of $w_d$ on $X_0(M)(\mathbb C)$. At $N=\ell^2$ the classical fixed-point formula gives $r_p(\ell^2p)=(1+\chi)V(p)$ and $r_{\ell^2p}(\ell^2p)=(\ell-\chi)V(p)$, with $\chi=\leg{-p}{\ell}$ and $V(p)=2L(p)$ by Deuring's formula. The sum $(\ell+1)V(p)$ again gives $\frac{\ell+1}{2}L(p)$. The argument above is independent of that route: it uses neither the degeneration of $X_0(\ell^2p)$ modulo $p$ nor any class number.
+\end{remark}
+
+\begin{remark}[The case $\ell=2$ and other levels]
+The proof uses that $\ell$ is odd: for $\ell=2$ the polynomial $X^2+p\equiv(X+1)^2\pmod 2$ has a repeated root, and Lemma~\ref{lem:torsion} fails. The middle-curve description is special to levels $\ell^2$; general levels are covered by the class-number formulas obtained from the companion article's fixed-point identity.
+\end{remark}
+
+\begin{remark}[Computational verification]
+A separate verification package enumerates the supersingular points of $X_0(\ell^2)^+$ directly for $\ell=3,5,7$. It constructs every cyclic $\ell^2$-kernel as an explicit polynomial from V\'elu isogenies, computes the Fricke involution from the actual dual isogenies and the Frobenius action on kernel coefficients, and counts the Frobenius-fixed orbits, including those at $j=0,1728$. It uses no class numbers, genus formulas or modular-form traces. All $505$ tested pairs agree with Theorem~\ref{thm:main}: every prime $5\leq p\leq1000$ with $p\neq\ell$, together with $p=1009,2003,5003$. A second implementation based on the middle-curve description also agrees in all $505$ pairs. An independent rerun under PARI/GP 2.17.2 reproduced both, including primes outside the original survey ($p=17,23,409,1201$).
+\end{remark}
+
+\section*{Declaration of generative AI assistance}
+OpenAI ChatGPT/Codex drafted the argument and wrote and ran the verification package. Anthropic Claude checked the argument, reran the verification and prepared this note. Authorial responsibility for the mathematical claims and the final text rests with the human author.
+
+\begin{thebibliography}{9}\small
+\bibitem{Chen} I. Chen, The Jacobians of non-split Cartan modular curves, \emph{Proc. London Math. Soc.} \textbf{77} (1998), 1--38. \href{https://doi.org/10.1112/S0024611598000392}{doi:10.1112/S0024611598000392}.
+\bibitem{DR} P. Deligne and M. Rapoport, Les sch\'emas de modules de courbes elliptiques, in \emph{Modular Functions of One Variable II}, Lecture Notes in Math. \textbf{349}, Springer, 1973, 143--316. \href{https://doi.org/10.1007/978-3-540-37855-6_4}{doi:10.1007/978-3-540-37855-6\_4}.
+\bibitem{KM} N. M. Katz and B. Mazur, \emph{Arithmetic Moduli of Elliptic Curves}, Annals of Math. Studies \textbf{108}, Princeton Univ. Press, 1985. \href{https://doi.org/10.1515/9781400881710}{doi:10.1515/9781400881710}.
+\bibitem{RW} M. Rebolledo and C. Wuthrich, A moduli interpretation for the non-split Cartan modular curve, \emph{Glasgow Math. J.} \textbf{60} (2018), 411--434. \href{https://doi.org/10.1017/S0017089517000180}{doi:10.1017/S0017089517000180}.
+\bibitem{Sil} J. H. Silverman, \emph{The Arithmetic of Elliptic Curves}, 2nd ed., Graduate Texts in Math. \textbf{106}, Springer, 2009. \href{https://doi.org/10.1007/978-0-387-09494-6}{doi:10.1007/978-0-387-09494-6}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,81 @@
+% Suggested computational-appendix insertion. Uses the article's existing macros.
+% All counts below are populated only after the complete CSV coverage audit.
+% Add inside the existing bibliography:
+% \bibitem{MMP2025} M. Mula, N. Murru and F. Pintore, On random sampling of
+% supersingular elliptic curves, Ann. Mat. Pura Appl. 204 (2025), 1293--1335.
+% \href{https://doi.org/10.1007/s10231-024-01528-x}{doi:10.1007/s10231-024-01528-x}.
+\subsection{Direct verification at square levels}
+\label{app:direct-square-levels}
+
+The standalone PARI/GP program \texttt{verify\_square\_direct.gp} checks
+\[
+\lambda_p(X_0(\ell^2)^+)=\frac{\ell+1}{2}L(p),\qquad \ell=3,5,7,
+\]
+by enumerating the supersingular coarse points in characteristic $p$.
+It uses no genus formula, class number, modular-form trace or
+characteristic-zero fixed-point count. The value $L(p)$ is obtained directly
+from the supersingular $j$-values, independently of Deuring's formula.
+
+The supersingular set is generated from the roots in $\mathbb F_{p^2}$ of the
+Legendre Hasse polynomial
+\[
+H_p(z)=\sum_{i=0}^{(p-1)/2}\binom{(p-1)/2}{i}^{\!2}z^i,
+\qquad j(z)=256\frac{(z^2-z+1)^3}{z^2(z-1)^2}.
+\]
+This uses the classical Hasse criterion; see \cite[Proposition 4.19]{MMP2025}.
+For each resulting $j$, the program constructs a short Weierstrass model whose
+$p^2$-Frobenius is scalar, and enumerates its $\ell+1$ order-$\ell$ subgroup
+kernels from its division polynomial. V\'elu's formulas construct the isogenies.
+The unique second step whose composite kernel is $E[\ell]$ is discarded.
+The remaining $\ell(\ell+1)$ composite kernels are checked to be distinct.
+They are exactly the cyclic subgroups of order $\ell^2$.
+
+The full subgroup kernel is retained, rather than only its triple of
+$j$-values. Quotienting these kernels by the source automorphisms produces the
+geometric coarse points of $X_0(\ell^2)$. In particular the extra automorphisms
+at $j=0,1728$ are included. The induced Frobenius $F$ raises coefficients to
+their $p$-th powers. Fricke reversal $W$ is constructed from the actual dual
+isogenies, with any intermediate canonical-model automorphism corrected.
+For every edge the program verifies the complete rational $x$-map identity
+$x(\widehat\phi(\phi(P)))=x([\ell]P)$. The sign on the ordinate is irrelevant
+to the subgroup kernel. It also checks on every coarse point that
+\[
+F^2=W^2=1,\qquad FW=WF.
+\]
+An orbit $\{P,W(P)\}$ is rational precisely when $F(P)$ belongs to that orbit.
+The enumeration therefore counts points with Frobenius-swapped lifts as well
+as points with rational lifts. A separate finite-set check verifies that the
+count is $(\#\Fix(F)+\#\Fix(WF))/2$.
+
+Run under PARI/GP 2.15.4, the enumeration agrees with the formula for every
+prime $5\leq p\leq1000$ with $p\ne\ell$, and separately for
+$p=1009,2003,5003$, at each of the three levels. There are $505$ distinct
+admissible pairs ($169$ at level $9$, and $168$ each at levels $25$ and $49$),
+with no mismatches and no skipped admissible cases. The computation constructs
+$695{,}714$ cyclic subgroup kernels and $685{,}906$ coarse covering-curve points.
+The initial $178$ comparisons through $300$ also agree on rerunning.
+A second enumeration uses the middle curve and an unordered pair of distinct
+order-$\ell$ subgroups; it shares the initial Hasse-set and prime-order kernel
+constructors, but uses no V\'elu or dual-map reversal routines. It agrees in all
+$505$ cases and checks $5{,}260$ rational middle-invariant fibres.
+The CSV, kernel and permutation snapshots, source code and coverage audit
+are supplied with the verification package.
+
+At $p=13$ the only supersingular invariant is $j=5$, so $L(13)=1$.
+The complete direct enumeration gives
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$\ell^2$ & $X_0$ points & Fricke orbits & Rational orbits & Swapped lifts\\\midrule
+9 & 12 & 6 & 2 & 2\\
+25 & 30 & 15 & 3 & 3\\
+49 & 56 & 28 & 4 & 3\\\bottomrule
+\end{tabular}
+\end{center}
+Every path here has the same triple $(5,5,5)$ of $j$-values, which demonstrates
+why collapsing paths to distinct triples would give an incorrect count.
+The package includes every kernel and both permutations for these examples,
+and a separate audit that reloads and recounts them.
+
+These computations test the rational supersingular point count directly.
+They do not compute a normalized Hauptmodul polynomial and do not replace the
+geometric proof or address additional moonshine normalizer actions.
