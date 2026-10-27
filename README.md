@@ -1,5 +1,7 @@
 # Nakaya's Conjectures 5 and 6: linear factors and degree of Fricke supersingular polynomials
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23698277.svg)](https://doi.org/10.5281/zenodo.23698277)
+
 Manuscript and exact PARI/GP verification for a deduction of two conjectures of Nakaya (*J. Number Theory* 204 (2019)) on the supersingular polynomial ss<sub>p</sub><sup>(N\*)</sup> attached to the Fricke group Γ<sub>0</sub>(N)<sup>+</sup>, at every prime level N ∈ {3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71} and every prime p ≥ 5, p ≠ N:
 
 - **Conjecture 5:** a class-number formula for the number of linear factors of ss<sub>p</sub><sup>(N\*)</sup> over 𝔽<sub>p</sub> (Corollary 1.2);
@@ -42,7 +44,7 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 
 ## Reproducing the verification
 
-Table 1 of the paper (Appendix A.1) lists every survey with its command, PARI version, whether it rebuilds the Hauptmoduli or uses the stored relations, and its expected final output. When citing the computations, cite a tagged release or exact commit of this repository; no archival DOI has been assigned.
+Table 1 of the paper (Appendix A.1) lists every survey with its command, PARI version, whether it rebuilds the Hauptmoduli or uses the stored relations, and its expected final output. The version matching the manuscript is release v1.0, archived on Zenodo as doi:10.5281/zenodo.23698277.
 
 **PARI/GP 2.15.x** (as used for the recorded run):
 ```sh
@@ -88,6 +90,12 @@ gp -fq -s 1000000000 c6_direct.gp    # Conjecture 6, direct count from Phi_N
 Logs: `results/c6_degrees.log`, `results/c6_direct.log`. The second implementation's own `SHA256SUMS.json` also lists a draft report (`Report.*`) that the merged paper supersedes and that is not included; every other listed file matches its checksum.
 
 Finite agreement checks the implementation and normalisations; it is not a substitute for the proofs.
+
+## How to cite
+
+Jordan, D. (2026). *Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials: manuscript and PARI/GP verification* (Version v1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23698277
+
+The v1.0 release is the version matching the manuscript.
 
 ## AI assistance
 
