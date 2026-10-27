@@ -23,6 +23,11 @@ Audit date: 26 October 2026. A direct check means that the relevant primary text
 
 Aricheta's theorem is given as a faithful full-hypothesis restatement, rather than claiming a long verbatim quotation. The short Q_p definition is quoted verbatim. The mathematical content and the quotient convention were checked against the published theorem and its proof. Thus the requested long verbatim reproduction is not supplied, while the requested substantive hypothesis and definition check is supplied.
 
+| Im–Jeon–Kim, published (second pass) | Proposition 2.1, pp. 1277–1278 | Published page checked directly (27 October 2026). The Q = 3 term (product over p \| N/3 of 1 + (−3/p)) and the restriction of the h(−Q) term to 4 ≤ Q ≡ 3 (mod 4) give r_3(3p) = 2(1 + (−3/p)) and r_3(3) = 2, as used in Lemma 6.1(2). The bibliography now cites the published version. |
+| Silverman, *The Arithmetic of Elliptic Curves* (2nd ed.) | Theorem V.4.1(c), p. 149 | Checked directly. One supersingular curve in characteristic 3; ⌊p/12⌋ + {0, 1, 1, 2} for p ≥ 5. Used for d_N = g(X_0(N)) + 1. |
+| Morton (2021b), arXiv:2002.04134 | Introduction; Section 7 | Introduction states a proof of Nakaya's degree conjecture for N = 5 in Section 7, with formula (p − (−1/p))/4 + (1 − (−5/p))/2, which agrees with (C6) at N = 5, and says a similar proof gives N = 7. |
+| Nakaya (2019), Conjecture 6 | Section 4.2 | Statement checked against the arXiv text: range N ∈ 𝔖 − {2}, p ≥ 5, p ≠ N, with deg ss_N(X); the paper states that N = 3 holds. |
+
 ## Mathematical points resolved in the revision
 
 The main proof uses Riemann–Hurwitz for the single induced involution. Cyclic point stabilizers are used only to justify the two-to-one lifting count and the absence of common fixed points. The former Klein-four computation is unnecessary.

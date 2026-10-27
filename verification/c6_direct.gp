@@ -11,10 +11,10 @@
 \\   (b) N prime outside the set: D = (C6) - (1 - (-N/p)) g(X_0(N)^+).
 \\   (c) Level 3 fixed points: r_3(3p) = 2(1 + (-3/p)) via Atkin-Lehner traces.
 \\ Run from this directory:  gp -fq -s 1000000000 c6_direct.gp
-\\ Needs ../../../verification/verify_general.gp (set C6_GENERAL to override).
+\\ Needs verify_general.gp in this directory (set C6_GENERAL to override).
 
 VG_NO_RUN=1;
-read(if(type(C6_GENERAL)=="t_STR", C6_GENERAL, "../../../verification/verify_general.gp"));
+read(if(type(C6_GENERAL)=="t_STR", C6_GENERAL, "verify_general.gp"));
 
 vgD(N,p,PHI) = {
   my(w=ffgen([p,2],'w), o=w^0, S=vg_roots(subst(vg_ss(p),X,X*o))[1], js=vector(#S,i,S[i][1]));

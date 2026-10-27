@@ -9,7 +9,7 @@ built from the stored Hauptmodul relations of the main verification
 The right-hand side of (C6) is evaluated in exact rational arithmetic, with
 d_N = number of supersingular j-invariants in characteristic N.
 
-Usage: python c6_degrees.py [MAXP] [REPO_ROOT]     (defaults: 1500, three levels up)
+Usage: python c6_degrees.py [MAXP] [REPO_ROOT]     (defaults: 1500, the repository root)
 Requires: cypari2.
 """
 import csv, sys, time
@@ -18,7 +18,7 @@ from pathlib import Path
 import cypari2
 
 MAXP = int(sys.argv[1]) if len(sys.argv) > 1 else 1500
-ROOT = Path(sys.argv[2]) if len(sys.argv) > 2 else Path(__file__).resolve().parents[3]
+ROOT = Path(sys.argv[2]) if len(sys.argv) > 2 else Path(__file__).resolve().parents[1]
 VER = ROOT / "verification"
 LEVELS = [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
 gp = cypari2.Pari(); gp.allocatemem(2 * 10**9)
