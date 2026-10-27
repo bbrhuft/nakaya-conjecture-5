@@ -1,0 +1,30 @@
+N=3 p=5
+ss_p(j)=X
+S(T)=T^2 + 2*T
+factor=[T, 1; T + 2, 1]
+gC=1 rN=0 genusA=1
+
+N=3 p=7
+ss_p(j)=X + 1
+S(T)=T + 6
+factor=Mat([T + 6, 1])
+gC=1 rN=4 genusA=0
+
+N=3 p=11
+ss_p(j)=X^2 + 10*X
+S(T)=T^3 + 7*T^2 + 10*T
+factor=[T, 1; T + 2, 1; T + 5, 1]
+gC=3 rN=0 genusA=2
+
+N=3 p=13
+ss_p(j)=X + 8
+S(T)=T^2 + 6*T + 5
+factor=[T + 1, 1; T + 5, 1]
+gC=3 rN=4 genusA=1
+
+N=11 p=13
+ss_p(j)=X + 8
+S(T)=T^8 + T^7 + 5*T^6 + 5*T^5 + T^4 + 4*T^3 + 2*T^2 + 9*T + 11
+factor=[T + 2, 1; T + 4, 1; T + 5, 1; T + 6, 1; T + 11, 1; T + 12, 1; T^2 + 2, 1]
+gC=13 rN=0 genusA=7
+

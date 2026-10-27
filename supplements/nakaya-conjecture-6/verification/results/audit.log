@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-27",
+  "direct_cases": 883,
+  "baseline_cases": 827,
+  "heldout_cases": 56,
+  "heldout_primes": [
+    307,
+    401,
+    503,
+    1009
+  ],
+  "p_less_than_N_cases": 89,
+  "levels": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    41,
+    47,
+    59,
+    71
+  ],
+  "ordinary_polynomial_crosschecks": 64,
+  "full_cusp_space_trace_cases": 39,
+  "mismatches": 0,
+  "python": "3.12.14",
+  "pari": "2.15.4",
+  "limitations": "Finite arithmetic checks are not a proof. Direct construction adapts inherited code. The trace comparison uses a distinct computation, but the same PARI runtime. No all-883-pair trace survey was run."
+}

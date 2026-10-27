@@ -1,0 +1,3 @@
+(a) Nakaya levels 11-31, p <= 700: 167 pairs, skipped 21, mismatches []
+(b) levels 37-73 (genus of X_0(N)^+ = [1, 1, 1, 1, 2, 2]), p <= 600: 87 pairs, skipped 48, mismatches []
+(c) level 3, r_3(3p) = 2(1 + (-3/p)) at 12 primes 5..43: mismatches []

@@ -1,0 +1,16 @@
+Part 1 (recorded degrees, p <= 300): 827 pairs, mismatches: none
+N=3: 177 primes in 1 s
+N=5: 177 primes in 1 s
+N=7: 177 primes in 2 s
+N=11: 177 primes in 2 s
+N=13: 177 primes in 3 s
+N=17: 177 primes in 4 s
+N=19: 177 primes in 4 s
+N=23: 177 primes in 5 s
+N=29: 177 primes in 6 s
+N=31: 177 primes in 7 s
+N=41: 177 primes in 11 s
+N=47: 177 primes in 12 s
+N=59: 177 primes in 17 s
+N=71: 177 primes in 16 s
+Part 2 (fresh degrees, 300 < p <= 1500): 2478 pairs, mismatches: none
