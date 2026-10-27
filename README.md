@@ -14,10 +14,11 @@ Together with Aricheta's theorem, they determine the factorization over 𝔽_p: 
 1. Nakaya's Hauptmodul is an integral coordinate on X₀(N)⁺, so the roots of ss_p^(N*) are the supersingular points of X₀(N)⁺ in characteristic p, and the linear factors are the 𝔽_p-rational ones (Proposition 5.1).
 2. The Deligne–Rapoport model of X₀(Np) mod p is two copies of X₀(N) glued at the supersingular points. Quotienting by Atkin–Lehner involutions and comparing genera gives:
    - the rational count, λ_p(X₀(N)⁺) = (r_p(Np) + r_Np(Np))/4, a count of fixed points of Atkin–Lehner involutions over ℂ (Theorem 1.1);
-   - the total count, D = 1 + g(X₀(Np)/⟨w_N⟩) in genus zero (Lemma 3.1).
+   - the total count, D = 1 + g(X₀(Np)/⟨w_N⟩) in genus zero (Lemma 3.1);
+   - Aricheta's identity g(B) = g(X) + (D − λ)/2, rederived from the same quotient model (Lemma 3.2).
 3. Ogg's fixed-point formula and the genus formula for X₀(Np) turn these into Nakaya's two formulas (Sections 4–6).
 
-For N = 7 this settles the case of Conjecture 5 that Morton (arXiv:2206.09801v5, §3) had reduced to his open Conjectures 2–3. It does not prove those finer conjectures.
+For N = 7 this settles the case of Conjecture 5 that Morton (*Ramanujan J.* 63 (2024), §3) had reduced to his Conjectures 1–3, of which he proved Conjecture 1 (Theorem A). It does not prove his finer Conjectures 2–3.
 
 Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingular points (Corollary 5.2) and, with a genus correction, all supersingular points (Proposition 6.2) on X₀(N)⁺ at **every odd prime level N**, including levels where X₀(N)⁺ has positive genus.
 
@@ -25,7 +26,7 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 
 | Path | Contents |
 |---|---|
-| `paper/` | LaTeX source of the article, `Nakaya_Conjectures_5_6.tex` (compile with `pdflatex` twice; no external files needed) |
+| `paper/` | The article: LaTeX source `Nakaya_Conjectures_5_6.tex` (compile with `pdflatex` twice; no external files needed) and the compiled PDF |
 | `verification/verify_nakaya.gp` | Self-contained PARI/GP verification: builds the Hauptmoduli from modular-form spaces, computes ss_p^(N*), and compares the direct root count with Nakaya's formula and with independently enumerated fixed-point counts |
 | `verification/run_extended.py` | cypari2 runner that reuses the stored relations (works on PARI 2.17) and extends the range |
 | `verification/verify_general.gp` | Independent direct count of rational supersingular points at prime levels inside and outside 𝔖, from the modular polynomial Φ_N only (no Hauptmodul, genus or fixed-point formula) |
@@ -42,6 +43,8 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 
 ## Reproducing the verification
 
+Table 1 of the paper (Appendix A.1) lists every survey with its command, PARI version, whether it rebuilds the Hauptmoduli or uses the stored relations, and its expected final output. When citing the computations, cite a tagged release or exact commit of this repository; no archival DOI has been assigned.
+
 **PARI/GP 2.15.x** (as used for the recorded run):
 ```sh
 cd verification
@@ -49,7 +52,7 @@ gp -fq -s 256000000 verify_nakaya.gp
 # expected final line: ALL PASSED: 827 cases   (all 14 levels, 5 ≤ p ≤ 300)
 ```
 
-**PARI/GP 2.17.x**: `verify_nakaya.gp` stops at N = 13 with `unexpected Hauptmodul dimension`, because `mfatkininit` behaves differently for the weight-12 space in that version. Use the stored relations instead:
+**PARI/GP 2.17.x**: `verify_nakaya.gp` stops at N = 13 with `unexpected Hauptmodul dimension`. In that environment the normalized Atkin–Lehner matrix from `mfatkininit(mfinit([13,12],4),13)` does not square to the identity, and its +1 eigenspace has dimension 7 instead of 8 (paper, Appendix A.5). The cause has not been isolated, and no PARI defect is claimed. Use the stored relations instead:
 ```sh
 pip install cypari2
 cd verification
@@ -69,7 +72,7 @@ gp -fq -s 1000000000 c6_direct.gp    # Conjecture 6, direct count from Phi_N
 | `verify_general.gp`, levels 37–73 (outside 𝔖) | 2.17.2 | p ≤ 1300, p ≡ 1 (mod 12) | 238 | 0 |
 | `verify_general.gp`, levels 79–127 (outside 𝔖) | 2.17.2 | p ≤ 600, p ≡ 1 (mod 12) | 58 | 0 |
 
-**General-level check** (Appendix A.5 of the paper). Run in PARI/GP with `gp -fq -s 512000000 verify_general.gp`, or set `VG_LEVELS` and `VG_MAXP` before `read`. Points over a Frobenius-stable pair (j, j′) with several isogenies are separated by the branch tangents of Φ_N(x, y) = 0; 10,881 such points were resolved. 237 small pairs (all with p < 4N) had a repeated tangent slope and were skipped and reported, not guessed. Primes p ≢ 1 (mod 12) are not covered by this check. Full log: `results/general_levels_run.log`.
+**General-level check** (Appendix A.6 of the paper). Run in PARI/GP with `gp -fq -s 512000000 verify_general.gp`, or set `VG_LEVELS` and `VG_MAXP` before `read`. Points over a Frobenius-stable pair (j, j′) with several isogenies are separated by the branch tangents of Φ_N(x, y) = 0; 10,881 such points were resolved. 237 small pairs (all with p < 4N) had a repeated tangent slope and were skipped and reported, not guessed. Primes p ≢ 1 (mod 12) are not covered by this check. Full log: `results/general_levels_run.log`.
 
 ### Conjecture 6 (degree)
 
@@ -89,7 +92,7 @@ Finite agreement checks the implementation and normalisations; it is not a subst
 
 ## AI assistance
 
-OpenAI ChatGPT/Codex and Anthropic Claude assisted with the exposition, literature and source checking, verification code, and editing, as disclosed in the manuscript. Responsibility for the mathematics rests with the human author.
+OpenAI ChatGPT/Codex and Anthropic Claude assisted with the exposition, literature and source checking, verification code, and editing, as disclosed in the manuscript. Responsibility for the mathematics rests with the author.
 
 ## Licence
 
