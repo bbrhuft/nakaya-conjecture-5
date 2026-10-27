@@ -2,7 +2,7 @@
 
 ## Status and contribution
 
-The manuscript is a seventeen-page journal-style draft before any venue-specific reformatting, covering both Nakaya's Conjecture 5 (linear factors) and Conjecture 6 (degree); the two were merged into one article on 27 October 2026, and the title was changed to "Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials". The author block gives David Jordan, Maynooth University. The mathematical contribution is framed as an explicit uniform deduction of Nakaya's formula from classical modular-curve geometry, Aricheta's theorem, and the fixed-point class-number formula. The arbitrary-level statement is made precise, but is itself a formal consequence of older general results. Beneish–Wen's Theorem 6.5 already implies the same geometric identity for squarefree total levels Np after Riemann–Hurwitz, although their preprint does not mention Nakaya. Morton's E7 paper (Ramanujan J. 63 (2024), Section 3) had reduced the N = 7 case to his Conjectures 1–3, proving Conjecture 1 as Theorem A; the article settles N = 7 unconditionally, without proving his Conjectures 2–3. A novelty assessment by a specialist is essential before presenting the article as original research. No priority claim is made.
+The manuscript is an eighteen-page journal-style draft before any venue-specific reformatting, covering both Nakaya's Conjecture 5 (linear factors) and Conjecture 6 (degree); the two were merged into one article on 27 October 2026, and the title was changed to "Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials". The author block gives David Jordan, Maynooth University. The mathematical contribution is framed as an explicit uniform deduction of Nakaya's formula from classical modular-curve geometry, Aricheta's theorem, and the fixed-point class-number formula. The arbitrary-level statement is made precise, but is itself a formal consequence of older general results. Beneish–Wen's Theorem 6.5 already implies the same geometric identity for squarefree total levels Np after Riemann–Hurwitz, although their preprint does not mention Nakaya. Morton's E7 paper (Ramanujan J. 63 (2024), Section 3) had reduced the N = 7 case to his Conjectures 1–3, proving Conjecture 1 as Theorem A; the article settles N = 7 unconditionally, without proving his Conjectures 2–3. A novelty assessment by a specialist is essential before presenting the article as original research. No priority claim is made.
 
 The proof uses the single-involution simplification supplied in the revision instructions. The cyclic-stabilizer explanation remains in the lifting lemma, where it is required. The flat proper quotient and structure-sheaf argument replaces the earlier resolution discussion. The article explicitly handles rational quotient points whose lifts are swapped by Frobenius.
 
@@ -44,6 +44,10 @@ Before choosing a venue, settle whether the explicit all-level deduction is alre
 - The AI declaration now says "the author".
 
 Open: the second implementation (`conjecture6_second_implementation/`) rebuilds the Hauptmoduli and was run only under PARI 2.15.4; it probably meets the same 2.17 failure but has not been tested there. No tagged release exists yet.
+
+## Revision of 27 October 2026 (literature review)
+
+Section 3.1 was expanded after reading Furumoto–Hasegawa, Xue, Accola and Padurariu–Park–Voight directly (see SOURCE_AUDIT.md, third pass). Xue (2009, Theorem 2) already proves the level-one case of Theorem 1.1 by the same route; this is now credited. Aricheta is credited for the quadratic-factor count in the abstract, introduction and Corollary 6.3. Contact details moved to the end of the paper.
 
 ## Conjecture 6 (added in the merged version)
 

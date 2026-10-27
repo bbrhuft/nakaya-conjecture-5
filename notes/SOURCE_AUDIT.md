@@ -42,3 +42,15 @@ The computational appendix does not assume the expected count to construct the H
 ## Remaining verification limits
 
 The Katz–Mazur pagination is now verified (p. 390). Morton's E7 numbering is verified in the published article. Neither point is a mathematical step on which the proof depends. A specialist's reading of the whole argument and of its novelty remains outstanding.
+
+## Third pass: sources for the expanded Section 3.1 (27 October 2026)
+
+| Source | Pinpoint or item | Verification and use |
+|---|---|---|
+| Furumoto–Hasegawa, Tokyo J. Math. 22 (1999) | Remark 2, pp. 108–109; Section 5, pp. 116–117, Figures 1–2 | **Checked directly (scan).** Remark 2 gives the full fixed-point formula for w_{N'} on X_0(N), including factors at 2 and the exceptional N' = 2, 3, 4 terms; it agrees with (4.1) and Lemma 6.1(2), and is now cited beside Im–Jeon–Kim. Section 5 describes the two shapes of the special fibre of X_0(pM)/W' (two copies, or one component with self-crossings) qualitatively, citing Deligne–Rapoport; it gives no node counts or genus formulas. A literature report had cited "Proposition 2.3"; the correct item is Remark 2. |
+| Xue, J. Number Theory 129 (2009), 2072–2092 | Introduction; Section 7.1, Theorem 2, p. 2088; eq. (7.5) | **Checked directly.** Minimal resolution over Z[1/6] of X_0(N)/W_M, for p > 3, with conditions on the powers of 2 and 3 in N. Theorem 2 proves Deuring's formula via the special fibre of X_0(p)/W_p (a rational curve with ½S_{p²} nodes), the genus of X_0(p) from DR VI.6.9, Riemann–Hurwitz and Ogg p. 454: the N = 1 case of Theorem 1.1 by the same route; now credited in Section 3.1 and Remark 7.1. Eq. (7.5), with proof left to the reader, gives H at N' = 1 where Theorem 2 gives H/2, so it appears to omit a factor ½; it is not cited. |
+| Accola, Proc. AMS 25 (1970), 598–602 | Theorem 1, Corollary, eq. (11), p. 600; Application, p. 601 | **Checked directly.** For a Klein four-group V, g(C) + 2g(C/V) = g(C/⟨u⟩) + g(C/⟨v⟩) + g(C/⟨uv⟩). With Riemann–Hurwitz this is equivalent to Lemma 3.4 (checked by hand); cited after Lemma 3.4. |
+| Padurariu–Park–Voight, arXiv:2607.11248v1 (13 July 2026) | Lemma 3.1, Corollary 3.2, Proposition 3.3, Theorem 1.2 | **Checked directly.** Corollary 3.2: a curve with a semistable model with irreducible geometric special fibre has good reduction iff there are no nodes. Combined with Lemma 3.2 this gives: B has good reduction at p iff Q_p(X) = 0. This one-line consequence is stated in Section 3.1 as an observation, not attributed to PPV. Beneish–Wen compare with PPV in their Remark 6.8. |
+| Beneish–Wen, third pass | Introduction; bibliography | Bibliography confirms Xue (2009) and PPV (2026). Beneish–Wen do not cite Furumoto–Hasegawa, Aricheta or Kluit. The arXiv identifier 2609.39725v1 is printed on the preprint itself. |
+
+Not cited (unread): Kani–Rosen (1989), Kluit (1977), Edixhoven (1990), Jao (2005, J. Number Theory 113, 208–225; cited by Xue and possibly relevant).
