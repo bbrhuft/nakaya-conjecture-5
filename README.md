@@ -1,37 +1,36 @@
 # Nakaya's Conjectures 5 and 6: linear factors and degree of Fricke supersingular polynomials
 
-Manuscript and exact PARI/GP verification for a deduction of two conjectures of Nakaya (*J. Number Theory* 204 (2019)) on the supersingular polynomial ss_p^(N*) attached to the Fricke group Γ₀(N)⁺, at every prime level N ∈ {3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71} and every prime p ≥ 5, p ≠ N:
+Manuscript and exact PARI/GP verification for a deduction of two conjectures of Nakaya (*J. Number Theory* 204 (2019)) on the supersingular polynomial ss<sub>p</sub><sup>(N\*)</sup> attached to the Fricke group Γ<sub>0</sub>(N)<sup>+</sup>, at every prime level N ∈ {3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71} and every prime p ≥ 5, p ≠ N:
 
-- **Conjecture 5:** a class-number formula for the number of linear factors of ss_p^(N*) over 𝔽_p (Corollary 1.2);
-- **Conjecture 6:** a formula for the degree of ss_p^(N*), the total number of supersingular points on X₀(N)⁺ (Corollary 1.3).
+- **Conjecture 5:** a class-number formula for the number of linear factors of ss<sub>p</sub><sup>(N\*)</sup> over 𝔽<sub>p</sub> (Corollary 1.2);
+- **Conjecture 6:** a formula for the degree of ss<sub>p</sub><sup>(N\*)</sup>, the total number of supersingular points on X<sub>0</sub>(N)<sup>+</sup> (Corollary 1.3).
 
-Together with Aricheta's theorem, they determine the factorization over 𝔽_p: ss_p^(N*) has that many linear factors and exactly g(X₀(Np)/⟨w_N, w_p⟩) irreducible quadratic factors (Corollary 6.3).
+Together with Aricheta's theorem, they determine the factorization over 𝔽<sub>p</sub>: ss<sub>p</sub><sup>(N\*)</sup> has that many linear factors and exactly g(X<sub>0</sub>(Np)/⟨w<sub>N</sub>, w<sub>p</sub>⟩) irreducible quadratic factors (Corollary 6.3).
 
 > **Status: draft, not yet reviewed by a specialist.** The proofs assemble known results (Deligne–Rapoport, Aricheta's Theorem 3.1, Ogg's and Im–Jeon–Kim's fixed-point formulas, the genus formula) and make no priority claim for the underlying geometric identities. Nakaya proved N = 3 of Conjecture 6, and Morton proved N = 5 and N = 7. See `notes/AUTHOR_NOTES.md`.
 
 ## Idea of the proofs
 
-1. Nakaya's Hauptmodul is an integral coordinate on X₀(N)⁺, so the roots of ss_p^(N*) are the supersingular points of X₀(N)⁺ in characteristic p, and the linear factors are the 𝔽_p-rational ones (Proposition 5.1).
-2. The Deligne–Rapoport model of X₀(Np) mod p is two copies of X₀(N) glued at the supersingular points. Quotienting by Atkin–Lehner involutions and comparing genera gives:
-   - the rational count, λ_p(X₀(N)⁺) = (r_p(Np) + r_Np(Np))/4, a count of fixed points of Atkin–Lehner involutions over ℂ (Theorem 1.1);
-   - the total count, D = 1 + g(X₀(Np)/⟨w_N⟩) in genus zero (Lemma 3.1);
-   - Aricheta's identity g(B) = g(X) + (D − λ)/2, rederived from the same quotient model (Lemma 3.2).
-3. Ogg's fixed-point formula and the genus formula for X₀(Np) turn these into Nakaya's two formulas (Sections 4–6).
+1. Nakaya's Hauptmodul is an integral coordinate on X<sub>0</sub>(N)<sup>+</sup>, so the roots of ss<sub>p</sub><sup>(N\*)</sup> are the supersingular points of X<sub>0</sub>(N)<sup>+</sup> in characteristic p, and the linear factors are the 𝔽<sub>p</sub>-rational ones (Proposition 5.1).
+2. The Deligne–Rapoport model of X<sub>0</sub>(Np) mod p is two copies of X<sub>0</sub>(N) glued at the supersingular points. Quotienting by Atkin–Lehner involutions and comparing genera gives the three identities displayed below: the rational count (Theorem 1.1), the total count in genus zero (Lemma 3.1), and Aricheta's identity, rederived from the same quotient model (Lemma 3.2).
+3. Ogg's fixed-point formula and the genus formula for X<sub>0</sub>(Np) turn these into Nakaya's two formulas (Sections 4–6).
+
+Here X = X<sub>0</sub>(N)<sup>+</sup>, B = X<sub>0</sub>(Np)/⟨w<sub>N</sub>, w<sub>p</sub>⟩, D is the total number of supersingular points on X in characteristic p, and λ = λ<sub>p</sub>(X) is the number of 𝔽<sub>p</sub>-rational ones. The terms r<sub>p</sub>(Np) and r<sub>Np</sub>(Np) count fixed points of the Atkin–Lehner involutions w<sub>p</sub> and w<sub>Np</sub> on X<sub>0</sub>(Np) over ℂ.
 
 For N = 7 this settles the case of Conjecture 5 that Morton (*Ramanujan J.* 63 (2024), §3) had reduced to his Conjectures 1–3, of which he proved Conjecture 1 (Theorem A). It does not prove his finer Conjectures 2–3.
 
-Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingular points (Corollary 5.2) and, with a genus correction, all supersingular points (Proposition 6.2) on X₀(N)⁺ at **every odd prime level N**, including levels where X₀(N)⁺ has positive genus.
+Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingular points (Corollary 5.2) and, with a genus correction, all supersingular points (Proposition 6.2) on X<sub>0</sub>(N)<sup>+</sup> at **every odd prime level N**, including levels where X<sub>0</sub>(N)<sup>+</sup> has positive genus.
 
 ## Repository layout
 
 | Path | Contents |
 |---|---|
 | `paper/` | The article: LaTeX source `Nakaya_Conjectures_5_6.tex` (compile with `pdflatex` twice; no external files needed) and the compiled PDF |
-| `verification/verify_nakaya.gp` | Self-contained PARI/GP verification: builds the Hauptmoduli from modular-form spaces, computes ss_p^(N*), and compares the direct root count with Nakaya's formula and with independently enumerated fixed-point counts |
+| `verification/verify_nakaya.gp` | Self-contained PARI/GP verification: builds the Hauptmoduli from modular-form spaces, computes ss<sub>p</sub><sup>(N\*)</sup>, and compares the direct root count with Nakaya's formula and with independently enumerated fixed-point counts |
 | `verification/run_extended.py` | cypari2 runner that reuses the stored relations (works on PARI 2.17) and extends the range |
-| `verification/verify_general.gp` | Independent direct count of rational supersingular points at prime levels inside and outside 𝔖, from the modular polynomial Φ_N only (no Hauptmodul, genus or fixed-point formula) |
+| `verification/verify_general.gp` | Independent direct count of rational supersingular points at prime levels inside and outside 𝔖, from the modular polynomial Φ<sub>N</sub> only (no Hauptmodul, genus or fixed-point formula) |
 | `verification/c6_degrees.py` | Checks Nakaya's degree formula (Conjecture 6) against the polynomial degrees from the stored relations |
-| `verification/c6_direct.gp` | Direct count of all supersingular points from Φ_N; checks Conjecture 6, Proposition 6.2 and the level-3 fixed-point count |
+| `verification/c6_direct.gp` | Direct count of all supersingular points from Φ<sub>N</sub>; checks Conjecture 6, Proposition 6.2 and the level-3 fixed-point count |
 | `verification/conjecture6_second_implementation/` | Separate PARI/GP implementation of the degree check, with an Atkin–Lehner trace computation (PARI 2.15.4), its results and its own README |
 | `verification/trace_example.gp` | Characteristic-zero Atkin–Lehner trace check of the worked example N = 11, p = 13 |
 | `verification/relations/`, `polynomials/` | Exact modular relations and supersingular polynomials for each level |
@@ -39,7 +38,7 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 | `verification/results/` | CSV, logs, summary JSON, and the original package's SHA-256 manifest |
 | `notes/` | Source audit and author notes |
 | `exploratory/` | Pre-proof numerical experiments (history only) |
-| `supplements/prime-square-levels/` | Separate note proving λ_p(X₀(ℓ²)⁺) = (ℓ+1)/2 · L(p), with its own direct-enumeration verification package (not part of the main paper) |
+| `supplements/prime-square-levels/` | Separate note proving λ<sub>p</sub>(X<sub>0</sub>(ℓ<sup>2</sup>)<sup>+</sup>) = ((ℓ+1)/2) · L(p), with its own direct-enumeration verification package (not part of the main paper) |
 
 ## Reproducing the verification
 
@@ -72,7 +71,7 @@ gp -fq -s 1000000000 c6_direct.gp    # Conjecture 6, direct count from Phi_N
 | `verify_general.gp`, levels 37–73 (outside 𝔖) | 2.17.2 | p ≤ 1300, p ≡ 1 (mod 12) | 238 | 0 |
 | `verify_general.gp`, levels 79–127 (outside 𝔖) | 2.17.2 | p ≤ 600, p ≡ 1 (mod 12) | 58 | 0 |
 
-**General-level check** (Appendix A.6 of the paper). Run in PARI/GP with `gp -fq -s 512000000 verify_general.gp`, or set `VG_LEVELS` and `VG_MAXP` before `read`. Points over a Frobenius-stable pair (j, j′) with several isogenies are separated by the branch tangents of Φ_N(x, y) = 0; 10,881 such points were resolved. 237 small pairs (all with p < 4N) had a repeated tangent slope and were skipped and reported, not guessed. Primes p ≢ 1 (mod 12) are not covered by this check. Full log: `results/general_levels_run.log`.
+**General-level check** (Appendix A.6 of the paper). Run in PARI/GP with `gp -fq -s 512000000 verify_general.gp`, or set `VG_LEVELS` and `VG_MAXP` before `read`. Points over a Frobenius-stable pair (j, j′) with several isogenies are separated by the branch tangents of Φ<sub>N</sub>(x, y) = 0; 10,881 such points were resolved. 237 small pairs (all with p < 4N) had a repeated tangent slope and were skipped and reported, not guessed. Primes p ≢ 1 (mod 12) are not covered by this check. Full log: `results/general_levels_run.log`.
 
 ### Conjecture 6 (degree)
 
@@ -84,7 +83,7 @@ gp -fq -s 1000000000 c6_direct.gp    # Conjecture 6, direct count from Phi_N
 | `conjecture6_second_implementation/` (cusp-form traces) | 2.15.4 | p = 5, 7, 13 | 39 | 0 |
 | `c6_direct.gp`: Nakaya levels 11–31 | 2.17.2 | p ≤ 700, p ≡ 1 (mod 12) | 167 | 0 |
 | `c6_direct.gp`: levels 37–73, Proposition 6.2 (genus 1–2) | 2.17.2 | p ≤ 600, p ≡ 1 (mod 12) | 87 | 0 |
-| `c6_direct.gp`: level-3 fixed points r₃(3p) | 2.17.2 | 5 ≤ p ≤ 43 | 12 | 0 |
+| `c6_direct.gp`: level-3 fixed points r<sub>3</sub>(3p) | 2.17.2 | 5 ≤ p ≤ 43 | 12 | 0 |
 
 Logs: `results/c6_degrees.log`, `results/c6_direct.log`. The second implementation's own `SHA256SUMS.json` also lists a draft report (`Report.*`) that the merged paper supersedes and that is not included; every other listed file matches its checksum.
 
@@ -96,4 +95,5 @@ OpenAI ChatGPT/Codex and Anthropic Claude assisted with the exposition, literatu
 
 ## Licence
 
-Code (`verification/`, `exploratory/`): MIT. Manuscript (`paper/`): all rights reserved.
+- Code (`verification/`, `exploratory/`, and the verification code in `supplements/prime-square-levels/`): MIT; see [`LICENSE`](LICENSE).
+- Manuscripts (`paper/` and the note in `supplements/prime-square-levels/`): all rights reserved.
