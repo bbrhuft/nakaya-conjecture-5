@@ -44,7 +44,20 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 
 ## Reproducing the verification
 
-Table 1 of the paper (Appendix A.1) lists every survey with its command, PARI version, whether it rebuilds the Hauptmoduli or uses the stored relations, and its expected final output. The version matching the manuscript is release v1.0, archived on Zenodo as doi:10.5281/zenodo.23698277.
+The version matching the manuscript is release v1.0, archived on Zenodo as doi:10.5281/zenodo.23698277. All commands are run from `verification/`. "Reconstructed" means the run rebuilds the Hauptmoduli and modular relations from spaces of modular forms; "stored" means it reads `relations/relation_N.gp`, produced by the reconstructing run under PARI/GP 2.15.4; "none" means it uses only the classical supersingular polynomial and the modular polynomial Φ<sub>N</sub>.
+
+| Survey | Command | Hauptmoduli | PARI | Expected final output |
+|---|---|---|---|---|
+| Conjecture 5, p ≤ 300 | `gp -fq -s 256000000 verify_nakaya.gp` | reconstructed | 2.15.4 | `ALL PASSED: 827 cases` |
+| Level 2, p ≤ 300 | `NK_MAXP=300; NK_LEVELS=[2]; read("verify_nakaya.gp")` | reconstructed | 2.15.4 | `ALL PASSED: 60 cases` |
+| Conjecture 5, p ≤ 2000 | `python run_extended.py 2000` | stored | 2.17.2 | `TOTAL 4201 pairs, mismatches: none` |
+| Other prime levels (paper, Corollary 5.2) | `verify_general.gp` with `VG_LEVELS`, `VG_MAXP` (paper, Appendix A.5) | none | 2.17.2 | `ALL AGREE: 468 cases`; `ALL AGREE: 58 cases` |
+| Conjecture 6, p ≤ 1500 | `python c6_degrees.py 1500` | stored | 2.17.2 | Part 1: 827 pairs, Part 2: 2478 pairs, `mismatches: none` |
+| Conjecture 6, second implementation | in `conjecture6_second_implementation/`: `gp -fq -s 768000000 code/verify_conjecture6.gp`, then `code/verify_traces.gp` | reconstructed | 2.15.4 | `ALL PASSED: 883`; `TRACE PASSED: 39` |
+| Conjecture 6 and Proposition 6.2, direct | `gp -fq -s 1000000000 c6_direct.gp` | none | 2.17.2 | (a) 167 pairs, (b) 87 pairs, (c) 12 primes, each with `mismatches []` |
+| Worked example N = 11, p = 13 | `gp -fq trace_example.gp` | none | 2.15.4 | fixed-point counts 4 and 20 |
+
+`verify_nakaya.gp` writes `verification.csv`, `relation_N.gp` and `polynomials_N.gp`. To load its functions without running a survey, set `NK_NO_RUN=1` before `read`.
 
 **PARI/GP 2.15.x** (as used for the recorded run):
 ```sh
@@ -53,7 +66,7 @@ gp -fq -s 256000000 verify_nakaya.gp
 # expected final line: ALL PASSED: 827 cases   (all 14 levels, 5 ≤ p ≤ 300)
 ```
 
-**PARI/GP 2.17.x**: `verify_nakaya.gp` stops at N = 13 with `unexpected Hauptmodul dimension`. In that environment the normalized Atkin–Lehner matrix from `mfatkininit(mfinit([13,12],4),13)` does not square to the identity, and its +1 eigenspace has dimension 7 instead of 8 (paper, Appendix A.5). The cause has not been isolated, and no PARI defect is claimed. Use the stored relations instead:
+**PARI/GP 2.17.x**: `verify_nakaya.gp` stops at N = 13 with `unexpected Hauptmodul dimension`. Levels 3, 5, 7 and 11 run unchanged. At N = 13 the construction uses `mf=mfinit([13,12],4)`, the full space M<sub>12</sub>(Γ<sub>0</sub>(13)) of dimension 15, and `at=mfatkininit(mf,13)`, whose normalizing constant `at[3]` is 1. In that environment the matrix `at[2]` does not satisfy `at[2]^2 = 1`, and its +1 eigenspace (the eigenvalue (−1)<sup>k/2</sup> required for k = 12) has dimension 7 instead of the expected m + 1 = 8, so the dimension check fails. The same construction passed all checks under 2.15.4. The cause has not been isolated, and no PARI defect is claimed. Use the stored relations instead (or load `relation_N.gp`, set `NK_NO_RUN=1`, and call `nk_polynomial`, `nk_rhs` and `nk_fixed` directly):
 ```sh
 pip install cypari2
 cd verification
@@ -73,7 +86,7 @@ gp -fq -s 1000000000 c6_direct.gp    # Conjecture 6, direct count from Phi_N
 | `verify_general.gp`, levels 37–73 (outside 𝔖) | 2.17.2 | p ≤ 1300, p ≡ 1 (mod 12) | 238 | 0 |
 | `verify_general.gp`, levels 79–127 (outside 𝔖) | 2.17.2 | p ≤ 600, p ≡ 1 (mod 12) | 58 | 0 |
 
-**General-level check** (Appendix A.6 of the paper). Run in PARI/GP with `gp -fq -s 512000000 verify_general.gp`, or set `VG_LEVELS` and `VG_MAXP` before `read`. Points over a Frobenius-stable pair (j, j′) with several isogenies are separated by the branch tangents of Φ<sub>N</sub>(x, y) = 0; 10,881 such points were resolved. 237 small pairs (all with p < 4N) had a repeated tangent slope and were skipped and reported, not guessed. Primes p ≢ 1 (mod 12) are not covered by this check. Full log: `results/general_levels_run.log`.
+**General-level check** (Appendix A.5 of the paper). Run in PARI/GP with `gp -fq -s 512000000 verify_general.gp`, or set `VG_LEVELS` and `VG_MAXP` before `read`. Points over a Frobenius-stable pair (j, j′) with several isogenies are separated by the branch tangents of Φ<sub>N</sub>(x, y) = 0; 10,881 such points were resolved. 237 small pairs (all with p < 4N) had a repeated tangent slope and were skipped and reported, not guessed. Primes p ≢ 1 (mod 12) are not covered by this check. Full log: `results/general_levels_run.log`.
 
 ### Conjecture 6 (degree)
 

@@ -49,6 +49,10 @@ Open: the second implementation (`conjecture6_second_implementation/`) rebuilds 
 
 Section 3.1 was expanded after reading Furumoto–Hasegawa, Xue, Accola and Padurariu–Park–Voight directly (see SOURCE_AUDIT.md, third pass). Xue (2009, Theorem 2) already proves the level-one case of Theorem 1.1 by the same route; this is now credited. Aricheta is credited for the quadratic-factor count in the abstract, introduction and Corollary 6.3. Contact details moved to the end of the paper.
 
+## Revision of 27 October 2026 (before arXiv)
+
+Following a review by Google Gemini, Appendix A was condensed: the former survey table (commands and expected outputs) and the reproduction instructions moved to the README, A.1 is now a short "Software and scope" paragraph, and the PARI/GP 2.17.2 diagnosis moved to the README, leaving a one-paragraph "Extended check" (A.4). Later appendix subsections moved up one; the representative-checks table is now Table 1. One sentence in "Relation to previous work" contrasts Morton's level-by-level proofs (Hasse invariants of E5, E7; explicit relations between j and j_N*) with the uniform argument. The AI declaration was left unchanged, by the author's decision. The PDF in paper/ was compiled here with pdflatex from the same source the author downloaded.
+
 ## Conjecture 6 (added in the merged version)
 
 The degree formula follows from Lemma 3.1 (D = 1 + g(X_0(Np)/<w_N>) in genus zero), Riemann-Hurwitz, the genus formula for X_0(Np), and the fixed-point counts of w_N (formula (4.1) for N >= 5; the exceptional Q = 3 term of Im-Jeon-Kim, Proposition 2.1, for N = 3). Nakaya proved N = 3; Morton proved N = 5 (JNT 227 (2021), Section 7) and N = 7 (IJNT 19 (2023), Section 3). Proposition 6.2 gives the total count at every prime level N >= 5, and Corollary 6.3 the factorization type over F_p. The degree checks are in verification/c6_degrees.py, verification/c6_direct.gp and verification/conjecture6_second_implementation/; all agreed (see README).

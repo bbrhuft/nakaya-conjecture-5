@@ -3,8 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathrsfs,booktabs,array}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
-\usepackage{listings,needspace}
-\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,keepspaces=true}
+\usepackage{needspace}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -90,7 +89,7 @@ Let $N\in\mathfrak S\setminus\{2\}$ and let $p\geq5$ be prime with $p\ne N$. Let
 Here the symbols are Legendre symbols, $\leg{-3}{3}=0$, and $d_3=1$ because $ss_3(X)=X$. The proof, in Section~\ref{sec:degree}, replaces the rational count of Theorem~\ref{thm:main} by the total count of supersingular points, which in genus zero is $1+g\bigl(X_0(Np)/\langle w_N\rangle\bigr)$ by Lemma~\ref{lem:total}. Aricheta's theorem \cite[Theorem 3.1]{Aricheta}, with the fact that every root lies in $\mathbb F_{p^2}$, already shows that the factors of $ss_p^{(N*)}$ over $\Fp$ that are not linear are exactly $g\bigl(X_0(Np)/\langle w_N,w_p\rangle\bigr)$ irreducible quadratics; the two corollaries supply the number $L^{(N*)}(p)$ of linear factors and the degree, and so complete the factorization (Corollary~\ref{cor:factor}).
 
 \paragraph{Relation to previous work.}
-The geometric mechanism is classical. Deligne--Rapoport \cite[VI, Theorem 6.9]{DR} describe the two-component special fibre of $X_0(Np)$ and its Frobenius gluing, and Ribet \cite[Proposition 3.8(i), p.~446]{Ribet} states that $w_p$ exchanges the components and acts as Frobenius on their intersection; Gross \cite[Proposition 2.7(3)]{Gross} gives the corresponding Brandt-matrix description. Ogg's reduction argument \cite{OggRed} is extended to Atkin--Lehner quotients by Aricheta \cite[Theorem 3.1]{Aricheta}, using the quotient model of Furumoto--Hasegawa \cite[Section 5]{FH}; Aricheta observes \cite[Section 1]{Aricheta} that his theorem settles Nakaya's characterization of the primes for which $ss_p^{(N*)}$ splits completely at $N=5,7$. For squarefree total level $Np$, which includes every case of Corollaries~\ref{cor:nakaya} and~\ref{cor:degree}, Theorem~\ref{thm:main} also follows from Beneish--Wen \cite[Theorem 6.5]{BW}; see Section~\ref{sec:prior}. For Conjecture 5, Nakaya proved $N=2,3$ \cite[Theorem 4]{Nakaya} and Morton proved $N=5$ \cite{Morton5a,Morton5b}; for $N=7$, Morton reduced it to the factor counts of the Hasse invariant of the Tate normal form $E_7$, of which he proved the linear and cubic counts \cite[Theorem A]{Morton7} (see Remark~\ref{rem:morton}). For Conjecture 6, Nakaya proved $N=3$ \cite{Nakaya}, and Morton proved $N=5$ \cite[Section 7]{Morton5b} and $N=7$ \cite[Section 3]{MortonFricke}. The contribution here is a uniform deduction of \eqref{eq:nakaya} and \eqref{eq:C6} at all fourteen levels from these ingredients, the versions at other prime levels (Corollary~\ref{cor:general} and Proposition~\ref{prop:degree-general}), and reproducible computations. No priority is claimed for the underlying geometric identities.
+The geometric mechanism is classical. Deligne--Rapoport \cite[VI, Theorem 6.9]{DR} describe the two-component special fibre of $X_0(Np)$ and its Frobenius gluing, and Ribet \cite[Proposition 3.8(i), p.~446]{Ribet} states that $w_p$ exchanges the components and acts as Frobenius on their intersection; Gross \cite[Proposition 2.7(3)]{Gross} gives the corresponding Brandt-matrix description. Ogg's reduction argument \cite{OggRed} is extended to Atkin--Lehner quotients by Aricheta \cite[Theorem 3.1]{Aricheta}, using the quotient model of Furumoto--Hasegawa \cite[Section 5]{FH}; Aricheta observes \cite[Section 1]{Aricheta} that his theorem settles Nakaya's characterization of the primes for which $ss_p^{(N*)}$ splits completely at $N=5,7$. For squarefree total level $Np$, which includes every case of Corollaries~\ref{cor:nakaya} and~\ref{cor:degree}, Theorem~\ref{thm:main} also follows from Beneish--Wen \cite[Theorem 6.5]{BW}; see Section~\ref{sec:prior}. For Conjecture 5, Nakaya proved $N=2,3$ \cite[Theorem 4]{Nakaya} and Morton proved $N=5$ \cite{Morton5a,Morton5b}; for $N=7$, Morton reduced it to the factor counts of the Hasse invariant of the Tate normal form $E_7$, of which he proved the linear and cubic counts \cite[Theorem A]{Morton7} (see Remark~\ref{rem:morton}). For Conjecture 6, Nakaya proved $N=3$ \cite{Nakaya}, and Morton proved $N=5$ \cite[Section 7]{Morton5b} and $N=7$ \cite[Section 3]{MortonFricke}. These results are obtained level by level, from the Hasse invariants of the Tate normal forms $E_5$ and $E_7$ and explicit computations with the modular relation between $j$ and $j_N^*$; the argument here treats all prime levels at once. The contribution here is a uniform deduction of \eqref{eq:nakaya} and \eqref{eq:C6} at all fourteen levels from these ingredients, the versions at other prime levels (Corollary~\ref{cor:general} and Proposition~\ref{prop:degree-general}), and reproducible computations. No priority is claimed for the underlying geometric identities.
 
 \section{Supersingular quotient points and integral models}\label{sec:prelim}
 An exact divisor $d$ of $M$ satisfies $\gcd(d,M/d)=1$. On a non-cuspidal point $(E,C_M)$, with $C_d$ the unique order-$d$ subgroup of $C_M$, the Atkin--Lehner involution is
@@ -503,25 +502,8 @@ Morton's Hasse-invariant factor-count results imply the relevant Fricke linear-f
 \section{Exact computational verification}\label{app:computation}
 The PARI/GP script \texttt{verify\_nakaya.gp}, in the repository named in the code and data availability statement, requires PARI/GP only. It constructs the Hauptmoduli and modular relations internally, without imports or coefficient tables. It was executed with PARI/GP 2.15.4 on 26 October 2026. The default survey contains $60$ primes for $N=3$ and $59$ primes for each of the other thirteen levels, giving $827$ pairs. All three counts below agreed in every case. A separate run for $N=2$ verified \eqref{eq:two} for all $60$ primes. Full polynomials, relations, a CSV, and the run log are in the same repository.
 
-\subsection{Overview of the surveys}\label{app:overview}
-Table~\ref{tab:surveys} lists every reported survey. All scripts are in the directory \texttt{verification} of the repository named in the code and data availability statement; commands are run from that directory. ``Reconstructed'' means that the run rebuilds the Hauptmoduli and modular relations from spaces of modular forms; ``stored'' means that it reads the relations \texttt{relations/relation\_N.gp} produced by the reconstructing run under PARI/GP 2.15.4; ``none'' means that it uses only the classical supersingular polynomial and the modular polynomial $\Phi_N$. Agreement in these surveys checks the implementations and normalizations; it does not prove the conjectures.
-
-\begin{table}[ht]
-\centering\footnotesize
-\setlength{\tabcolsep}{3pt}
-\caption{Surveys, commands and expected outputs.}\label{tab:surveys}
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{5.0cm}>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}p{1.0cm}>{\raggedright\arraybackslash}p{3.8cm}}\toprule
-Survey & Command & Hauptmoduli & PARI & Expected final output\\\midrule
-Conjecture 5, $p\leq300$ & \texttt{gp -fq -s 256000000 verify\_nakaya.gp} & reconstructed & 2.15.4 & \texttt{ALL PASSED: 827 cases}\\
-Level $2$, $p\leq300$ & \texttt{NK\_MAXP=300; NK\_LEVELS=[2];} \texttt{read("verify\_nakaya.gp")} & reconstructed & 2.15.4 & \texttt{ALL PASSED: 60 cases}\\
-Conjecture 5, $p\leq2000$ & \texttt{python run\_extended.py 2000} & stored & 2.17.2 & \texttt{TOTAL 4201 pairs, mismatches: none}\\
-Other prime levels, Corollary~\ref{cor:general} & \texttt{verify\_general.gp}, with \texttt{VG\_LEVELS} and \texttt{VG\_MAXP} as in Appendix~\ref{app:general} & none & 2.17.2 & \texttt{ALL AGREE: 468 cases}; \texttt{ALL AGREE: 58 cases}\\
-Conjecture 6, $p\leq1500$ & \texttt{python c6\_degrees.py 1500} & stored & 2.17.2 & Part 1: $827$ pairs, Part 2: $2478$ pairs, \texttt{mismatches: none}\\
-Conjecture 6, second implementation & in \texttt{conjecture6\_second\_}\allowbreak\texttt{implementation}: \texttt{gp -fq -s 768000000} \texttt{code/verify\_conjecture6.gp}, then \texttt{code/verify\_traces.gp} & reconstructed & 2.15.4 & \texttt{ALL PASSED: 883}; \texttt{TRACE PASSED: 39}\\
-Conjecture 6 and Proposition~\ref{prop:degree-general}, direct & \texttt{gp -fq -s 1000000000 c6\_direct.gp} & none & 2.17.2 & (a) $167$ pairs, (b) $87$ pairs, (c) $12$ primes, each with \texttt{mismatches []}\\
-Worked example & \texttt{gp -fq trace\_example.gp} & none & 2.15.4 & fixed-point counts $4$ and $20$\\\bottomrule
-\end{tabular}
-\end{table}
+\subsection{Software and scope}\label{app:overview}
+The scripts, stored modular relations, polynomials and logs are in the archived release cited in the code and data availability statement; its \texttt{README} gives the command and expected output of each survey. The surveys with $p\leq300$, namely the main survey above, the level-two supplement, the second implementation of the degree check in Appendix~\ref{app:degree} and the trace check of the worked example, rebuild the Hauptmoduli and modular relations from spaces of modular forms and were run under PARI/GP 2.15.4. The extended surveys, to $p\leq2000$ for Conjecture 5 and $p\leq1500$ for Conjecture 6, read the relations stored by that run and were run under PARI/GP 2.17.2. The direct counts of Appendices~\ref{app:general} and~\ref{app:degree} use only the classical supersingular polynomial and the modular polynomial $\Phi_N$; they and the level-three trace check in Appendix~\ref{app:degree} were run under PARI/GP 2.17.2. Agreement in all these surveys checks the implementations and normalizations; it does not prove the conjectures.
 
 \subsection{Construction of the principal moduli}
 For each prime level set
@@ -587,25 +569,8 @@ $N$&$p$&$\deg ss_p^{(N*)}$&\eqref{eq:C6}&Direct roots&\eqref{eq:nakaya}&$r_p(Np)
 \bottomrule\end{tabular}
 \end{table}
 
-\subsection{Reproduction}
-Run the following command in a fresh directory containing the script:
-\begin{lstlisting}
-gp -fq -s 256000000 verify_nakaya.gp
-\end{lstlisting}
-It writes \texttt{verification.csv}, \texttt{relation\_N.gp}, and \texttt{polynomials\_N.gp}, with one relation and polynomial file for each level. The final output must be \texttt{ALL PASSED: 827 cases}. To run the level-two supplement from an interactive session in another directory, use
-\begin{lstlisting}
-NK_MAXP=300; NK_LEVELS=[2]; read("verify_nakaya.gp");
-\end{lstlisting}
-To load functions without running a survey set \texttt{NK\_NO\_RUN=1} before \texttt{read}. A direct trace check for the worked example is
-\begin{lstlisting}
-mf=mfinit([143,2],1);
-at=mfatkininit(mf,13); print(2-2*trace(at[2]/at[3]));
-at=mfatkininit(mf,143); print(2-2*trace(at[2]/at[3]));
-\end{lstlisting}
-The output is $4$ and $20$.
-
-\subsection{Version note and extended check}
-Under PARI/GP 2.17.2 we observed that the Hauptmodul construction stops at $N=13$ with the message \texttt{unexpected Hauptmodul dimension}; levels $3,5,7,11$ run unchanged. At $N=13$ the construction uses \texttt{mf=mfinit(}\allowbreak\texttt{[13,12],4)}, the full space $M_{12}(\Gamma_0(13))$ of dimension $15$, and \texttt{at=mfatkininit(}\allowbreak\texttt{mf,13)}, whose normalizing constant \texttt{at[3]} is $1$. In that environment the matrix \texttt{at[2]} does not satisfy $\texttt{at[2]}^2=1$, and its $+1$ eigenspace, the eigenvalue $(-1)^{k/2}$ required for $k=12$, has dimension $7$ rather than the expected $m+1=8$, so the dimension check fails. We have not isolated the cause, and we do not claim a defect in PARI/GP; the same construction passed all checks under 2.15.4. Users of later versions can instead load the stored files \texttt{relation\_N.gp} produced under 2.15.4, set \texttt{NK\_NO\_RUN=1}, and call \texttt{nk\_polynomial}, \texttt{nk\_rhs} and \texttt{nk\_fixed} directly. Run in this way under PARI 2.17.2, using the stored relations, the three counts agreed for all $14$ levels and every prime $5\leq p\leq2000$ with $p\neq N$, a total of $4201$ pairs.
+\subsection{Extended check}
+Under PARI/GP 2.17.2, using the relations stored by the 2.15.4 run, the three counts agreed for all $14$ levels and every prime $5\leq p\leq2000$ with $p\neq N$, a total of $4201$ pairs. The reconstruction of the Hauptmoduli itself is to be run under PARI/GP 2.15.4; the repository \texttt{README} records a failure of its dimension check at $N=13$ under 2.17.2.
 
 \subsection{Direct count at prime levels outside \texorpdfstring{$\mathfrak S$}{S}}\label{app:general}
 The script \texttt{verify\_general.gp} checks Corollary~\ref{cor:general} without Hauptmoduli, genus formulas or the fixed-point formula \eqref{eq:ogg}. It uses only the classical supersingular polynomial and the modular polynomial $\Phi_N(x,y)$, computed by PARI's \texttt{polmodular}.
