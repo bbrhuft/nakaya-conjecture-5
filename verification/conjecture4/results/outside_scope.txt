@@ -1,0 +1,228 @@
+OUTSIDE CONJECTURE: N=2 p=2
+ss=X
+factor V=Mat([T, 3])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=2 p=3
+ss=X
+factor V=Mat([T, 3])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=3 p=2
+ss=X
+factor V=Mat([T, 4])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=3 p=3
+ss=X
+factor V=Mat([T, 4])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=5 p=2
+ss=X
+factor V=Mat([T, 6])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=5 p=3
+ss=X
+factor V=Mat([T, 6])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=5 p=5
+ss=X
+factor V=Mat([T + 3, 6])
+rad V=T + 3
+degree rad=1
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=7 p=2
+ss=X
+factor V=Mat([T, 8])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=7 p=3
+ss=X
+factor V=[T, 2; T + 1, 6]
+rad V=T^2 + T
+degree rad=2
+OUTSIDE CONJECTURE: N=7 p=7
+ss=X + 1
+factor V=Mat([T + 1, 8])
+rad V=T + 1
+degree rad=1
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=11 p=2
+ss=X
+factor V=Mat([T, 12])
+rad V=T
+degree rad=1
+OUTSIDE CONJECTURE: N=11 p=3
+ss=X
+factor V=Mat([T + 2, 12])
+rad V=T + 2
+degree rad=1
+OUTSIDE CONJECTURE: N=11 p=11
+ss=X^2 + 10*X
+factor V=[T + 6, 12; T + 7, 12]
+rad V=T^2 + 2*T + 9
+degree rad=2
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=13 p=2
+ss=X
+factor V=[T, 6; T + 1, 8]
+rad V=T^2 + T
+degree rad=2
+OUTSIDE CONJECTURE: N=13 p=3
+ss=X
+factor V=[T, 2; T + 1, 6; T + 2, 6]
+rad V=T^3 + 2*T
+degree rad=3
+OUTSIDE CONJECTURE: N=13 p=13
+ss=X + 8
+factor V=Mat([T + 11, 14])
+rad V=T + 11
+degree rad=1
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=17 p=2
+ss=X
+factor V=[T, 6; T + 1, 12]
+rad V=T^2 + T
+degree rad=2
+OUTSIDE CONJECTURE: N=17 p=3
+ss=X
+factor V=[T + 1, 12; T + 2, 6]
+rad V=T^2 + 2
+degree rad=2
+OUTSIDE CONJECTURE: N=17 p=17
+ss=X^2 + 9*X
+factor V=[T + 5, 18; T + 13, 18]
+rad V=T^2 + T + 14
+degree rad=2
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=19 p=2
+ss=X
+factor V=[T, 12; T + 1, 8]
+rad V=T^2 + T
+degree rad=2
+OUTSIDE CONJECTURE: N=19 p=3
+ss=X
+factor V=[T, 2; T + 1, 6; T^2 + 2*T + 2, 6]
+rad V=T^4 + T^2 + 2*T
+degree rad=4
+OUTSIDE CONJECTURE: N=19 p=19
+ss=X^2 + 13*X + 12
+factor V=[T + 4, 20; T + 15, 20]
+rad V=T^2 + 3
+degree rad=2
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=23 p=2
+ss=X
+factor V=Mat([T + 1, 24])
+rad V=T + 1
+degree rad=1
+OUTSIDE CONJECTURE: N=23 p=3
+ss=X
+factor V=[T, 12; T + 2, 12]
+rad V=T^2 + 2*T
+degree rad=2
+OUTSIDE CONJECTURE: N=23 p=23
+ss=X^3 + X^2 + 11*X
+factor V=[T + 5, 24; T + 8, 24; T + 12, 24]
+rad V=T^3 + 2*T^2 + 12*T + 20
+degree rad=3
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=29 p=2
+ss=X
+factor V=[T, 6; T^2 + T + 1, 12]
+rad V=T^3 + T^2 + T
+degree rad=3
+OUTSIDE CONJECTURE: N=29 p=3
+ss=X
+factor V=[T, 12; T + 1, 12; T + 2, 6]
+rad V=T^3 + 2*T
+degree rad=3
+OUTSIDE CONJECTURE: N=29 p=29
+ss=X^3 + 2*X^2 + 21*X
+factor V=[T + 17, 30; T + 19, 30; T + 23, 30]
+rad V=T^3 + T^2 + 20*T + 5
+degree rad=3
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=31 p=2
+ss=X
+factor V=[T, 8; T + 1, 24]
+rad V=T^2 + T
+degree rad=2
+OUTSIDE CONJECTURE: N=31 p=3
+ss=X
+factor V=[T, 2; T + 2, 6; T^2 + 1, 6; T^2 + 2*T + 2, 6]
+rad V=T^6 + T^5 + T^4 + 2*T^3 + T
+degree rad=6
+OUTSIDE CONJECTURE: N=31 p=31
+ss=X^3 + 2*X^2 + 22*X + 2
+factor V=[T + 8, 32; T + 27, 32; T + 29, 32]
+rad V=T^3 + 2*T^2 + 22*T + 2
+degree rad=3
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=41 p=2
+ss=X
+factor V=[T, 6; T + 1, 12; T^2 + T + 1, 12]
+rad V=T^4 + T
+degree rad=4
+OUTSIDE CONJECTURE: N=41 p=3
+ss=X
+factor V=[T, 6; T + 2, 12; T^2 + 1, 12]
+rad V=T^4 + 2*T^3 + T^2 + 2*T
+degree rad=4
+OUTSIDE CONJECTURE: N=41 p=41
+ss=X^4 + 19*X^3 + 10*X^2 + 18*X
+factor V=[T + 3, 42; T + 6, 42; T + 15, 42; T + 19, 42]
+rad V=T^4 + 2*T^3 + 35*T^2 + 20*T + 5
+degree rad=4
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=47 p=2
+ss=X
+factor V=[T, 24; T + 1, 24]
+rad V=T^2 + T
+degree rad=2
+OUTSIDE CONJECTURE: N=47 p=3
+ss=X
+factor V=[T, 12; T + 2, 12; T^2 + 1, 12]
+rad V=T^4 + 2*T^3 + T^2 + 2*T
+degree rad=4
+OUTSIDE CONJECTURE: N=47 p=47
+ss=X^5 + 42*X^4 + 45*X^3 + 22*X^2 + 9*X
+factor V=[T + 3, 48; T + 29, 48; T + 30, 48; T + 39, 48; T + 42, 48]
+rad V=T^5 + 2*T^4 + 46*T^3 + 33*T^2 + 7*T + 13
+degree rad=5
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=59 p=2
+ss=X
+factor V=[T, 24; T + 1, 12; T^2 + T + 1, 12]
+rad V=T^4 + T
+degree rad=4
+OUTSIDE CONJECTURE: N=59 p=3
+ss=X
+factor V=[T + 2, 12; T^2 + T + 2, 12; T^2 + 2*T + 2, 12]
+rad V=T^5 + 2*T^4 + T + 2
+degree rad=5
+OUTSIDE CONJECTURE: N=59 p=59
+ss=X^6 + 22*X^5 + 21*X^4 + 26*X^3 + 43*X^2 + 45*X
+factor V=[T + 8, 60; T + 19, 60; T + 21, 60; T + 36, 60; T + 47, 60; T + 48, 60]
+rad V=T^6 + 2*T^5 + 57*T^4 + 49*T^3 + 35*T^2 + 11*T + 15
+degree rad=6
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM
+OUTSIDE CONJECTURE: N=71 p=2
+ss=X
+factor V=[T, 24; T^2 + T + 1, 24]
+rad V=T^3 + T^2 + T
+degree rad=3
+OUTSIDE CONJECTURE: N=71 p=3
+ss=X
+factor V=[T + 1, 12; T + 2, 12; T^2 + 1, 12; T^2 + 2*T + 2, 12]
+rad V=T^6 + 2*T^5 + 2*T^4 + 2*T^2 + T + 1
+degree rad=6
+OUTSIDE CONJECTURE: N=71 p=71
+ss=X^7 + 48*X^6 + 9*X^5 + 17*X^4 + 21*X^3 + 65*X
+factor V=[T + 10, 72; T + 17, 72; T + 34, 72; T + 39, 72; T + 57, 72; T + 64, 72; T + 65, 72]
+rad V=T^7 + 2*T^6 + 68*T^5 + 58*T^4 + 54*T^3 + 53*T^2 + 27*T + 29
+degree rad=7
+Formal squared identity using mu=1/2: FAIL_SQUARED_FORM

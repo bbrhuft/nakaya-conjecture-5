@@ -9,7 +9,9 @@ Manuscript and exact PARI/GP verification for a deduction of two conjectures of 
 
 Together with Aricheta's theorem, they determine the factorization over 𝔽<sub>p</sub>: ss<sub>p</sub><sup>(N\*)</sup> has that many linear factors and exactly g(X<sub>0</sub>(Np)/⟨w<sub>N</sub>, w<sub>p</sub>⟩) irreducible quadratic factors (Corollary 6.3).
 
-> **Status: draft, not yet reviewed by a specialist.** The proofs assemble known results (Deligne–Rapoport, Aricheta's Theorem 3.1, Ogg's and Im–Jeon–Kim's fixed-point formulas, the genus formula) and make no priority claim for the underlying geometric identities. Nakaya proved N = 3 of Conjecture 6, and Morton proved N = 5 and N = 7. See `notes/AUTHOR_NOTES.md`.
+As a secondary result, Section 7 gives a uniform form of Nakaya's **Conjecture 4** (the multiplicities in the resultant Res<sub>X</sub>(ss<sub>p</sub>(X), R<sub>N</sub>(X, Y)), whose radical is ss<sub>p</sub><sup>(N\*)</sup>) at all fifteen levels in 𝔖 (Proposition 7.1). Nakaya stated Conjecture 4 only for N = 2, 3, 5, 7, and Morton (*Int. J. Number Theory* 19 (2023)) proved those four cases; Proposition 7.1 recovers them and supplies the analogues at the other eleven levels. Remarks 6.4 and 8.4 record consequences for Nakaya's Question 1 and Observation 3.
+
+> **Status: draft, not yet reviewed by a specialist.** The proofs assemble known results (Deligne–Rapoport, Aricheta's Theorem 3.1, Ogg's and Im–Jeon–Kim's fixed-point formulas, the genus formula, tame ramification of the j-map) and make no priority claim for the underlying geometric identities. Nakaya proved N = 3 of Conjecture 6, and Morton proved N = 5 and N = 7. See `notes/AUTHOR_NOTES.md`.
 
 ## Idea of the proofs
 
@@ -34,6 +36,7 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 | `verification/c6_degrees.py` | Checks Nakaya's degree formula (Conjecture 6) against the polynomial degrees from the stored relations |
 | `verification/c6_direct.gp` | Direct count of all supersingular points from Φ<sub>N</sub>; checks Conjecture 6, Proposition 6.2 and the level-3 fixed-point count |
 | `verification/conjecture6_second_implementation/` | Separate PARI/GP implementation of the degree check, with an Atkin–Lehner trace computation (PARI 2.15.4), its results and its own README |
+| `verification/conjecture4/` | Conjecture 4 (resultant multiplicities, Section 7 and Appendix A.7): `code/verify_c4.gp` (PARI/GP 2.15.4), an output audit script, full results for all 1,127 pairs, a research memorandum (`report/report.pdf`), provenance notes and its own README |
 | `verification/trace_example.gp` | Characteristic-zero Atkin–Lehner trace check of the worked example N = 11, p = 13 |
 | `verification/relations/`, `polynomials/` | Exact modular relations and supersingular polynomials for each level |
 | `verification/n2/` | Supplementary level-2 run |
@@ -44,7 +47,7 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 
 ## Reproducing the verification
 
-The version matching the manuscript is release v1.0, archived on Zenodo as doi:10.5281/zenodo.23698277. All commands are run from `verification/`. "Reconstructed" means the run rebuilds the Hauptmoduli and modular relations from spaces of modular forms; "stored" means it reads `relations/relation_N.gp`, produced by the reconstructing run under PARI/GP 2.15.4; "none" means it uses only the classical supersingular polynomial and the modular polynomial Φ<sub>N</sub>.
+The current manuscript, which adds Section 7 (Conjecture 4) and Appendix A.7, corresponds to release v1.1 (Zenodo DOI to be added). Release v1.0, archived as doi:10.5281/zenodo.23698277, matches the earlier manuscript without Section 7. All commands are run from `verification/`. "Reconstructed" means the run rebuilds the Hauptmoduli and modular relations from spaces of modular forms; "stored" means it reads `relations/relation_N.gp`, produced by the reconstructing run under PARI/GP 2.15.4; "none" means it uses only the classical supersingular polynomial and the modular polynomial Φ<sub>N</sub>.
 
 | Survey | Command | Hauptmoduli | PARI | Expected final output |
 |---|---|---|---|---|
@@ -56,6 +59,7 @@ The version matching the manuscript is release v1.0, archived on Zenodo as doi:1
 | Conjecture 6, second implementation | in `conjecture6_second_implementation/`: `gp -fq -s 768000000 code/verify_conjecture6.gp`, then `code/verify_traces.gp` | reconstructed | 2.15.4 | `ALL PASSED: 883`; `TRACE PASSED: 39` |
 | Conjecture 6 and Proposition 6.2, direct | `gp -fq -s 1000000000 c6_direct.gp` | none | 2.17.2 | (a) 167 pairs, (b) 87 pairs, (c) 12 primes, each with `mismatches []` |
 | Worked example N = 11, p = 13 | `gp -fq trace_example.gp` | none | 2.15.4 | fixed-point counts 4 and 20 |
+| Conjecture 4 analogue, p ≤ 400 | in `conjecture4/`: `mkdir -p results; gp -fq -s 1000000000 code/verify_c4.gp > results/run.log 2>&1`, then `python3 code/audit_outputs.py` | reconstructed | 2.15.4 | `COMPLETE tested=1127 failed=0 exceptional_pairs=246` |
 
 `verify_nakaya.gp` writes `verification.csv`, `relation_N.gp` and `polynomials_N.gp`. To load its functions without running a survey, set `NK_NO_RUN=1` before `read`.
 
@@ -102,13 +106,22 @@ gp -fq -s 1000000000 c6_direct.gp    # Conjecture 6, direct count from Phi_N
 
 Logs: `results/c6_degrees.log`, `results/c6_direct.log`. The second implementation's own `SHA256SUMS.json` also lists a draft report (`Report.*`) that the merged paper supersedes and that is not included; every other listed file matches its checksum.
 
+### Conjecture 4 (resultant multiplicities)
+
+| Run | PARI version | Range | Pairs | Mismatches |
+|---|---|---|---|---|
+| `conjecture4/code/verify_c4.gp`, all 15 levels in 𝔖 | 2.15.4 | 5 ≤ p ≤ 400, p ≠ N | 1127 (1051 odd-level, 76 at N = 2) | 0 |
+| of which collision-flagged pairs (repeated or common factors of A<sub>N</sub>, B<sub>N</sub>, E<sub>N</sub> mod p) | 2.15.4 | same | 246 | 0 |
+
+The script reconstructs R<sub>N</sub> from modular forms, extracts the correction polynomials A<sub>N</sub>, B<sub>N</sub>, E<sub>N</sub>, confirms that they reproduce Nakaya's four sets of correction factors, and compares every exponent in the factorization of the resultant with Proposition 7.1. Like `verify_nakaya.gp`, it stops at the Hauptmodul construction under PARI/GP 2.17.x, and it deliberately refuses versions other than 2.15.4. Log: `conjecture4/results/run.log`; checksums: `conjecture4/SHA256SUMS.json`. Morton's theorem numbers cited in the memorandum were checked in arXiv:2105.14532v1, not in the journal typesetting.
+
 Finite agreement checks the implementation and normalisations; it is not a substitute for the proofs.
 
 ## How to cite
 
-Jordan, D. (2026). *Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials: manuscript and PARI/GP verification* (Version v1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23698277
+Jordan, D. (2026). *Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials: manuscript and PARI/GP verification* (Version v1.1) [Computer software]. Zenodo. DOI to be added on release (v1.0: https://doi.org/10.5281/zenodo.23698277)
 
-The v1.0 release is the version matching the manuscript.
+Release v1.1 matches the current manuscript; v1.0 matches the earlier version without the Conjecture 4 material.
 
 ## AI assistance
 

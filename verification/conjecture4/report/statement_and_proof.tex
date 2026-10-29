@@ -1,0 +1,155 @@
+\section{A uniform statement and its proof}
+Let $\mathfrak S=\{2,3,5,7,11,13,17,19,23,29,31,41,47,59,71\}$ and use Nakaya's constant terms $104,42,16,9,0,\ldots,0$. Write
+\[
+ R_N(X,Y)=X^2-a_N(Y)X+b_N(Y),\quad D_N=a_N^2-4b_N,
+ \quad Q_{N,c}=R_N(c,Y).
+\]
+All gcds and factorizations in the following definitions are taken in $\mathbb Q[Y]$, with monic factors. For $c=0,1728$, put
+\begin{equation}\label{eq:U}
+ U_{N,c}=\prod_{\substack{f\text{ monic irreducible},\ f\mid Q_{N,c}\\
+ f\mid a_N-2c}} f^{v_f(Q_{N,c})}.
+\end{equation}
+Thus $U_{N,c}$ is the full part of $Q_{N,c}$ supported on its gcd with $a_N-2c$, not just that gcd. Define the monic polynomials $A_N,B_N,E_N,H_N$ by
+\begin{equation}\label{eq:ABC}
+ Q_{N,0}=U_{N,0}A_N^3,\qquad Q_{N,1728}=U_{N,1728}B_N^2,
+ \qquad D_N=E_NH_N^2,
+\end{equation}
+where $E_N$ is squarefree. Equivalently, $E_N$ is the product of the irreducible factors of $D_N$ having odd exponent. These polynomials belong to $\mathbb Z[Y]$: they are monic rational factors of monic integer polynomials, so Gauss's lemma applies.
+
+For an odd prime $p\ge5$, let
+\[
+ \delta=\frac{1-\left(\frac{-3}{p}\right)}2,\quad
+ \epsilon=\frac{1-\left(\frac{-1}{p}\right)}2,\quad
+ \mu_N=\frac{1-\left(\frac{-N}{p}\right)}2,\quad \nu=\mu_2.
+\]
+When $p\ne N$, set
+\begin{equation}\label{eq:C}
+ C_{N,p}(Y)=
+ \begin{cases}
+ Y^\epsilon(Y-256)^\nu,&N=2,\\
+ E_N(Y)^{\mu_N},&N\text{ odd}.
+ \end{cases}
+\end{equation}
+Bars below mean coefficientwise reduction modulo $p$.
+
+\begin{theorem}[Resultant multiplicities for the prime Fricke levels]\label{thm:main}
+Let $N\in\mathfrak S$, and let $p\ge5$ be prime with $p\ne N$. Put
+\[
+ V_{N,p}(Y)=\operatorname{Res}_X(ss_p(X),\overline{R_N}(X,Y)),
+ \qquad S_{N,p}=\operatorname{rad}(V_{N,p}),
+\]
+where the radical is monic. Then $S_{N,p}=ss_p^{(N*)}$ and
+\begin{equation}\label{eq:main}
+ \boxed{\quad \overline{C_{N,p}}\,V_{N,p}
+       =\overline{A_N}^{\,2\delta}\,
+        \overline{B_N}^{\,\epsilon}\,S_{N,p}^{,2}
+        \quad\text{in }\mathbb F_p[Y].\quad}
+\end{equation}
+For every monic irreducible factor $f$ of $V_{N,p}$, its exact exponent is
+\begin{equation}\label{eq:exponent}
+ v_f(V_{N,p})=2+2\delta\,v_f(\overline{A_N})
+                 +\epsilon\,v_f(\overline{B_N})
+                 -v_f(\overline{C_{N,p}}).
+\end{equation}
+In particular, reduction multiplicities in the correction factors must be retained.
+If $d_p=\deg ss_p$, then $\deg V_{N,p}=(N+1)d_p$ and its leading coefficient is $1$. There is no unspecified scalar in \eqref{eq:main}.
+\end{theorem}
+
+\subsection{The norm lemma, including singular plane points}
+\begin{lemma}\label{lem:norm}
+Let $k$ be algebraically closed of characteristic different from $2$, let $C$ be a smooth curve with a nonidentity involution $w$, and let $\pi:C\to D=C/\langle w\rangle$. Suppose $Y$ is a local coordinate on $D$, $j$ is regular above the point under consideration, and
+\[
+ R(X,Y)=(X-j)(X-j\circ w)
+       =\operatorname{Norm}_{k(C)/k(D)}(X-j).
+\]
+For any finite set $J\subset k$, put $s(X)=\prod_{\alpha\in J}(X-\alpha)$. Then
+\begin{equation}\label{eq:normorders}
+ \operatorname{ord}_{Y=y}\operatorname{Res}_X(s,R)
+ =\sum_{P\in\pi^{-1}(y)}\operatorname{ord}_P(s(j))
+ =\sum_{\substack{P\in\pi^{-1}(y)\\j(P)\in J}}e_j(P).
+\end{equation}
+The sums run over distinct points of the normalization, including a fixed point only once.
+\end{lemma}
+\begin{proof}
+The product formula for the resultant gives
+$\operatorname{Res}_X(s,R)=\prod_{\alpha\in J}R(\alpha,Y)
+=\operatorname{Norm}(s(j))$; the possible signs cancel because the norm has degree $2$.
+At an unramified point of $D$ the completed algebra is a product of two power-series rings, and the order of the norm is the sum of the two orders. At a branch point, tame linearization gives parameters $t,u$ with $w(t)=-t$ and $u=t^2$. If $s(j)=t^m v(t)$ with $v$ a unit, its norm is $(-1)^m u^m v(t)v(-t)$, which has order $m$ in $u$. This proves the first equality. Squarefreeness of $s$ gives the second, since the order of $j-j(P)$ is $e_j(P)$. No regularity of the plane curve $R=0$ has been used.
+\end{proof}
+
+\subsection{Integral models and the three correction divisors}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Work over $R=\mathbb Z_{(p)}$. Use the smooth coarse modular curve
+$\mathcal C=X_0(N)_R$, its Fricke involution $w$, and its quotient
+$\mathcal D=\mathcal C/\langle w\rangle$. Since $p\nmid6N$, the moduli stabilizers and the quotient involution are tame. Jordan's Section~2 and Proposition~5.1 identify $\mathcal D$ with $\mathbb P^1_R$ by $Y=j_N^*$, with its cusp at infinity. The two cusps of $\mathcal C$ are distinct and exchanged by $w$.
+
+On the complement of those cusps, $j$ is regular and $\pi:\mathcal C\to\mathcal D$ is finite locally free of degree two. Its characteristic polynomial is
+\[
+ \operatorname{Norm}(X-j)=X^2-\operatorname{Tr}(j)X+\operatorname{Norm}(j).
+\]
+Nakaya's Proposition~4 identifies this polynomial with $R_N$ on the generic fibre. Both sides are integral sections of a torsion-free algebra, so the equality holds over $R$ and after reduction. This is the required specialization statement; it is stronger and safer than assuming that the plane model is smooth.
+
+For completeness, the plane model does have the correct function field in every permitted characteristic. The pole orders of $j$ at the two cusps are $1$ and $N$, whereas those of $j\circ w$ are $N$ and $1$. Their leading coefficients are units, so $j\ne j\circ w$ also after reduction. Hence $k(\mathcal C_k)=k(Y,j)$ and the smooth modular curve is the normalization of $R_N=0$. The map $j$ is separable: away from the elliptic points the level-forgetting morphism is etale. Its degree need not be prime to $p$ for this conclusion.
+
+Let $T_3$ be the reduced divisor of points above $j=0$ with $e_j=3$, and let $T_2$ be the analogous reduced divisor above $j=1728$ with $e_j=2$. At every other finite point $e_j=1$. These descriptions hold on the generic and special fibres. Indeed, over an elliptic curve the choices of a cyclic subgroup of order $N$ form a finite etale scheme; the coarse map is the tame quotient by $\operatorname{Aut}(E)/\{\pm1\}$. A nonfixed subgroup has orbit size $3$ or $2$, respectively; a fixed subgroup has orbit size $1$. This also proves that the ramified and unramified parts of each elliptic fibre specialize with their multiplicities unchanged on $\mathcal C$.
+
+Over characteristic zero, an isogeny with source and target both of invariant $0$, or both of invariant $1728$, is an endomorphism after identifying the curves. The endomorphism ring is commutative, so its kernel is stable under all automorphisms. Conversely, a subgroup stable under all automorphisms gives a quotient with the same exceptional invariant. Thus the support of $U_{N,c}$ in \eqref{eq:U} is precisely the image of the unramified part of $j^{-1}(c)$. Applying Lemma~\ref{lem:norm} to $X$ and $X-1728$ gives
+\begin{equation}\label{eq:ramdiv}
+ \operatorname{div}_0(A_N)=\pi_*T_3,\qquad
+ \operatorname{div}_0(B_N)=\pi_*T_2
+\end{equation}
+on the generic fibre. These equalities persist on the special fibre. One can see this without dividing polynomials modulo $p$: after an etale base change split the reduced elliptic fibres into sections, and take the products of $Y-Y(P)$ over the appropriate sections. Their monic products are the reductions of the characteristic-zero polynomials in \eqref{eq:ramdiv}. Distinct sections of $\mathcal C$ may have the same image in $\mathcal D$; such repetitions are retained in these products.
+
+Let $F$ be the fixed-point divisor of $w$. Its image on $\mathcal D$ is the branch divisor. In characteristic zero the quadratic extension can be written
+\[
+ k(\mathcal C)=k(Y)\bigl(\sqrt{D_N(Y)}\bigr)
+             =k(Y)\bigl(\sqrt{E_N(Y)}\bigr).
+\]
+Therefore $\operatorname{div}_0(E_N)=\pi_*F$. There is no branch point at the cusp. Since the involution is tame and nonidentity on every fibre, its fixed scheme is finite etale over $R$: locally at a fixed point the action on a parameter is $t\mapsto-t$. In particular, the branch points remain distinct. This proves that $\overline{E_N}$ is squarefree for every $p\ge5$, $p\ne N$, and that it still cuts out precisely the branch divisor. The factors in $H_N^2$ are not extra branch points.
+
+For odd $N\ge5$, the characteristic-zero Fricke-fixed points have CM by orders of discriminant $-4N$, and also $-N$ when $N\equiv3\pmod4$. Their common CM field is $\mathbb Q(\sqrt{-N})$. Every special-fibre fixed point lifts, by the etaleness just proved. The CM reduction criterion consequently says that all these fixed points are supersingular when $\left(\frac{-N}{p}\right)=-1$, and none are supersingular when that symbol is $1$. Equivalently, one can combine the unchanged total fixed-point count with the supersingular fixed-point count of Beneish and Wen, Proposition~3.16, with $D=N,m=1$; both counts agree in the inert case and the latter is zero in the split case. No ramified case occurs because $p\ne N$.
+
+At $N=3$, the two branch values are $0,108$, with $j$-values $0,54000$, of discriminants $-3,-12$; the same conclusion holds with $\mu_3=\delta$. At $N=2$, the values $0,256$ correspond to discriminants $-4,-8$, respectively, and have different supersingularity tests $\epsilon$ and $\nu$. Thus in all cases the divisor of $\overline{C_{N,p}}$ is exactly the image of the supersingular part of $F$.
+
+Now let $Z$ be the reduced supersingular divisor on $\mathcal C_k$, $k=\overline{\mathbb F}_p$, and let $S$ denote its reduced image on $\mathcal D_k$. Supersingularity is preserved by the degree-$N$ isogeny, so $Z$ is $w$-stable. The orbit count, with a fixed point counted once, is the divisor equality
+\begin{equation}\label{eq:orbits}
+ \pi_*Z=2S-\pi_*F_{\rm ss}.
+\end{equation}
+On the other hand, the finite zero divisor of $ss_p(j)$ is
+\[
+ \operatorname{div}_0(ss_p(j))=Z+2\delta T_3+\epsilon T_2.
+\]
+Push this equality to $\mathcal D_k$ and apply the norm lemma, \eqref{eq:ramdiv}, and \eqref{eq:orbits}. It gives
+\[
+ \operatorname{div}_0(V_{N,p})
+ =2S+2\delta\operatorname{div}_0(\overline A_N)
+       +\epsilon\operatorname{div}_0(\overline B_N)
+       -\operatorname{div}_0(\overline C_{N,p}).
+\]
+The support is precisely the set in Nakaya's definition, so $S$ is the zero divisor of $S_{N,p}=ss_p^{(N*)}$. This proves the claimed equality of divisors, even when correction factors collide. Every polynomial involved is monic. Moreover $R_N(\alpha,Y)$ is monic of degree $N+1$ for each $\alpha$, since $a_N$ and $b_N$ are monic of degrees $N$ and $N+1$. Their product over the $d_p$ supersingular invariants proves the degree, leading coefficient, and scalar-one assertions. Taking the coefficient of an irreducible divisor proves \eqref{eq:exponent}.
+\end{proof}
+
+\subsection{What is general, and what is special to these levels}
+The norm and divisor argument works for every prime $N\ne p$, with the Fricke quotient in place of the $Y$-line. A single polynomial statement in a Hauptmodul requires genus zero, hence the restriction to $\mathfrak S$ here. This proof uses Jordan's good-reduction coordinate result and tame moduli description, but does not need his nodal genus comparison in Lemma~3.1. That comparison supplies an independent aggregate check, not a local multiplicity calculation.
+
+For odd prime $N$, the numbers of unramified points above the two elliptic invariants are
+\[
+ u_3=1+\left(\frac{-3}{N}\right),\qquad
+ u_2=1+\left(\frac{-1}{N}\right).
+\]
+At $N=2$ they are $u_3=0,u_2=1$. A formula valid at all prime levels uses the Kronecker symbol $u_2=1+\left(\frac{-4}{N}\right)$ instead. Consequently
+\[
+ \deg A_N=\frac{N+1-u_3}{3},\qquad
+ \deg B_N=\frac{N+1-u_2}{2},\qquad
+ \deg E_N=2g(X_0(N))+2.
+\]
+For odd $N\ge5$, Jordan's fixed-point formula (4.1) gives
+\[
+ \deg E_N=h_{\rm ord}(-4N)+[N\equiv3\pmod4]h_{\rm ord}(-N)=2d_N.
+\]
+The same last equality holds for $N=3$ with $d_3=1$. Taking degrees in \eqref{eq:main} therefore recovers Jordan's Corollary~1.3. At $N=2$ it gives
+\[
+ \deg S_{2,p}=\frac{p-1}{8}+\frac38\left(1-\left(\frac{-1}{p}\right)\right)
+                       +\frac14\left(1-\left(\frac{-2}{p}\right)\right).
+\]
+This is a consequence of the stronger multiplicity formula, not a new claim of priority for the known degree formulas.

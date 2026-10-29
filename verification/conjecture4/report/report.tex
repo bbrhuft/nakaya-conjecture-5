@@ -1,0 +1,227 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,longtable,array,xcolor,hyperref,microtype,fancyvrb}
+\hypersetup{pdftitle={Resultant multiplicities at the fifteen prime Fricke levels},pdfauthor={Research memorandum prepared for David Jordan},colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{4pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\title{Resultant multiplicities at the fifteen prime Fricke levels\\[3pt]\large A source audit, geometric proof, and exact computation}
+\author{Research memorandum prepared for David Jordan}
+\date{28 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The corrected general identity holds in every one of the 1,127 tested pairs, comprising all fourteen odd levels in Nakaya's set and level 2, for every prime $5\le p\le400$, $p\ne N$. A geometric proof for every permitted prime is given below, using norms and divisors on the smooth modular curve; it does not assume that its plane image is smooth. Two qualifications are essential: unramified elliptic factors must be removed before defining $A_N,B_N$, and level 2 needs two different CM exponents. Morton's four original cases are already proved; priority for the extension to the other eleven levels is not established by this literature search.
+\end{abstract}
+
+\section{Source transcription and the original four cases}
+The following is a transcription of Conjecture~4 in the supplied Nakaya arXiv v1, Section~4.1, p.~18. All equalities are modulo $p$, for primes $p\ge5$, $p\ne N$. Write $s_N=ss_p^{(N*)}(Y)$,
+$\delta=(1-(\frac{-3}{p}))/2$, $\epsilon=(1-(\frac{-1}{p}))/2$,
+$\nu=(1-(\frac{-2}{p}))/2$, and $\mu_N=(1-(\frac{-N}{p}))/2$.
+\begin{align*}
+ Y^\epsilon(Y-256)^\nu V_p^{(2*)}(Y)
+ &= (Y+144)^{2\delta}(Y-648)^\epsilon s_2^2,\\
+ Y^\delta(Y-108)^\delta V_p^{(3*)}(Y)
+ &= (Y+192)^{2\delta}(Y^2-576Y-1728)^\epsilon s_3^2,\\
+ (Y^2-44Y-16)^{\mu_5}V_p^{(5*)}(Y)
+ &= (Y^2+216Y+144)^{2\delta}(Y^2-540Y-6480)^\epsilon s_5^2,\\
+ (Y+1)^{\mu_7}(Y-27)^{\mu_7}V_p^{(7*)}(Y)
+ &= (Y^2+224Y+448)^{2\delta}\\[-2pt]
+ &\quad\cdot(Y^4-528Y^3-9024Y^2-5120Y-1728)^\epsilon s_7^2.
+\end{align*}
+The page was checked both by text extraction and visual rendering. The code verifies the four displayed correction polynomials explicitly, and verifies the identities at all 302 permitted pairs in these four levels up to 400. There is no discrepancy with Nakaya's formulas.
+
+\subsection{Morton's exact scope}
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Level & Result in supplied Morton v1 & Verified page & Hypothesis\\
+\midrule
+5 & Theorem 1, equations (6)--(7) & 3 & prime $p\ge7$\\
+7 & Theorem 3, equations (13)--(14) & 12 & prime $p\ge5$, $p\ne7$\\
+2, 3 & Theorem 5, equations (26)--(27) & 21 & prime $p\ge5$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are exactly all four levels in the original Conjecture~4. For level 5, $p\ge7$ is the same permitted domain as $p\ge5$, $p\ne5$. Morton's exceptional primes in the proofs are checked separately; they are not additional exclusions from the theorems. The introduction, p.~2, explicitly identifies the three theorems as covering all four cases.
+
+\textbf{Pagination limitation.} The uploaded file is arXiv:2105.14532v1, with 27 pages, not the 26-page journal typesetting. The journal citation is \emph{International Journal of Number Theory, 19}(4), 803--828 (2023), DOI 10.1142/S1793042123500409. The theorem numbers and pages in the table were verified in the uploaded preprint. The exact journal page for each theorem, and unchanged numbering in the final typesetting, are \textbf{not verified}; the accessible publisher preview contains only the opening page. No journal page was inferred by adding a fixed offset.
+
+\input{statement_and_proof.tex}
+
+\section{Checks on the formulation}
+\subsection{Why the two corrections to a naive statement matter}
+The polynomial $\operatorname{rad}(D_N)$ usually contains much more than the branch divisor. For example,
+\[
+ D_2=Y(Y-256)(Y-81)^2.
+\]
+The factor $Y-81$ is excluded from $E_2$. At this value two distinct points on the normalization can have the same $j$-value. They still contribute separately to the norm. Counting a repeated $X$-root as one point would be wrong.
+
+Also, taking the whole square root of $R_N(1728,Y)$ gives the wrong $B_N$. At level 5,
+\[
+ R_5(1728,Y)=Y^2(Y^2-540Y-6480)^2,
+\]
+so $U_{5,1728}=Y^2$ and $B_5=Y^2-540Y-6480$. The omitted square is the image of two unramified elliptic points. The rational gcd definition in \eqref{eq:U} distinguishes it from the ramified square factors.
+
+Finally, the prescription $E_N^{\mu_N}$ cannot be used unchanged at $N=2$. Its branch points have CM fields $\mathbb Q(i)$ and $\mathbb Q(\sqrt{-2})$. For instance at $(N,p)=(2,5)$, $\epsilon=0$, $\nu=1$; multiplying by the additional factor $Y$ would give a false identity. The user's proposed common CM-field description is correct at odd levels, but requires this level-two exception. The factors $Y$ at level 2 and at level 3 lie over unramified exceptional elliptic points, so no extra ramification factor should be inserted for them.
+
+\subsection{Geometric multiplicity rule}
+For a supersingular quotient value $y$, let $b(y)$ be 1 if its fibre is Fricke-fixed and 0 otherwise. Let $n_3(y)$ and $n_2(y)$ count the distinct points in that fibre where $e_j=3$ and $e_j=2$. The norm proof gives
+\[
+ m(y)=2-b(y)+2n_3(y)+n_2(y).
+\]
+Only supersingular elliptic fibres contribute: $n_3=0$ unless $\delta=1$ and $n_2=0$ unless $\epsilon=1$. A nonfixed fibre has two points, hence can have multiplicity $2,3,4,5,$ or $6$; a fixed fibre has multiplicity $1,2,$ or $3$. In particular, a factor of multiplicity 6 is legitimate, not a failure of the square formula. Formula \eqref{eq:exponent} is its version over $\mathbb F_p$ for arbitrary irreducible factors.
+
+\subsection{Recovery of the four formulas}
+\begin{center}\small
+\begin{tabular}{ccll}
+\toprule
+$N$ & $E_N$ & $A_N$ & $B_N$\\
+\midrule
+2 & $Y(Y-256)$ & $Y+144$ & $Y-648$\\
+3 & $Y(Y-108)$ & $Y+192$ & $Y^2-576Y-1728$\\
+5 & $Y^2-44Y-16$ & $Y^2+216Y+144$ & $Y^2-540Y-6480$\\
+7 & $(Y+1)(Y-27)$ & $Y^2+224Y+448$ & see below\\
+\bottomrule
+\end{tabular}\end{center}
+Here $B_7=Y^4-528Y^3-9024Y^2-5120Y-1728$. Substituting these into \eqref{eq:main}, with $\mu_3=\delta$ and the separate level-two definition \eqref{eq:C}, yields precisely the four identities transcribed above, including the leading scalar 1.
+
+\section{Exact computation}
+The final, clean run used PARI/GP 2.15.4 (amd64, GMP 6.3.0) and completed in \textbf{11.624 seconds} of GP wall-clock time on the supplied environment. This excludes installation, literature retrieval, and report generation. No floating-point arithmetic enters any mathematical check. The random seed only fixes finite-field factorization choices.
+
+\input{computed_summary.tex}
+
+\subsection{Reconstruction and independence of the checks}
+The code constructs the Hauptmodul as a quotient of a form in the correct Fricke eigenspace by $(\eta(\tau)\eta(N\tau))^k$. It asserts the eigenspace dimension $m+1$, the principal part $q^{-1}$, Nakaya's constant term, and integrality of the retained coefficients. It constructs $a_N,b_N$ by eliminating their pole parts; no stored relation is an input. The positive-coefficient checks implement the two identities of Nakaya's Proposition~4, not a comparison with an external coefficient table (that proposition supplies no such table for all fifteen levels).
+
+The remainder orders range from $O(q^{97})$, $O(q^{96})$ at level 2 to $O(q^{443})$, $O(q^{442})$ at level 71 for the sum and product, respectively. Thus at level 71 all positive coefficients through $q^{442}$ and $q^{441}$ are checked. Principal-part matching certifies the identity once modularity and the pole divisor are known; the extra coefficients are implementation safeguards.
+
+The ordinary supersingular polynomial is computed by a binomial formula and cross-checked, for each of the 76 tested primes, against the radical of the Legendre Hasse-polynomial elimination. Each $V_{N,p}$ is computed by a resultant and fully factored. Its radical is obtained by a derivative/gcd routine with recursive $p$th-root extraction, independently of the predicted correction identity; that radical is also checked against the product of the distinct irreducible factors. This is not an independent moduli construction of $S_{N,p}$: it is precisely Nakaya's definition, as requested.
+
+Every irreducible factor's actual exponent is compared to \eqref{eq:exponent}; the full monic polynomial identity is also checked, which detects any missing support or scalar error. Radical degrees are compared with Jordan's Corollary~1.3 (his level-two formula for $N=2$), and each radical is checked to divide $Y^{p^2}-Y$. In the supplied paper, Corollary~6.3 concerns nonrational quadratic factors, rather than the total degree. This audit uses Corollary~1.3 for the degree, as specified in Task B.3.
+
+\subsection{Collision primes: no exclusions}
+The phrase ``a prime dividing $\operatorname{disc}_X R_N$'' needs interpretation: this is a polynomial, monic here, so no prime divides all its coefficients. Also $\operatorname{disc}_Y(D_N)=0$ identically because $D_N$ has square factors. The audit therefore uses the nonzero integer certificates
+\[
+ \operatorname{disc}(A_N),\ \operatorname{disc}(B_N),\ \operatorname{disc}(E_N),
+ \operatorname{Res}(A_N,B_N),\ \operatorname{Res}(A_N,E_N),\ \operatorname{Res}(B_N,E_N),
+\]
+plus $\operatorname{disc}(\operatorname{rad}_{\mathbb Q}D_N)$. Divisibility of the last integer detects collisions among distinct characteristic-zero discriminant roots, including singular-plane points. These tests concern possible collisions whether or not the affected roots are supersingular.
+
+There are 246 flagged pairs: 239 have a collision in the $A,B,E$ correction data and 7 have only a collision in the larger discriminant-root set. The latter are
+\[
+ (N,p)=(13,17),(17,13),(19,17),(23,13),(29,13),(41,37),(71,37).
+\]
+Every one of the 246 identities passes. No permitted prime divides $\operatorname{disc}(E_N)$; exact factorizations of these integers have prime support contained in $\{2,N\}$ for these fifteen levels. Thus two true branch points never coalesce in the conjectured range. A branch point can meet an elliptic correction root, and two ramified points can have the same quotient coordinate.
+
+Two explicit checks illustrate the need to retain reduction multiplicities:
+\begin{itemize}
+\item $(N,p)=(2,11)$: $V=Y(Y+1)^5$, $S=Y(Y+1)$, $A=B=Y+1$, $C=Y$. Both sides of \eqref{eq:main} equal $Y^2(Y+1)^5$.
+\item $(N,p)=(11,5)$: $A=Y^2(Y-1)^2$ modulo 5, $\delta=1$, $\epsilon=0$, $\mu_{11}=0$, and $V=Y^6(Y-1)^6$, $S=Y(Y-1)$. Each of the two factors has predicted and actual exponent $2+2\cdot2=6$.
+\end{itemize}
+All flagged prime lists appear in Appendix~A; their gcd certificates and the individual factor matrices are in the accompanying files. No smoothness inference is made from the absence of a flag. The proof already accommodates singular plane points and collisions through normalization and divisor specialization.
+
+\subsection{Runs outside the conjecture}
+The package includes all 30 pairs with $p=2,3$ and all 13 additional diagonal pairs with $p=N\ge5$, for 43 separate exploratory pairs. For $p=2,3$ the ordinary supersingular polynomial is taken to be $X$. Only the resulting polynomials and radicals are reported: the tame exponents are not asserted there.
+
+For the diagonal odd levels, substituting $\mu_N=1/2$ does not define the original polynomial identity. As a deliberately formal diagnostic, the code checks its squared version
+\[
+ \overline E_N V_{N,N}^2
+ \stackrel{?}{=}\overline A_N^{4\delta}\overline B_N^{2\epsilon}S_{N,N}^4.
+\]
+It fails at all 13 diagonal levels. For example, at $(N,p)=(5,5)$, $V=(Y+3)^6$, $S=Y+3$, $\overline E_5=(Y+3)^2$ and $\overline A_5=(Y+3)^2$; the two sides have exponents 14 and 12. These are not counterexamples to Theorem~\ref{thm:main}.
+
+\subsection{How to reproduce}
+From the extracted \path{nakaya_c4} directory, create \path{results} if necessary and run with \textbf{PARI/GP 2.15.4}:
+\begin{Verbatim}[fontsize=\small]
+mkdir -p results
+gp -fq -s 1000000000 code/verify_c4.gp > results/run.log 2>&1
+python3 code/audit_outputs.py
+\end{Verbatim}
+The driver refuses other GP versions, rather than silently bypassing the reported Hauptmodul dimension issue. This fulfils the pinned-version option; a 2.17.2 fix is not claimed. To change the survey bound, use a small driver file containing
+\begin{Verbatim}[fontsize=\small]
+P_MAX=1000;
+read("code/verify_c4.gp");
+\end{Verbatim}
+For function-only loading set \path{C4_NO_RUN=1} before \path{read}. The functions \path{nk_haupt}, \path{nk_faber}, \path{nk_relation}, \path{nk_ss}, and \path{nk_rad} adapt Jordan's supplied verification code. The new multiplicity audit, extraction of correction factors, collision certificates, and outside-domain diagnostics are labelled separately in the source. \path{verify_duality.gp} was not present in the uploaded archive.
+
+\section{Prior work and novelty}
+This is a bounded literature search, not a proof that no earlier general formula exists. Searches covered the two named papers, visible citing-paper lists, targeted queries for the resultant identity, and the requested Aricheta, Sakai, Tsutsumi, and Kaneko--Zagier literature. Technical claims below rely on the original papers or publisher abstracts, not automated literature summaries.
+
+\begin{longtable}{L{.19\linewidth}L{.45\linewidth}L{.10\linewidth}L{.16\linewidth}}
+\toprule Source & What was established or inspected & Overlap & Verification\\\midrule\endhead
+Nakaya (2019) & Proposition 4 constructs the two monic coefficient polynomials. Section 4.1, Conjecture 4 states the four identities; Remark 2 identifies elliptic factors. & Partial & Supplied v1, pp. 14, 18, checked.\\\addlinespace
+Morton (2023) & Theorems 1, 3, 5 prove the exact four identities at $N=5,7,2,3$, respectively, on their full stated domains. & Full for four; partial overall & Supplied v1, pp. 3, 12, 21; final theorem pagination not verified.\\\addlinespace
+Morton (2024) & Tate-form $E_7$ linear/cubic factor counts; quadratic/sextic assertions are explicitly conjectural in the abstract. This is related to Nakaya's Conjecture 5, not an all-level Conjecture 4 proof. & Partial & Original arXiv v5 abstract checked; full theorem audit not verified.\\\addlinespace
+Jordan (supplied manuscript) & Section 2 and Proposition 5.1 give the coarse quotient and integral coordinate; Corollaries 1.3 and 6.3 give degrees and quadratic-factor counts. Appendix A reconstructs relations and audits multiple plane points. & Partial & Supplied text and code checked; no claim of publication status.\\\addlinespace
+Aricheta (2019) & Theorem 3.1 relates the number of nonrational supersingular points to a genus difference; Remark 1.2 and Appendix A settle the relevant complete-splitting lists. Not the corrected resultant multiplicity formula. & Partial & Original SIGMA paper, pp. 3, 7--8 and relevant sections checked.\\\addlinespace
+Hajouji (2023) & Lemmas 2.6--2.7 and Propositions 2.8--2.9 treat automorphism weights, Fricke orbits and $\mathbb F_{p^2}$; Sections 2.4--2.5 use these quadratic relations and resultant radicals and settle Conjecture 2. The fixed-point versus two-point loop distinction is explicit. & Partial & arXiv v3, pp. 6--9 checked. No all-level correction identity found.\\\addlinespace
+Beneish \& Wen (2026) & Proposition 3.16 gives the supersingular fixed-point count used above for $D=N,m=1$; Theorem 6.5 gives quotient special fibres and genera. & Partial & Original arXiv v1, p. 15 and Theorem A statement checked. No resultant formula located.\\\addlinespace
+Sakai (2011) & Atkin orthogonal polynomials for Fricke levels at most 3 and their relation to supersingular polynomials. & Partial background & Publisher abstract/preview checked; full theorem audit not verified.\\\addlinespace
+Sakai (2014) & Atkin polynomials for levels 5 and 7, extremal quasimodular forms, and a conjectural supersingular connection. & Partial background & Publisher abstract checked; full theorem audit not verified.\\\addlinespace
+Tsutsumi (2007) & Low-level congruence/triangle-group Atkin polynomials and supersingular elliptic curves. & Partial background & Publisher abstract and metadata checked; full text not verified.\\\addlinespace
+Kaneko \& Zagier (1998) & Level-one supersingular polynomials via modular forms, hypergeometric series and Atkin orthogonal polynomials. & Partial background & Author-hosted paper introduction checked; not an all-level Fricke resultant theorem.\\\addlinespace
+Nakaya (2023 preprint; 2024 journal article) & Atkin-like orthogonality and generalized Faber expansions at level one. A visible citing work of Morton, but not evidence for the proposed extension. & None to this identity & arXiv introduction checked; full exclusion/ journal pagination not verified.\\
+\bottomrule
+\end{longtable}
+
+\textbf{Recommendation: a proposition plus a remark.} Place the norm-divisor proposition after Jordan's Proposition~5.1 and move the full computational data into an appendix or supplement. The local norm rule is standard, and the branch/elliptic corrections are a natural consequence once the model and coordinate are set up. The explicit uniform packaging at the eleven additional levels appears useful; an unqualified claim that it is the first such result is not supported by this search. No part of Morton's original four-case theorem should be described as still conjectural.
+
+Suggested wording for Jordan's paper:
+\begin{quote}
+The same moduli interpretation also determines the multiplicities in Nakaya's resultant. With the unramified elliptic factors removed, the norm-divisor calculation below gives a uniform identity at every prime level in $\mathfrak S$. It recovers the four identities of Nakaya's Conjecture 4, already proved by Morton, and supplies their analogues at the remaining levels. The argument uses standard tame ramification and Fricke fixed-point geometry; we make no priority claim for these geometric ingredients. Exact computations through $p\le400$ are included as checks of the formulas and normalizations.
+\end{quote}
+The supplied draft has not been modified. The theorem and proof are supplied as a separate editable LaTeX fragment. The proof here is a mathematical derivation from the stated integral modular-curve facts, not a conclusion drawn from finite agreement; no unresolved plane-normalization or collision lemma is being left implicit. The unresolved issues are bibliographic: final journal theorem pagination, inaccessible full texts, and exhaustive priority.
+
+\appendix
+\section{All flagged primes in the tested range}
+\input{exception_table.tex}
+\section{Correction-polynomial output and file map}
+All fifteen $A_N,B_N,E_N$ are printed in \path{results/run.log}, in
+\path{results/correction_polynomials.txt}, and in the exact GP vectors
+\path{results/data_N.gp}. The latter have order
+\[ [A_N,B_N,E_N,H_N,U_{N,0},U_{N,1728}]. \]
+The complete factorizations over $\mathbb Z$ of $R_N(0,Y)$, $R_N(1728,Y)$ and $D_N$ appear in \path{integer_factors_N.txt}. Large coefficients are left in these machine-readable files to avoid transcription errors.
+
+\begin{longtable}{L{.44\linewidth}L{.48\linewidth}}
+\toprule File & Contents\\\midrule\endhead
+\path{results/pairs.csv} & One row per permitted pair; status, degrees, maximum multiplicity, timing.\\
+\path{results/status_matrix.csv} & Requested $N\times p$ PASS table; diagonal marked OUTSIDE.\\
+\path{results/factors_N.txt} & Full actual and predicted factor matrices for each prime, including the first mismatch field.\\
+\path{results/radicals_N.gp} & All monic supersingular radical polynomials.\\
+\path{results/relation_N.gp} & Reconstructed $[a_N,b_N,k,m,v_{\rm sum},v_{\rm prod}]$.\\
+\path{results/exceptions.csv} & Collision flags for all 246 affected pairs.\\
+\path{results/exceptional_details.txt} & Polynomial gcds explaining each flag. Units in GP gcd output mean no common root.\\
+\path{results/certificates.txt} & Exact integer discriminants and pairwise resultants; detects further possible collision primes beyond the survey.\\
+\path{results/outside_scope.*} & All 43 exploratory pairs, including full factors and the separate formal diagonal diagnostic.\\
+\path{results/audit.json} & Structural checks of the saved output, pair counts, statuses and exception counts.\\
+\path{code/verify_c4.gp} & Self-contained reconstruction and multiplicity audit, pinned to GP 2.15.4.\\
+\path{report/statement_and_proof.tex} & Editable theorem, definitions, and complete geometric proof.\\
+\bottomrule
+\end{longtable}
+
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\footnotesize
+\begin{description}
+\setlength{\itemsep}{1pt}
+\setlength{\parsep}{0pt}
+\item Aricheta, V. M. (2019). Supersingular elliptic curves and moonshine. \emph{SIGMA, 15}, Article 007. \url{https://doi.org/10.3842/SIGMA.2019.007}
+\item Beneish, L., \& Wen, B. (2026). \emph{Atkin--Lehner quotients of modular curves at primes of bad reduction} [Preprint, v1]. arXiv. \url{https://arxiv.org/abs/2609.39725}
+\item Hajouji, N. (2023). \emph{Supersingular isogeny graphs from algebraic modular curves} [Preprint, v3]. arXiv. \url{https://arxiv.org/abs/2303.09096}
+\item Jordan, D. (n.d.). \emph{Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials} [Unpublished manuscript supplied with this request]. Filename: \path{Nakaya_Conjectures_5_6(3).pdf}. Publication status and date not verified; the associated code archive was also supplied.
+\item Kaneko, M., \& Zagier, D. (1998). Supersingular $j$-invariants, hypergeometric series, and Atkin's orthogonal polynomials. In D. A. Buell \& J. T. Teitelbaum (Eds.), \emph{Computational perspectives on number theory} (AMS/IP Studies in Advanced Mathematics, Vol. 7, pp. 97--126). American Mathematical Society. \url{https://www2.math.kyushu-u.ac.jp/~mkaneko/papers/17Atkin.pdf}
+\item Morton, P. (2023). Supersingular conjectures for the Fricke group. \emph{International Journal of Number Theory, 19}(4), 803--828. \url{https://doi.org/10.1142/S1793042123500409} [The theorem audit uses the supplied 2021 preprint, \url{https://arxiv.org/abs/2105.14532v1}.]
+\item Morton, P. (2024). The Hasse invariant of the Tate normal form $E_7$ and the supersingular polynomial for the Fricke group $\Gamma_0^*(7)$. \emph{The Ramanujan Journal, 63}, 339--385. \url{https://doi.org/10.1007/s11139-023-00764-8} [The abstract's distinction between proved linear/cubic and conjectural quadratic/sextic counts was checked; full paper was not re-audited here. Journal page range follows the supplied Jordan bibliography and was not independently verified.]
+\item Nakaya, T. (2019). The number of linear factors of supersingular polynomials and sporadic simple groups. \emph{Journal of Number Theory, 204}, 471--496. \url{https://doi.org/10.1016/j.jnt.2019.04.015} [Formulas checked in supplied arXiv:1809.02363v1.]
+\item Nakaya, T. (2023). \emph{On the orthogonality of Atkin-like polynomials and orthogonal polynomial expansion of generalized Faber polynomials} [Preprint]. arXiv. \url{https://arxiv.org/abs/2309.15360} [A 2024 journal version was located; final bibliographic details were not independently audited.]
+\item Sakai, Y. (2011). The Atkin orthogonal polynomials for the low-level Fricke groups and their application. \emph{International Journal of Number Theory, 7}(6), 1637--1661. \url{https://doi.org/10.1142/S1793042111004460}
+\item Sakai, Y. (2014). The Atkin orthogonal polynomials for the Fricke groups of levels 5 and 7. \emph{International Journal of Number Theory, 10}(8), 2243--2255. \url{https://doi.org/10.1142/S1793042114500766}
+\item Tsutsumi, H. (2007). The Atkin orthogonal polynomials for congruence subgroups of low levels. \emph{The Ramanujan Journal, 14}, 223--247. \url{https://doi.org/10.1007/s11139-007-9026-8}
+\end{description}
+\end{document}
