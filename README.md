@@ -1,6 +1,6 @@
 # Nakaya's Conjectures 5 and 6: linear factors and degree of Fricke supersingular polynomials
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23698277.svg)](https://doi.org/10.5281/zenodo.23698277)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23750884.svg)](https://doi.org/10.5281/zenodo.23750884)
 
 Manuscript and exact PARI/GP verification for a deduction of two conjectures of Nakaya (*J. Number Theory* 204 (2019)) on the supersingular polynomial ss<sub>p</sub><sup>(N\*)</sup> attached to the Fricke group Γ<sub>0</sub>(N)<sup>+</sup>, at every prime level N ∈ {3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71} and every prime p ≥ 5, p ≠ N:
 
@@ -47,7 +47,7 @@ Only step 1 needs N ∈ 𝔖. The same arguments count the rational supersingula
 
 ## Reproducing the verification
 
-The current manuscript, which adds Section 7 (Conjecture 4) and Appendix A.7, corresponds to release v1.1 (Zenodo DOI to be added). Release v1.0, archived as doi:10.5281/zenodo.23698277, matches the earlier manuscript without Section 7. All commands are run from `verification/`. "Reconstructed" means the run rebuilds the Hauptmoduli and modular relations from spaces of modular forms; "stored" means it reads `relations/relation_N.gp`, produced by the reconstructing run under PARI/GP 2.15.4; "none" means it uses only the classical supersingular polynomial and the modular polynomial Φ<sub>N</sub>.
+The current manuscript, which adds Section 7 (Conjecture 4) and Appendix A.7, corresponds to release v1.1, archived on Zenodo as doi:10.5281/zenodo.23750884. Release v1.0, archived as doi:10.5281/zenodo.23698277, matches the earlier manuscript without Section 7. All commands are run from `verification/`. "Reconstructed" means the run rebuilds the Hauptmoduli and modular relations from spaces of modular forms; "stored" means it reads `relations/relation_N.gp`, produced by the reconstructing run under PARI/GP 2.15.4; "none" means it uses only the classical supersingular polynomial and the modular polynomial Φ<sub>N</sub>.
 
 | Survey | Command | Hauptmoduli | PARI | Expected final output |
 |---|---|---|---|---|
@@ -119,7 +119,7 @@ Finite agreement checks the implementation and normalisations; it is not a subst
 
 ## How to cite
 
-Jordan, D. (2026). *Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials: manuscript and PARI/GP verification* (Version v1.1) [Computer software]. Zenodo. DOI to be added on release (v1.0: https://doi.org/10.5281/zenodo.23698277)
+Jordan, D. (2026). *Nakaya's conjectures on the linear factors and degree of Fricke supersingular polynomials: manuscript and PARI/GP verification* (Version v1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23750884
 
 Release v1.1 matches the current manuscript; v1.0 matches the earlier version without the Conjecture 4 material.
 
