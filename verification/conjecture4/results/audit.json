@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "permitted_pairs": 1127,
+  "odd_level_pairs": 1051,
+  "levels": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    41,
+    47,
+    59,
+    71
+  ],
+  "primes": 76,
+  "largest_prime": 397,
+  "flagged_pairs": 246,
+  "correction_collision_pairs": 239,
+  "plane_discriminant_only_pairs": 7,
+  "flag_counts": {
+    "Res_AE": 52,
+    "disc_rad_D": 203,
+    "Res_BE": 60,
+    "Res_AB": 82,
+    "disc_B": 106,
+    "disc_A": 51
+  },
+  "max_multiplicity": 6,
+  "outside_pairs": 43,
+  "formal_diagonal_failures": 13,
+  "scope": "Saved-output structural audit, not a second number-theoretic implementation."
+}

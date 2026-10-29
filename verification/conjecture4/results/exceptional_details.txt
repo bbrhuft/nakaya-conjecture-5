@@ -1,0 +1,1968 @@
+N=2 p=5 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=1
+gcd(E,E')=1
+gcd(A,B)=2
+gcd(A,E)=T + 4
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=2*T + 3
+N=2 p=7 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=1
+gcd(E,E')=3
+gcd(A,B)=1
+gcd(A,E)=4
+gcd(B,E)=T + 3
+gcd(rad_Q(D),derivative)=5*T + 1
+N=2 p=11 flags=["Res_AB"]
+gcd(A,A')=1
+gcd(B,B')=1
+gcd(E,E')=6
+gcd(A,B)=T + 1
+gcd(A,E)=4
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=7
+N=3 p=5 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=3
+gcd(E,E')=4
+gcd(A,B)=3
+gcd(A,E)=T + 2
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=2*T + 4
+N=3 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=2*T + 5
+gcd(E,E')=3
+gcd(A,B)=2
+gcd(A,E)=4
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=6*T + 1
+N=3 p=11 flags=["Res_AB", "Res_BE", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=6
+gcd(E,E')=10
+gcd(A,B)=T + 5
+gcd(A,E)=4
+gcd(B,E)=5*T + 10
+gcd(rad_Q(D),derivative)=4*T + 8
+N=3 p=23 flags=["Res_AB"]
+gcd(A,A')=1
+gcd(B,B')=14
+gcd(E,E')=5
+gcd(A,B)=T + 8
+gcd(A,E)=8
+gcd(B,E)=18
+gcd(rad_Q(D),derivative)=8
+N=5 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=2
+gcd(B,B')=2*T + 6
+gcd(E,E')=4
+gcd(A,B)=2
+gcd(A,E)=4
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=5*T + 1
+N=5 p=11 flags=["Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=8
+gcd(B,B')=7
+gcd(E,E')=6
+gcd(A,B)=8*T + 2
+gcd(A,E)=7*T + 6
+gcd(B,E)=10*T + 4
+gcd(rad_Q(D),derivative)=10*T^2 + 5
+N=5 p=19 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=13
+gcd(B,B')=2
+gcd(E,E')=13
+gcd(A,B)=3
+gcd(A,E)=1
+gcd(B,E)=17*T + 15
+gcd(rad_Q(D),derivative)=2*T + 4
+N=5 p=59 flags=["Res_AB"]
+gcd(A,A')=44
+gcd(B,B')=34
+gcd(E,E')=31
+gcd(A,B)=48*T + 16
+gcd(A,E)=53
+gcd(B,E)=51
+gcd(rad_Q(D),derivative)=34
+N=5 p=71 flags=["Res_AB"]
+gcd(A,A')=53
+gcd(B,B')=69
+gcd(E,E')=68
+gcd(A,B)=46*T + 21
+gcd(A,E)=27
+gcd(B,E)=3
+gcd(rad_Q(D),derivative)=44
+N=7 p=5 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=4
+gcd(B,B')=3
+gcd(E,E')=4
+gcd(A,B)=4
+gcd(A,E)=T^2 + 4*T + 3
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=3*T^2 + 2*T + 4
+N=7 p=11 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=4
+gcd(B,B')=2*T + 7
+gcd(E,E')=2
+gcd(A,B)=T^2 + 4*T + 8
+gcd(A,E)=5
+gcd(B,E)=5
+gcd(rad_Q(D),derivative)=8*T + 6
+N=7 p=17 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=8
+gcd(B,B')=10
+gcd(E,E')=8
+gcd(A,B)=12
+gcd(A,E)=12*T + 16
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=4*T + 11
+N=7 p=19 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=7
+gcd(B,B')=12
+gcd(E,E')=13
+gcd(A,B)=13
+gcd(A,E)=11
+gcd(B,E)=16*T + 5
+gcd(rad_Q(D),derivative)=12*T + 18
+N=7 p=23 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=2
+gcd(B,B')=16*T + 7
+gcd(E,E')=11
+gcd(A,B)=2
+gcd(A,E)=6
+gcd(B,E)=6
+gcd(rad_Q(D),derivative)=22*T + 1
+N=7 p=47 flags=["Res_AB"]
+gcd(A,A')=30
+gcd(B,B')=10
+gcd(E,E')=39
+gcd(A,B)=10*T + 25
+gcd(A,E)=34
+gcd(B,E)=34
+gcd(rad_Q(D),derivative)=12
+N=7 p=83 flags=["Res_AB"]
+gcd(A,A')=22
+gcd(B,B')=19
+gcd(E,E')=53
+gcd(A,B)=53*T + 71
+gcd(A,E)=70
+gcd(B,E)=51
+gcd(rad_Q(D),derivative)=15
+N=7 p=131 flags=["Res_AB"]
+gcd(A,A')=87
+gcd(B,B')=47
+gcd(E,E')=66
+gcd(A,B)=107*T + 21
+gcd(A,E)=64
+gcd(B,E)=114
+gcd(rad_Q(D),derivative)=14
+N=11 p=5 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=T^2 + 4*T
+gcd(B,B')=1
+gcd(E,E')=1
+gcd(A,B)=1
+gcd(A,E)=1
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=T^6 + 2*T^5 + 3*T^4 + 4*T^3
+N=11 p=7 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=3
+gcd(B,B')=6*T + 3
+gcd(E,E')=6
+gcd(A,B)=4
+gcd(A,E)=4
+gcd(B,E)=T^4 + 4*T^3 + 3*T^2 + 4*T + 2
+gcd(rad_Q(D),derivative)=3*T^5 + 3*T^4 + T^3 + 6*T^2 + 5*T + 3
+N=11 p=17 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=10
+gcd(B,B')=6
+gcd(E,E')=12
+gcd(A,B)=7
+gcd(A,E)=5*T + 12
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=13*T + 4
+N=11 p=19 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=14
+gcd(B,B')=17*T + 2
+gcd(E,E')=2
+gcd(A,B)=10
+gcd(A,E)=9
+gcd(B,E)=4*T + 8
+gcd(rad_Q(D),derivative)=16*T^2 + 16*T + 6
+N=11 p=23 flags=["Res_AB"]
+gcd(A,A')=4
+gcd(B,B')=6
+gcd(E,E')=4
+gcd(A,B)=21*T^2 + 18*T + 15
+gcd(A,E)=6
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=12
+N=11 p=29 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=27
+gcd(B,B')=8
+gcd(E,E')=27
+gcd(A,B)=9
+gcd(A,E)=23*T + 11
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=22*T + 8
+N=11 p=31 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=7*T + 22
+gcd(E,E')=18
+gcd(A,B)=14
+gcd(A,E)=10
+gcd(B,E)=28
+gcd(rad_Q(D),derivative)=19*T + 11
+N=11 p=43 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=42
+gcd(B,B')=26
+gcd(E,E')=32
+gcd(A,B)=8
+gcd(A,E)=24
+gcd(B,E)=33*T + 14
+gcd(rad_Q(D),derivative)=32*T + 24
+N=11 p=107 flags=["Res_AB"]
+gcd(A,A')=88
+gcd(B,B')=58
+gcd(E,E')=74
+gcd(A,B)=14*T + 52
+gcd(A,E)=37
+gcd(B,E)=14
+gcd(rad_Q(D),derivative)=6
+N=11 p=167 flags=["Res_AB"]
+gcd(A,A')=140
+gcd(B,B')=55
+gcd(E,E')=51
+gcd(A,B)=91*T + 150
+gcd(A,E)=58
+gcd(B,E)=87
+gcd(rad_Q(D),derivative)=26
+N=11 p=263 flags=["Res_AB"]
+gcd(A,A')=174
+gcd(B,B')=114
+gcd(E,E')=131
+gcd(A,B)=27*T + 141
+gcd(A,E)=190
+gcd(B,E)=147
+gcd(rad_Q(D),derivative)=110
+N=11 p=347 flags=["Res_AB"]
+gcd(A,A')=220
+gcd(B,B')=264
+gcd(E,E')=193
+gcd(A,B)=330*T + 70
+gcd(A,E)=131
+gcd(B,E)=168
+gcd(rad_Q(D),derivative)=166
+N=11 p=359 flags=["Res_AB"]
+gcd(A,A')=95
+gcd(B,B')=308
+gcd(E,E')=14
+gcd(A,B)=156*T + 335
+gcd(A,E)=23
+gcd(B,E)=46
+gcd(rad_Q(D),derivative)=38
+N=13 p=5 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=4*T
+gcd(B,B')=2
+gcd(E,E')=3
+gcd(A,B)=1
+gcd(A,E)=T^2 + T + 2
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=T^4 + T^3 + 2*T^2
+N=13 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=3
+gcd(B,B')=4*T^3 + 2*T^2 + 3
+gcd(E,E')=4
+gcd(A,B)=4
+gcd(A,E)=1
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=3*T^3 + 5*T^2 + 4
+N=13 p=11 flags=["disc_A", "disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=10*T + 9
+gcd(B,B')=2*T^2 + 10*T
+gcd(E,E')=3
+gcd(A,B)=9*T^2 + 4
+gcd(A,E)=1
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=3*T^4 + 5*T^3 + 6*T^2 + 5*T
+N=13 p=17 flags=["disc_rad_D"]
+gcd(A,A')=10
+gcd(B,B')=9
+gcd(E,E')=16
+gcd(A,B)=16
+gcd(A,E)=15
+gcd(B,E)=8
+gcd(rad_Q(D),derivative)=2*T + 12
+N=13 p=23 flags=["disc_B", "Res_AB", "Res_AE", "disc_rad_D"]
+gcd(A,A')=20
+gcd(B,B')=10*T
+gcd(E,E')=17
+gcd(A,B)=14*T + 21
+gcd(A,E)=12*T + 5
+gcd(B,E)=2
+gcd(rad_Q(D),derivative)=19*T^2 + 6*T
+N=13 p=43 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=21
+gcd(B,B')=18
+gcd(E,E')=34
+gcd(A,B)=22
+gcd(A,E)=6
+gcd(B,E)=9*T + 41
+gcd(rad_Q(D),derivative)=12*T + 26
+N=13 p=47 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=9
+gcd(B,B')=25*T + 37
+gcd(E,E')=42
+gcd(A,B)=32
+gcd(A,E)=4
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=29*T + 26
+N=13 p=107 flags=["Res_AB"]
+gcd(A,A')=71
+gcd(B,B')=97
+gcd(E,E')=55
+gcd(A,B)=42*T + 65
+gcd(A,E)=1
+gcd(B,E)=88
+gcd(rad_Q(D),derivative)=86
+N=13 p=251 flags=["Res_AB"]
+gcd(A,A')=186
+gcd(B,B')=130
+gcd(E,E')=199
+gcd(A,B)=46*T + 35
+gcd(A,E)=67
+gcd(B,E)=153
+gcd(rad_Q(D),derivative)=46
+N=13 p=311 flags=["Res_AB"]
+gcd(A,A')=95
+gcd(B,B')=110
+gcd(E,E')=259
+gcd(A,B)=65*T + 43
+gcd(A,E)=75
+gcd(B,E)=242
+gcd(rad_Q(D),derivative)=67
+N=17 p=5 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=T + 3
+gcd(B,B')=1
+gcd(E,E')=1
+gcd(A,B)=4
+gcd(A,E)=T^4 + 2*T^3 + T^2 + 4*T + 3
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=3*T^6 + 4*T^5 + T^4 + 4*T^3 + 3*T^2 + 2*T + 1
+N=17 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=2
+gcd(B,B')=2*T^4 + 3*T^3 + 3*T^2 + T
+gcd(E,E')=5
+gcd(A,B)=1
+gcd(A,E)=4
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=3*T^4 + T^3 + T^2 + 5*T
+N=17 p=11 flags=["disc_A", "disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=8*T + 10
+gcd(B,B')=9*T^2 + 8*T + 6
+gcd(E,E')=7
+gcd(A,B)=4*T^4 + 3*T^3 + 4*T^2 + 10*T + 9
+gcd(A,E)=10
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=6*T^4 + 2*T^3 + 7*T^2 + 9
+N=17 p=13 flags=["disc_rad_D"]
+gcd(A,A')=12
+gcd(B,B')=1
+gcd(E,E')=12
+gcd(A,B)=2
+gcd(A,E)=9
+gcd(B,E)=10
+gcd(rad_Q(D),derivative)=11*T
+N=17 p=19 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=8
+gcd(B,B')=13
+gcd(E,E')=2
+gcd(A,B)=2
+gcd(A,E)=14
+gcd(B,E)=2*T + 2
+gcd(rad_Q(D),derivative)=10*T + 10
+N=17 p=23 flags=["disc_A", "disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=16*T + 4
+gcd(B,B')=3*T + 11
+gcd(E,E')=17
+gcd(A,B)=9*T^2 + 18*T + 4
+gcd(A,E)=3
+gcd(B,E)=6
+gcd(rad_Q(D),derivative)=18*T^3 + 6*T^2 + 14*T + 7
+N=17 p=31 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=7
+gcd(B,B')=12*T + 9
+gcd(E,E')=15
+gcd(A,B)=24
+gcd(A,E)=1
+gcd(B,E)=28
+gcd(rad_Q(D),derivative)=13*T + 2
+N=17 p=43 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=7
+gcd(B,B')=6*T + 34
+gcd(E,E')=30
+gcd(A,B)=26
+gcd(A,E)=16
+gcd(B,E)=20*T + 3
+gcd(rad_Q(D),derivative)=24*T^2 + 2*T + 29
+N=17 p=47 flags=["Res_AB", "Res_AE", "disc_rad_D"]
+gcd(A,A')=46
+gcd(B,B')=46
+gcd(E,E')=20
+gcd(A,B)=7*T^2 + 13*T + 5
+gcd(A,E)=35*T + 7
+gcd(B,E)=37
+gcd(rad_Q(D),derivative)=4*T + 29
+N=17 p=59 flags=["Res_AB", "Res_BE", "disc_rad_D"]
+gcd(A,A')=50
+gcd(B,B')=6
+gcd(E,E')=42
+gcd(A,B)=44*T^2 + 6*T + 56
+gcd(A,E)=29
+gcd(B,E)=41*T + 19
+gcd(rad_Q(D),derivative)=39*T^2 + 4*T + 37
+N=17 p=67 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=11
+gcd(B,B')=7
+gcd(E,E')=58
+gcd(A,B)=44
+gcd(A,E)=54
+gcd(B,E)=15*T + 29
+gcd(rad_Q(D),derivative)=8*T + 11
+N=17 p=83 flags=["Res_AB"]
+gcd(A,A')=39
+gcd(B,B')=66
+gcd(E,E')=47
+gcd(A,B)=3*T + 42
+gcd(A,E)=26
+gcd(B,E)=10
+gcd(rad_Q(D),derivative)=48
+N=17 p=191 flags=["Res_AB"]
+gcd(A,A')=58
+gcd(B,B')=178
+gcd(E,E')=63
+gcd(A,B)=87*T + 59
+gcd(A,E)=156
+gcd(B,E)=79
+gcd(rad_Q(D),derivative)=112
+N=17 p=383 flags=["Res_AB"]
+gcd(A,A')=218
+gcd(B,B')=287
+gcd(E,E')=314
+gcd(A,B)=222*T + 36
+gcd(A,E)=172
+gcd(B,E)=263
+gcd(rad_Q(D),derivative)=375
+N=19 p=5 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=3*T^3 + 4*T^2 + T
+gcd(B,B')=3
+gcd(E,E')=3
+gcd(A,B)=3
+gcd(A,E)=2
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=2*T^11 + 2*T^9 + 4*T^8 + 2*T^7 + 3*T^6 + T^5 + 4*T^4 + 4*T^3
+N=19 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=5
+gcd(B,B')=T^5 + 6*T^4 + 4*T^3 + 2*T^2 + 2
+gcd(E,E')=1
+gcd(A,B)=1
+gcd(A,E)=1
+gcd(B,E)=2
+gcd(rad_Q(D),derivative)=T^5 + 6*T^4 + 4*T^3 + 2*T^2 + 2
+N=19 p=11 flags=["disc_A", "disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=8*T + 4
+gcd(B,B')=10*T^3 + T
+gcd(E,E')=1
+gcd(A,B)=4*T^4 + T^3 + 4*T^2 + 10*T + 4
+gcd(A,E)=9
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=4*T^5 + 4*T^4 + 8*T^3 + 7*T^2 + 10*T
+N=19 p=17 flags=["disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=6
+gcd(E,E')=5
+gcd(A,B)=13
+gcd(A,E)=13
+gcd(B,E)=9
+gcd(rad_Q(D),derivative)=4*T + 15
+N=19 p=23 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=4
+gcd(B,B')=16*T
+gcd(E,E')=4
+gcd(A,B)=10*T^2 + 14*T + 8
+gcd(A,E)=18
+gcd(B,E)=6
+gcd(rad_Q(D),derivative)=9*T
+N=19 p=29 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=13*T + 11
+gcd(B,B')=11
+gcd(E,E')=2
+gcd(A,B)=26
+gcd(A,E)=18
+gcd(B,E)=9
+gcd(rad_Q(D),derivative)=11*T^2 + 3*T + 18
+N=19 p=31 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=21*T + 19
+gcd(E,E')=17
+gcd(A,B)=22
+gcd(A,E)=19
+gcd(B,E)=16
+gcd(rad_Q(D),derivative)=24*T + 4
+N=19 p=41 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=31
+gcd(B,B')=3
+gcd(E,E')=29
+gcd(A,B)=20
+gcd(A,E)=24*T + 12
+gcd(B,E)=9
+gcd(rad_Q(D),derivative)=12*T + 6
+N=19 p=47 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=21
+gcd(B,B')=12*T + 40
+gcd(E,E')=9
+gcd(A,B)=46
+gcd(A,E)=35
+gcd(B,E)=9
+gcd(rad_Q(D),derivative)=15*T + 3
+N=19 p=53 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=28
+gcd(B,B')=50
+gcd(E,E')=35
+gcd(A,B)=33
+gcd(A,E)=38*T + 25
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=24*T + 13
+N=19 p=59 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=55
+gcd(B,B')=15*T + 25
+gcd(E,E')=34
+gcd(A,B)=28*T + 11
+gcd(A,E)=17
+gcd(B,E)=16
+gcd(rad_Q(D),derivative)=13*T + 2
+N=19 p=67 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=18
+gcd(E,E')=28
+gcd(A,B)=21
+gcd(A,E)=64
+gcd(B,E)=65*T + 10
+gcd(rad_Q(D),derivative)=56*T + 55
+N=19 p=71 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=23
+gcd(B,B')=28*T + 44
+gcd(E,E')=23
+gcd(A,B)=4
+gcd(A,E)=5
+gcd(B,E)=38
+gcd(rad_Q(D),derivative)=49*T + 6
+N=19 p=83 flags=["Res_AB"]
+gcd(A,A')=41
+gcd(B,B')=44
+gcd(E,E')=29
+gcd(A,B)=59*T^2 + 76*T + 68
+gcd(A,E)=25
+gcd(B,E)=38
+gcd(rad_Q(D),derivative)=47
+N=23 p=5 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=4*T + 3
+gcd(B,B')=3
+gcd(E,E')=1
+gcd(A,B)=3
+gcd(A,E)=T^6 + 4*T^5 + 2*T^4 + 3*T^3 + 4*T^2 + T
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=4*T^8 + 2*T^7 + 3*T^6 + 3*T^5 + T^4 + T^3 + T
+N=23 p=7 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=5
+gcd(B,B')=2*T^3 + T^2 + 5*T + 6
+gcd(E,E')=3
+gcd(A,B)=4
+gcd(A,E)=1
+gcd(B,E)=T^6 + 4*T^5 + 3*T^4 + 5*T^3 + 6*T^2 + 5*T
+gcd(rad_Q(D),derivative)=6*T^10 + 4*T^8 + 2*T^7 + 2*T^6 + 2*T^5 + 4*T^4 + 2*T^3 + 5*T^2 + T
+N=23 p=11 flags=["disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=10
+gcd(B,B')=T^2 + 7*T + 2
+gcd(E,E')=10
+gcd(A,B)=9*T^5 + 9*T^4 + 10*T^2 + 8*T + 4
+gcd(A,E)=7*T^3 + 2*T^2 + 9*T + 8
+gcd(B,E)=2*T^3 + 9*T^2 + 6*T + 10
+gcd(rad_Q(D),derivative)=5*T^8 + 5*T^6 + 9*T^5 + 3*T^4 + 8*T^2 + 10
+N=23 p=13 flags=["disc_rad_D"]
+gcd(A,A')=5
+gcd(B,B')=7
+gcd(E,E')=3
+gcd(A,B)=8
+gcd(A,E)=9
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=8*T + 10
+N=23 p=17 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=15*T
+gcd(B,B')=12
+gcd(E,E')=1
+gcd(A,B)=10
+gcd(A,E)=8*T + 5
+gcd(B,E)=2
+gcd(rad_Q(D),derivative)=8*T^3 + 5*T^2
+N=23 p=19 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=15
+gcd(B,B')=9*T
+gcd(E,E')=15
+gcd(A,B)=1
+gcd(A,E)=7
+gcd(B,E)=11*T^2 + 7*T + 17
+gcd(rad_Q(D),derivative)=7*T^4 + 17*T^3 + 2*T^2 + 4*T
+N=23 p=31 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=16
+gcd(B,B')=18*T + 8
+gcd(E,E')=4
+gcd(A,B)=14
+gcd(A,E)=28
+gcd(B,E)=5
+gcd(rad_Q(D),derivative)=19*T + 5
+N=23 p=41 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=24*T + 11
+gcd(B,B')=33
+gcd(E,E')=37
+gcd(A,B)=1
+gcd(A,E)=21
+gcd(B,E)=36
+gcd(rad_Q(D),derivative)=32*T^2 + 2*T + 9
+N=23 p=43 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=33
+gcd(B,B')=18
+gcd(E,E')=34
+gcd(A,B)=3
+gcd(A,E)=35
+gcd(B,E)=4*T + 39
+gcd(rad_Q(D),derivative)=28*T + 15
+N=23 p=47 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=24
+gcd(B,B')=21*T + 37
+gcd(E,E')=26
+gcd(A,B)=4
+gcd(A,E)=28
+gcd(B,E)=34
+gcd(rad_Q(D),derivative)=45*T + 39
+N=23 p=53 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=8
+gcd(B,B')=35
+gcd(E,E')=29
+gcd(A,B)=12
+gcd(A,E)=20*T + 27
+gcd(B,E)=44
+gcd(rad_Q(D),derivative)=25*T + 47
+N=23 p=67 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=13
+gcd(B,B')=23*T + 24
+gcd(E,E')=20
+gcd(A,B)=32
+gcd(A,E)=26
+gcd(B,E)=17*T + 16
+gcd(rad_Q(D),derivative)=37*T^2 + 15*T + 24
+N=23 p=79 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=71
+gcd(B,B')=41*T + 39
+gcd(E,E')=63
+gcd(A,B)=33
+gcd(A,E)=12
+gcd(B,E)=2
+gcd(rad_Q(D),derivative)=46*T + 11
+N=23 p=83 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=55
+gcd(B,B')=54
+gcd(E,E')=67
+gcd(A,B)=31
+gcd(A,E)=25
+gcd(B,E)=67*T + 73
+gcd(rad_Q(D),derivative)=20*T^2 + 17*T + 8
+N=23 p=107 flags=["Res_AB"]
+gcd(A,A')=55
+gcd(B,B')=54
+gcd(E,E')=51
+gcd(A,B)=13*T^2 + 105*T + 69
+gcd(A,E)=44
+gcd(B,E)=33
+gcd(rad_Q(D),derivative)=53
+N=29 p=5 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=4*T^5 + T^4 + T^3 + 3*T^2 + 1
+gcd(B,B')=4
+gcd(E,E')=4
+gcd(A,B)=4
+gcd(A,E)=3
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=T^17 + T^16 + 2*T^15 + 4*T^14 + 2*T^13 + 4*T^12 + 3*T^11 + 4*T^9 + 3*T^7 + 3*T^6 + 2*T^5 + 4*T^4 + 2*T^3 + 3*T^2 + T + 1
+N=29 p=7 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=4
+gcd(B,B')=T^4 + 4*T^3 + 5*T^2 + T
+gcd(E,E')=2
+gcd(A,B)=1
+gcd(A,E)=4
+gcd(B,E)=T^6 + 2*T^5 + 4*T^4 + 4*T^3 + T^2 + 3*T + 3
+gcd(rad_Q(D),derivative)=3*T^11 + 5*T^10 + T^9 + 5*T^8 + T^7 + 6*T^6 + 5*T^5 + 3*T^4 + 5*T^3 + 6*T^2 + 3*T
+N=29 p=11 flags=["disc_A", "disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=10*T^2 + 2*T
+gcd(B,B')=6*T^4 + 6*T^3 + 2*T^2 + 8
+gcd(E,E')=1
+gcd(A,B)=5*T^6 + 6*T^5 + 3*T^4 + 5*T^3 + 3*T^2 + 6*T + 10
+gcd(A,E)=2
+gcd(B,E)=9
+gcd(rad_Q(D),derivative)=2*T^8 + 5*T^7 + 8*T^6 + 9*T^5 + 9*T^4 + 4*T^3 + 7*T^2
+N=29 p=13 flags=["disc_rad_D"]
+gcd(A,A')=2
+gcd(B,B')=12
+gcd(E,E')=9
+gcd(A,B)=5
+gcd(A,E)=3
+gcd(B,E)=10
+gcd(rad_Q(D),derivative)=8*T^2 + 5*T + 7
+N=29 p=17 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=16*T + 14
+gcd(B,B')=14
+gcd(E,E')=12
+gcd(A,B)=2
+gcd(A,E)=12*T^2 + 6*T + 4
+gcd(B,E)=8
+gcd(rad_Q(D),derivative)=16*T^4 + 2*T^3 + 16*T^2 + 2*T + 14
+N=29 p=19 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=17
+gcd(B,B')=11*T^3 + 2*T^2 + 9*T + 2
+gcd(E,E')=4
+gcd(A,B)=5
+gcd(A,E)=17
+gcd(B,E)=5
+gcd(rad_Q(D),derivative)=17*T^3 + 10*T^2 + 7*T + 10
+N=29 p=23 flags=["Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=14
+gcd(E,E')=15
+gcd(A,B)=T^3 + 7*T^2 + 13*T + 19
+gcd(A,E)=8*T + 5
+gcd(B,E)=T^2 + 20*T + 14
+gcd(rad_Q(D),derivative)=14*T^3 + 7*T^2 + 3*T + 19
+N=29 p=31 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=4
+gcd(B,B')=13*T^2 + 4*T + 2
+gcd(E,E')=16
+gcd(A,B)=26
+gcd(A,E)=3
+gcd(B,E)=29
+gcd(rad_Q(D),derivative)=16*T^2 + 24*T + 12
+N=29 p=43 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=13
+gcd(B,B')=10*T + 19
+gcd(E,E')=13
+gcd(A,B)=34
+gcd(A,E)=41
+gcd(B,E)=13
+gcd(rad_Q(D),derivative)=6*T + 20
+N=29 p=47 flags=["Res_AB"]
+gcd(A,A')=9
+gcd(B,B')=1
+gcd(E,E')=2
+gcd(A,B)=43*T^2 + 42*T + 3
+gcd(A,E)=28
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=12
+N=29 p=59 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=26*T + 29
+gcd(B,B')=10
+gcd(E,E')=55
+gcd(A,B)=27
+gcd(A,E)=3
+gcd(B,E)=45
+gcd(rad_Q(D),derivative)=54*T^2 + 7*T + 30
+N=29 p=67 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=41
+gcd(B,B')=50
+gcd(E,E')=2
+gcd(A,B)=50
+gcd(A,E)=47
+gcd(B,E)=39*T + 56
+gcd(rad_Q(D),derivative)=28*T + 11
+N=29 p=71 flags=["disc_B", "Res_AB", "Res_AE", "disc_rad_D"]
+gcd(A,A')=44
+gcd(B,B')=68*T + 34
+gcd(E,E')=66
+gcd(A,B)=66*T^2 + 32*T + 69
+gcd(A,E)=49*T + 4
+gcd(B,E)=40
+gcd(rad_Q(D),derivative)=18*T^2 + 38*T + 50
+N=29 p=79 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=36
+gcd(B,B')=T + 68
+gcd(E,E')=44
+gcd(A,B)=40
+gcd(A,E)=22
+gcd(B,E)=65
+gcd(rad_Q(D),derivative)=76*T + 33
+N=29 p=83 flags=["Res_AB", "Res_AE", "disc_rad_D"]
+gcd(A,A')=39
+gcd(B,B')=1
+gcd(E,E')=15
+gcd(A,B)=37*T^2 + 2*T + 70
+gcd(A,E)=44*T + 38
+gcd(B,E)=23
+gcd(rad_Q(D),derivative)=22*T + 19
+N=29 p=103 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=44
+gcd(B,B')=78*T + 57
+gcd(E,E')=27
+gcd(A,B)=20
+gcd(A,E)=29
+gcd(B,E)=81
+gcd(rad_Q(D),derivative)=78*T + 57
+N=29 p=107 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=30
+gcd(B,B')=31
+gcd(E,E')=28
+gcd(A,B)=1
+gcd(A,E)=25
+gcd(B,E)=29*T + 65
+gcd(rad_Q(D),derivative)=22*T^2 + 69*T + 58
+N=29 p=179 flags=["Res_AB"]
+gcd(A,A')=37
+gcd(B,B')=87
+gcd(E,E')=102
+gcd(A,B)=148*T^2 + 42*T + 24
+gcd(A,E)=117
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=167
+N=31 p=5 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=3*T^5 + 2*T^4 + 4*T^3 + T^2 + T + 4
+gcd(B,B')=4
+gcd(E,E')=4
+gcd(A,B)=3
+gcd(A,E)=1
+gcd(B,E)=2
+gcd(rad_Q(D),derivative)=T^17 + 2*T^16 + 2*T^15 + 2*T^14 + 2*T^12 + 2*T^11 + 3*T^10 + 4*T^8 + 4*T^7 + T^6 + T^5 + 4*T^3 + 2*T^2
+N=31 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=2
+gcd(B,B')=4*T^8 + 3*T^7 + 5*T^6 + 2*T^5 + 5*T^4 + 2*T^3 + 4*T^2 + 3
+gcd(E,E')=3
+gcd(A,B)=6
+gcd(A,E)=2
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=5*T^8 + 2*T^7 + T^6 + 6*T^5 + T^4 + 6*T^3 + 5*T^2 + 2
+N=31 p=11 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=9*T + 1
+gcd(B,B')=4*T^4 + 7*T^3 + 2*T^2 + 5*T + 5
+gcd(E,E')=6
+gcd(A,B)=6*T^5 + 2*T^4 + 6*T^3 + 10*T^2 + 10*T + 4
+gcd(A,E)=T^3 + 3*T^2 + 2*T + 2
+gcd(B,E)=3*T^3 + 3*T^2 + 9*T + 9
+gcd(rad_Q(D),derivative)=7*T^13 + 5*T^12 + 8*T^11 + T^10 + 5*T^9 + 8*T^8 + 9*T^7 + 5*T^6 + 2*T^5 + 5*T^4 + T^3 + 4*T^2 + 8*T + 1
+N=31 p=17 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=5*T + 9
+gcd(B,B')=12
+gcd(E,E')=8
+gcd(A,B)=8
+gcd(A,E)=14*T + 4
+gcd(B,E)=16
+gcd(rad_Q(D),derivative)=3*T^3 + 13*T + 2
+N=31 p=19 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=9
+gcd(B,B')=17*T^2 + 2*T + 16
+gcd(E,E')=13
+gcd(A,B)=10
+gcd(A,E)=16
+gcd(B,E)=17
+gcd(rad_Q(D),derivative)=T^2 + 18*T + 11
+N=31 p=23 flags=["disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=11
+gcd(B,B')=9*T^2 + 12*T + 1
+gcd(E,E')=11
+gcd(A,B)=21*T + 7
+gcd(A,E)=19*T + 13
+gcd(B,E)=6*T^2 + 22*T + 17
+gcd(rad_Q(D),derivative)=21*T^5 + 8*T^4 + 13*T^3 + 4*T^2 + 4*T + 21
+N=31 p=29 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=18
+gcd(B,B')=18
+gcd(E,E')=5
+gcd(A,B)=1
+gcd(A,E)=19*T + 2
+gcd(B,E)=20
+gcd(rad_Q(D),derivative)=15*T + 26
+N=31 p=41 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=23*T + 3
+gcd(B,B')=31
+gcd(E,E')=18
+gcd(A,B)=36
+gcd(A,E)=39
+gcd(B,E)=10
+gcd(rad_Q(D),derivative)=36*T^3 + 16*T^2 + 19*T + 19
+N=31 p=43 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=16
+gcd(E,E')=28
+gcd(A,B)=12
+gcd(A,E)=6
+gcd(B,E)=8*T + 35
+gcd(rad_Q(D),derivative)=16*T + 27
+N=31 p=47 flags=["Res_AB"]
+gcd(A,A')=18
+gcd(B,B')=21
+gcd(E,E')=35
+gcd(A,B)=42*T^2 + 2*T + 9
+gcd(A,E)=8
+gcd(B,E)=21
+gcd(rad_Q(D),derivative)=21
+N=31 p=59 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=16
+gcd(B,B')=12*T^2 + 5*T + 18
+gcd(E,E')=55
+gcd(A,B)=55*T^2 + 57*T + 28
+gcd(A,E)=36
+gcd(B,E)=20
+gcd(rad_Q(D),derivative)=12*T^2 + 5*T + 18
+N=31 p=71 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=38
+gcd(B,B')=43*T + 21
+gcd(E,E')=11
+gcd(A,B)=46*T^2 + 11*T + 23
+gcd(A,E)=30
+gcd(B,E)=58
+gcd(rad_Q(D),derivative)=42*T + 4
+N=31 p=79 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=72
+gcd(B,B')=74*T + 68
+gcd(E,E')=77
+gcd(A,B)=69
+gcd(A,E)=57
+gcd(B,E)=2
+gcd(rad_Q(D),derivative)=8*T + 65
+N=31 p=83 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=5
+gcd(B,B')=75*T + 73
+gcd(E,E')=54
+gcd(A,B)=37
+gcd(A,E)=27
+gcd(B,E)=10
+gcd(rad_Q(D),derivative)=75*T + 73
+N=31 p=89 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=80
+gcd(B,B')=66
+gcd(E,E')=57
+gcd(A,B)=51
+gcd(A,E)=29*T + 78
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=26*T + 73
+N=31 p=107 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=39
+gcd(B,B')=38*T + 78
+gcd(E,E')=60
+gcd(A,B)=77
+gcd(A,E)=44
+gcd(B,E)=13
+gcd(rad_Q(D),derivative)=76*T + 49
+N=31 p=179 flags=["Res_AB"]
+gcd(A,A')=112
+gcd(B,B')=122
+gcd(E,E')=136
+gcd(A,B)=10*T + 149
+gcd(A,E)=1
+gcd(B,E)=107
+gcd(rad_Q(D),derivative)=68
+N=31 p=191 flags=["Res_AB"]
+gcd(A,A')=68
+gcd(B,B')=46
+gcd(E,E')=131
+gcd(A,B)=96*T^2 + 151*T + 161
+gcd(A,E)=1
+gcd(B,E)=184
+gcd(rad_Q(D),derivative)=49
+N=31 p=383 flags=["Res_AB"]
+gcd(A,A')=199
+gcd(B,B')=328
+gcd(E,E')=52
+gcd(A,B)=256*T + 137
+gcd(A,E)=317
+gcd(B,E)=64
+gcd(rad_Q(D),derivative)=292
+N=41 p=5 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=3*T^7 + 2*T^6 + 4*T^4 + T^3 + T + 4
+gcd(B,B')=3
+gcd(E,E')=3
+gcd(A,B)=1
+gcd(A,E)=1
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=3*T^23 + T^22 + 4*T^21 + 4*T^20 + 4*T^19 + T^18 + 2*T^17 + 3*T^16 + 2*T^15 + 3*T^13 + 2*T^12 + 4*T^11 + T^10 + 4*T^9 + T^7 + 4*T^6 + T^5 + 3*T^4 + 2*T^3 + T^2
+N=41 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=3*T^10 + 4*T^9 + 4*T^8 + T^7 + 3*T^6 + 4*T^4 + 3*T^3 + 3*T^2 + 6*T + 4
+gcd(E,E')=3
+gcd(A,B)=1
+gcd(A,E)=1
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=2*T^10 + 5*T^9 + 5*T^8 + 3*T^7 + 2*T^6 + 5*T^4 + 2*T^3 + 2*T^2 + 4*T + 5
+N=41 p=11 flags=["disc_A", "disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=10*T^2 + 5*T + 3
+gcd(B,B')=4*T^5 + 7*T^4 + 4*T^3 + 10*T^2 + 9*T + 7
+gcd(E,E')=6
+gcd(A,B)=9*T^10 + T^9 + 7*T^8 + 3*T^6 + 3*T^5 + 8*T^4 + 7*T^3 + 3*T^2 + 5*T + 1
+gcd(A,E)=3
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=8*T^9 + 9*T^7 + 6*T^6 + 8*T^4 + 5*T^3 + 7*T^2 + 10*T + 5
+N=41 p=17 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=8
+gcd(B,B')=3
+gcd(E,E')=8
+gcd(A,B)=13
+gcd(A,E)=5*T^2 + 8*T + 11
+gcd(B,E)=16
+gcd(rad_Q(D),derivative)=3*T^2 + 15*T + 10
+N=41 p=19 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=3*T^2 + 18*T + 13
+gcd(E,E')=14
+gcd(A,B)=16
+gcd(A,E)=9
+gcd(B,E)=7
+gcd(rad_Q(D),derivative)=18*T^2 + 13*T + 2
+N=41 p=23 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=21*T + 8
+gcd(B,B')=21*T + 11
+gcd(E,E')=14
+gcd(A,B)=13*T^5 + 13*T^4 + 12*T^3 + 4*T^2 + 20*T + 16
+gcd(A,E)=8*T + 6
+gcd(B,E)=14*T^2 + 4*T + 14
+gcd(rad_Q(D),derivative)=20*T^6 + 7*T^5 + 21*T^3 + 15*T^2 + 18*T + 14
+N=41 p=29 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=3*T + 17
+gcd(B,B')=14
+gcd(E,E')=25
+gcd(A,B)=22
+gcd(A,E)=19*T^2 + 27*T + 27
+gcd(B,E)=5
+gcd(rad_Q(D),derivative)=6*T^4 + 17*T^3 + 18*T^2 + 27*T + 25
+N=41 p=31 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=15
+gcd(B,B')=26*T^2 + 10*T + 30
+gcd(E,E')=30
+gcd(A,B)=25
+gcd(A,E)=11
+gcd(B,E)=3*T^2 + 18*T + 11
+gcd(rad_Q(D),derivative)=9*T^5 + 20*T^4 + 24*T^3 + 15*T^2 + 20*T + 11
+N=41 p=37 flags=["disc_rad_D"]
+gcd(A,A')=25
+gcd(B,B')=9
+gcd(E,E')=36
+gcd(A,B)=16
+gcd(A,E)=27
+gcd(B,E)=36
+gcd(rad_Q(D),derivative)=16*T + 29
+N=41 p=43 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=32
+gcd(B,B')=42
+gcd(E,E')=28
+gcd(A,B)=28
+gcd(A,E)=1
+gcd(B,E)=3*T + 40
+gcd(rad_Q(D),derivative)=8*T + 35
+N=41 p=47 flags=["disc_A", "disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=9*T + 16
+gcd(B,B')=17*T + 19
+gcd(E,E')=5
+gcd(A,B)=46*T^2 + 2*T + 19
+gcd(A,E)=25
+gcd(B,E)=28
+gcd(rad_Q(D),derivative)=18*T^3 + 15*T^2 + 8*T + 43
+N=41 p=59 flags=["Res_AB", "Res_AE", "disc_rad_D"]
+gcd(A,A')=50
+gcd(B,B')=50
+gcd(E,E')=6
+gcd(A,B)=T^2 + 15*T + 16
+gcd(A,E)=24*T + 44
+gcd(B,E)=36
+gcd(rad_Q(D),derivative)=28*T + 12
+N=41 p=67 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=15
+gcd(B,B')=27*T + 64
+gcd(E,E')=13
+gcd(A,B)=63
+gcd(A,E)=22
+gcd(B,E)=19
+gcd(rad_Q(D),derivative)=51*T + 39
+N=41 p=71 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=20*T + 15
+gcd(B,B')=38
+gcd(E,E')=28
+gcd(A,B)=6
+gcd(A,E)=4
+gcd(B,E)=49
+gcd(rad_Q(D),derivative)=25*T^2 + 2*T + 54
+N=41 p=79 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=31
+gcd(B,B')=54*T^2 + 3*T + 74
+gcd(E,E')=14
+gcd(A,B)=13
+gcd(A,E)=50
+gcd(B,E)=65
+gcd(rad_Q(D),derivative)=5*T^2 + 31*T + 1
+N=41 p=83 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=22
+gcd(B,B')=4
+gcd(E,E')=79
+gcd(A,B)=19
+gcd(A,E)=69
+gcd(B,E)=17*T + 19
+gcd(rad_Q(D),derivative)=41*T^2 + 19*T + 49
+N=41 p=103 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=73
+gcd(B,B')=101*T + 1
+gcd(E,E')=89
+gcd(A,B)=30
+gcd(A,E)=17
+gcd(B,E)=91
+gcd(rad_Q(D),derivative)=53*T + 25
+N=41 p=107 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=46
+gcd(B,B')=37
+gcd(E,E')=55
+gcd(A,B)=11
+gcd(A,E)=69*T + 33
+gcd(B,E)=105
+gcd(rad_Q(D),derivative)=102*T + 86
+N=41 p=127 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=3
+gcd(B,B')=110*T + 68
+gcd(E,E')=27
+gcd(A,B)=96
+gcd(A,E)=98
+gcd(B,E)=76
+gcd(rad_Q(D),derivative)=101*T + 104
+N=41 p=131 flags=["Res_AB"]
+gcd(A,A')=82
+gcd(B,B')=26
+gcd(E,E')=24
+gcd(A,B)=56*T^2 + 30*T + 85
+gcd(A,E)=46
+gcd(B,E)=48
+gcd(rad_Q(D),derivative)=82
+N=41 p=139 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=108
+gcd(B,B')=35*T + 130
+gcd(E,E')=114
+gcd(A,B)=56
+gcd(A,E)=42
+gcd(B,E)=10*T + 1
+gcd(rad_Q(D),derivative)=52*T^3 + 21*T^2 + 9*T + 115
+N=41 p=151 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=44
+gcd(B,B')=86*T + 112
+gcd(E,E')=106
+gcd(A,B)=108
+gcd(A,E)=34
+gcd(B,E)=76
+gcd(rad_Q(D),derivative)=90*T + 54
+N=41 p=163 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=18
+gcd(B,B')=63
+gcd(E,E')=98
+gcd(A,B)=20
+gcd(A,E)=145
+gcd(B,E)=89*T + 133
+gcd(rad_Q(D),derivative)=80*T + 6
+N=41 p=239 flags=["Res_AB"]
+gcd(A,A')=44
+gcd(B,B')=32
+gcd(E,E')=227
+gcd(A,B)=134*T^2 + 39*T + 45
+gcd(A,E)=62
+gcd(B,E)=213
+gcd(rad_Q(D),derivative)=236
+N=41 p=383 flags=["Res_AB"]
+gcd(A,A')=324
+gcd(B,B')=251
+gcd(E,E')=106
+gcd(A,B)=50*T^2 + 272*T + 263
+gcd(A,E)=27
+gcd(B,E)=136
+gcd(rad_Q(D),derivative)=151
+N=47 p=5 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=4*T^3 + 3*T^2 + 2*T + 4
+gcd(B,B')=4
+gcd(E,E')=1
+gcd(A,B)=2
+gcd(A,E)=T^10 + 4*T^9 + 2*T^8 + 3*T^7 + T^5 + T^4 + 2*T^2 + 1
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=3*T^16 + 4*T^15 + 4*T^14 + 3*T^12 + T^11 + 4*T^10 + 2*T^9 + 3*T^8 + 4*T^7 + 2*T^5 + T^4 + 3*T^3 + 3*T + 3
+N=47 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=5*T^12 + 2*T^11 + 5*T^10 + 5*T^9 + 5*T^8 + 4*T^7 + T^6 + 5*T^5 + 2*T^4 + 2*T^3 + 2*T^2 + 3*T + 1
+gcd(E,E')=2
+gcd(A,B)=4
+gcd(A,E)=3
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=5*T^12 + 2*T^11 + 5*T^10 + 5*T^9 + 5*T^8 + 4*T^7 + T^6 + 5*T^5 + 2*T^4 + 2*T^3 + 2*T^2 + 3*T + 1
+N=47 p=11 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=2*T^2 + 4*T + 5
+gcd(B,B')=5*T^5 + 9*T^4 + 10*T^3 + 9*T + 3
+gcd(E,E')=8
+gcd(A,B)=8*T^8 + 5*T^7 + 8*T^5 + 7*T^4 + 6*T^3 + 10*T^2 + 3*T + 9
+gcd(A,E)=7*T^4 + 4*T^2 + 7*T + 5
+gcd(B,E)=10*T^6 + 7*T^5 + 8*T^4 + 7*T^3 + 2*T + 9
+gcd(rad_Q(D),derivative)=10*T^20 + 7*T^19 + 2*T^18 + T^17 + 8*T^16 + 5*T^15 + 7*T^14 + 5*T^13 + 5*T^12 + T^11 + 10*T^10 + 9*T^9 + 8*T^8 + 9*T^7 + 7*T^6 + 8*T^5 + 3*T^3 + 7*T^2 + 7*T + 2
+N=47 p=17 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=4*T^2 + T + 15
+gcd(B,B')=15
+gcd(E,E')=1
+gcd(A,B)=1
+gcd(A,E)=15
+gcd(B,E)=7
+gcd(rad_Q(D),derivative)=T^5 + 16*T^4 + 10*T^3 + 7*T^2 + 7*T + 6
+N=47 p=19 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=12
+gcd(B,B')=6*T^2 + 12*T + 5
+gcd(E,E')=5
+gcd(A,B)=13
+gcd(A,E)=5
+gcd(B,E)=6*T^3 + 18*T^2 + 10*T
+gcd(rad_Q(D),derivative)=11*T^7 + 2*T^6 + 4*T^5 + 13*T^4 + 13*T^3 + 7*T^2 + 11*T
+N=47 p=23 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=5*T + 8
+gcd(B,B')=21*T^2 + 22*T + 14
+gcd(E,E')=22
+gcd(A,B)=7*T^5 + 20*T^4 + 10*T^3 + 10*T^2 + 13*T + 11
+gcd(A,E)=18*T + 12
+gcd(B,E)=8*T^2 + 6*T + 17
+gcd(rad_Q(D),derivative)=16*T^8 + 13*T^7 + 14*T^6 + 21*T^5 + 8*T^4 + 9*T^3 + 5*T^2 + 20*T + 18
+N=47 p=29 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=26*T + 10
+gcd(B,B')=8
+gcd(E,E')=24
+gcd(A,B)=24
+gcd(A,E)=15*T + 13
+gcd(B,E)=24
+gcd(rad_Q(D),derivative)=5*T^3 + 17*T + 17
+N=47 p=31 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=26
+gcd(B,B')=3*T + 28
+gcd(E,E')=23
+gcd(A,B)=7
+gcd(A,E)=20
+gcd(B,E)=8*T^2 + 21*T + 19
+gcd(rad_Q(D),derivative)=5*T^5 + 24*T^4 + 17*T^3 + 17*T^2 + 28*T + 2
+N=47 p=41 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=22
+gcd(B,B')=3
+gcd(E,E')=2
+gcd(A,B)=20
+gcd(A,E)=35*T + 21
+gcd(B,E)=33
+gcd(rad_Q(D),derivative)=T + 17
+N=47 p=43 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=28
+gcd(B,B')=T^2 + T + 40
+gcd(E,E')=12
+gcd(A,B)=40
+gcd(A,E)=4
+gcd(B,E)=39*T^2 + 6*T + 28
+gcd(rad_Q(D),derivative)=23*T^5 + 38*T^4 + T^3 + 29*T^2 + 26*T + 29
+N=47 p=59 flags=["Res_AB"]
+gcd(A,A')=37
+gcd(B,B')=25
+gcd(E,E')=47
+gcd(A,B)=19*T^2 + 19*T + 54
+gcd(A,E)=26
+gcd(B,E)=53
+gcd(rad_Q(D),derivative)=30
+N=47 p=67 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=31
+gcd(B,B')=61
+gcd(E,E')=41
+gcd(A,B)=15
+gcd(A,E)=25
+gcd(B,E)=54*T + 13
+gcd(rad_Q(D),derivative)=6*T + 61
+N=47 p=71 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=25
+gcd(B,B')=43*T + 4
+gcd(E,E')=55
+gcd(A,B)=61*T^2 + 29*T + 47
+gcd(A,E)=3
+gcd(B,E)=57
+gcd(rad_Q(D),derivative)=3*T + 30
+N=47 p=79 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=67
+gcd(B,B')=19*T + 13
+gcd(E,E')=14
+gcd(A,B)=9
+gcd(A,E)=19
+gcd(B,E)=44
+gcd(rad_Q(D),derivative)=71*T + 7
+N=47 p=89 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=61*T + 51
+gcd(B,B')=34
+gcd(E,E')=87
+gcd(A,B)=41
+gcd(A,E)=11
+gcd(B,E)=32
+gcd(rad_Q(D),derivative)=2*T^2 + 69*T + 50
+N=47 p=103 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=30
+gcd(B,B')=47*T^2 + 42*T + 13
+gcd(E,E')=62
+gcd(A,B)=27
+gcd(A,E)=16
+gcd(B,E)=56
+gcd(rad_Q(D),derivative)=59*T^2 + 33*T + 47
+N=47 p=107 flags=["Res_AB", "Res_BE", "disc_rad_D"]
+gcd(A,A')=98
+gcd(B,B')=8
+gcd(E,E')=32
+gcd(A,B)=9*T^2 + 61*T + 33
+gcd(A,E)=12
+gcd(B,E)=80*T + 3
+gcd(rad_Q(D),derivative)=9*T^2 + 53*T + 101
+N=47 p=113 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=22*T + 111
+gcd(B,B')=75
+gcd(E,E')=11
+gcd(A,B)=98
+gcd(A,E)=35
+gcd(B,E)=32
+gcd(rad_Q(D),derivative)=35*T^2 + 45*T + 75
+N=47 p=127 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=108
+gcd(B,B')=56*T + 86
+gcd(E,E')=125
+gcd(A,B)=110
+gcd(A,E)=73
+gcd(B,E)=68
+gcd(rad_Q(D),derivative)=67*T + 53
+N=47 p=137 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=42
+gcd(B,B')=54
+gcd(E,E')=109
+gcd(A,B)=77
+gcd(A,E)=98*T + 11
+gcd(B,E)=109
+gcd(rad_Q(D),derivative)=101*T + 105
+N=47 p=139 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=138
+gcd(B,B')=101
+gcd(E,E')=17
+gcd(A,B)=27
+gcd(A,E)=83
+gcd(B,E)=13*T + 115
+gcd(rad_Q(D),derivative)=27*T^2 + 138*T + 48
+N=47 p=151 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=65
+gcd(B,B')=140*T + 58
+gcd(E,E')=135
+gcd(A,B)=66
+gcd(A,E)=95
+gcd(B,E)=18
+gcd(rad_Q(D),derivative)=21*T + 54
+N=47 p=163 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=45
+gcd(B,B')=85*T + 160
+gcd(E,E')=127
+gcd(A,B)=38
+gcd(A,E)=15
+gcd(B,E)=49*T + 16
+gcd(rad_Q(D),derivative)=147*T^2 + 85*T + 52
+N=47 p=179 flags=["Res_AB", "Res_BE", "disc_rad_D"]
+gcd(A,A')=41
+gcd(B,B')=167
+gcd(E,E')=73
+gcd(A,B)=61*T^2 + 134*T + 98
+gcd(A,E)=1
+gcd(B,E)=16*T + 156
+gcd(rad_Q(D),derivative)=51*T^3 + 92*T^2 + 51*T + 114
+N=47 p=227 flags=["Res_AB"]
+gcd(A,A')=55
+gcd(B,B')=162
+gcd(E,E')=45
+gcd(A,B)=95*T + 31
+gcd(A,E)=171
+gcd(B,E)=26
+gcd(rad_Q(D),derivative)=35
+N=47 p=251 flags=["Res_AB"]
+gcd(A,A')=9
+gcd(B,B')=60
+gcd(E,E')=128
+gcd(A,B)=68*T^2 + 127*T + 145
+gcd(A,E)=14
+gcd(B,E)=9
+gcd(rad_Q(D),derivative)=177
+N=47 p=347 flags=["Res_AB"]
+gcd(A,A')=292
+gcd(B,B')=117
+gcd(E,E')=88
+gcd(A,B)=29*T^2 + 239*T + 235
+gcd(A,E)=236
+gcd(B,E)=119
+gcd(rad_Q(D),derivative)=224
+N=59 p=5 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=2*T^10 + 3*T^9 + 3*T^8 + 3*T^7 + 4*T^6 + 2*T^5 + T^4 + 2*T^3 + 4*T^2 + 1
+gcd(B,B')=1
+gcd(E,E')=4
+gcd(A,B)=3
+gcd(A,E)=3
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=2*T^35 + 4*T^34 + 4*T^32 + 4*T^31 + 4*T^30 + 2*T^28 + 4*T^26 + T^25 + 4*T^24 + 3*T^23 + 3*T^22 + T^21 + 4*T^20 + T^19 + T^17 + 3*T^16 + 3*T^15 + T^13 + 4*T^12 + 4*T^10 + T^9 + T^8 + 3*T^7 + 3*T^6 + 4*T^4 + 4*T^3 + 3*T^2 + 4
+N=59 p=7 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=1
+gcd(B,B')=5*T^15 + 2*T^14 + 4*T^13 + 2*T^12 + T^11 + 3*T^10 + 3*T^9 + 5*T^8 + T^7 + 6*T^6 + 2*T^5 + 3*T^2 + 5*T
+gcd(E,E')=1
+gcd(A,B)=2
+gcd(A,E)=5
+gcd(B,E)=5
+gcd(rad_Q(D),derivative)=5*T^15 + 2*T^14 + 4*T^13 + 2*T^12 + T^11 + 3*T^10 + 3*T^9 + 5*T^8 + T^7 + 6*T^6 + 2*T^5 + 3*T^2 + 5*T
+N=59 p=11 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=8*T^2 + 5*T + 9
+gcd(B,B')=7*T^6 + T^5 + T^4 + 8*T^3 + 9*T^2 + 6*T + 3
+gcd(E,E')=9
+gcd(A,B)=8*T^11 + 6*T^10 + 2*T^9 + 4*T^8 + 6*T^7 + 6*T^6 + 5*T^5 + 5*T^4 + 8*T^3 + 4*T^2 + 8*T + 6
+gcd(A,E)=T^5 + 4*T^4 + 8*T^2 + 7*T + 3
+gcd(B,E)=8*T^7 + 9*T^4 + 6*T^3 + T^2 + 2*T
+gcd(rad_Q(D),derivative)=10*T^24 + T^22 + 9*T^21 + 9*T^19 + T^18 + 9*T^16 + 2*T^15 + T^14 + 9*T^13 + T^12 + 9*T^11 + 5*T^10 + 8*T^9 + 4*T^8 + 9*T^7 + 4*T^6 + 6*T^4 + 7*T^3 + 5*T^2 + T
+N=59 p=17 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=9*T + 4
+gcd(B,B')=16
+gcd(E,E')=9
+gcd(A,B)=9
+gcd(A,E)=13
+gcd(B,E)=15
+gcd(rad_Q(D),derivative)=3*T^5 + 4*T^4 + 2*T^3 + 3*T + 8
+N=59 p=19 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=4
+gcd(B,B')=8*T^4 + 18*T^3 + 5*T^2 + 17*T + 16
+gcd(E,E')=11
+gcd(A,B)=7
+gcd(A,E)=8
+gcd(B,E)=16
+gcd(rad_Q(D),derivative)=11*T^4 + T^3 + 14*T^2 + 2*T + 3
+N=59 p=23 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=18*T + 4
+gcd(B,B')=3*T^3 + 5*T^2 + 15*T + 3
+gcd(E,E')=14
+gcd(A,B)=12*T^4 + 9*T^3 + 21*T^2 + 9*T + 9
+gcd(A,E)=20*T^2 + 3*T + 1
+gcd(B,E)=20*T^4 + 8*T^3 + 10*T^2 + 6*T + 11
+gcd(rad_Q(D),derivative)=4*T^13 + 19*T^12 + 14*T^11 + 10*T^10 + 20*T^9 + 16*T^8 + 14*T^7 + 6*T^6 + 13*T^5 + 19*T^4 + 14*T^3 + 17*T + 17
+N=59 p=29 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=12*T^2 + 22*T + 19
+gcd(B,B')=28
+gcd(E,E')=28
+gcd(A,B)=16
+gcd(A,E)=16
+gcd(B,E)=23
+gcd(rad_Q(D),derivative)=22*T^5 + 2*T^4 + 5*T^3 + 10*T^2 + 7*T + 27
+N=59 p=31 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=3
+gcd(B,B')=20*T^2 + 23*T + 19
+gcd(E,E')=26
+gcd(A,B)=14
+gcd(A,E)=1
+gcd(B,E)=6*T^2 + 16*T + 20
+gcd(rad_Q(D),derivative)=3*T^5 + 26*T^4 + 20*T^3 + 17*T^2 + 22*T + 5
+N=59 p=41 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=40*T + 29
+gcd(B,B')=4
+gcd(E,E')=9
+gcd(A,B)=1
+gcd(A,E)=40
+gcd(B,E)=32
+gcd(rad_Q(D),derivative)=2*T^2 + 7*T + 1
+N=59 p=43 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=20
+gcd(B,B')=6*T + 26
+gcd(E,E')=22
+gcd(A,B)=8
+gcd(A,E)=17
+gcd(B,E)=23*T^2 + 4*T + 2
+gcd(rad_Q(D),derivative)=30*T^4 + 41*T^3 + 35*T^2 + 40*T + 3
+N=59 p=47 flags=["Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=38
+gcd(B,B')=5
+gcd(E,E')=20
+gcd(A,B)=35*T^5 + 9*T^4 + 46*T^3 + 27*T^2 + 18*T + 37
+gcd(A,E)=9*T^2 + 11*T + 42
+gcd(B,E)=21*T^2 + 5*T + 10
+gcd(rad_Q(D),derivative)=40*T^4 + 42*T^3 + 2*T^2 + 16*T + 21
+N=59 p=53 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=37*T + 9
+gcd(B,B')=40
+gcd(E,E')=15
+gcd(A,B)=17
+gcd(A,E)=49
+gcd(B,E)=29
+gcd(rad_Q(D),derivative)=31*T^2 + 38*T + 39
+N=59 p=67 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=25
+gcd(B,B')=8*T + 11
+gcd(E,E')=48
+gcd(A,B)=52
+gcd(A,E)=41
+gcd(B,E)=13*T + 54
+gcd(rad_Q(D),derivative)=53*T^2 + 45*T + 36
+N=59 p=71 flags=["Res_AB"]
+gcd(A,A')=49
+gcd(B,B')=64
+gcd(E,E')=29
+gcd(A,B)=59*T^2 + 46*T + 52
+gcd(A,E)=9
+gcd(B,E)=43
+gcd(rad_Q(D),derivative)=29
+N=59 p=79 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=44
+gcd(B,B')=17*T + 43
+gcd(E,E')=22
+gcd(A,B)=72
+gcd(A,E)=64
+gcd(B,E)=33
+gcd(rad_Q(D),derivative)=78*T + 30
+N=59 p=83 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=80
+gcd(B,B')=16*T + 23
+gcd(E,E')=27
+gcd(A,B)=42*T + 25
+gcd(A,E)=3
+gcd(B,E)=68
+gcd(rad_Q(D),derivative)=52*T + 54
+N=59 p=101 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=67*T + 80
+gcd(B,B')=53
+gcd(E,E')=61
+gcd(A,B)=66
+gcd(A,E)=13
+gcd(B,E)=14
+gcd(rad_Q(D),derivative)=22*T^2 + 45*T + 54
+N=59 p=107 flags=["Res_AB"]
+gcd(A,A')=96
+gcd(B,B')=75
+gcd(E,E')=35
+gcd(A,B)=29*T^2 + 71*T + 85
+gcd(A,E)=13
+gcd(B,E)=30
+gcd(rad_Q(D),derivative)=96
+N=59 p=113 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=94
+gcd(B,B')=46
+gcd(E,E')=48
+gcd(A,B)=24
+gcd(A,E)=11*T + 14
+gcd(B,E)=53
+gcd(rad_Q(D),derivative)=11*T + 14
+N=59 p=127 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=8
+gcd(B,B')=52*T + 50
+gcd(E,E')=8
+gcd(A,B)=83
+gcd(A,E)=50
+gcd(B,E)=37
+gcd(rad_Q(D),derivative)=37*T + 60
+N=59 p=139 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=16
+gcd(B,B')=90*T + 125
+gcd(E,E')=28
+gcd(A,B)=124
+gcd(A,E)=64
+gcd(B,E)=83
+gcd(rad_Q(D),derivative)=53*T + 35
+N=59 p=149 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=55*T + 30
+gcd(B,B')=79
+gcd(E,E')=57
+gcd(A,B)=55
+gcd(A,E)=35
+gcd(B,E)=86
+gcd(rad_Q(D),derivative)=38*T^2 + 55*T + 15
+N=59 p=151 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=104
+gcd(B,B')=93*T^2 + 110*T + 51
+gcd(E,E')=102
+gcd(A,B)=94
+gcd(A,E)=26
+gcd(B,E)=118
+gcd(rad_Q(D),derivative)=104*T^2 + 136*T + 96
+N=59 p=163 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=47
+gcd(B,B')=50*T + 22
+gcd(E,E')=58
+gcd(A,B)=134
+gcd(A,E)=9
+gcd(B,E)=88
+gcd(rad_Q(D),derivative)=35*T + 48
+N=59 p=167 flags=["Res_AB"]
+gcd(A,A')=18
+gcd(B,B')=31
+gcd(E,E')=4
+gcd(A,B)=51*T^2 + 153*T + 26
+gcd(A,E)=36
+gcd(B,E)=12
+gcd(rad_Q(D),derivative)=126
+N=59 p=173 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=50
+gcd(B,B')=71
+gcd(E,E')=28
+gcd(A,B)=164
+gcd(A,E)=38*T + 56
+gcd(B,E)=148
+gcd(rad_Q(D),derivative)=78*T + 33
+N=59 p=191 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=174
+gcd(B,B')=123*T + 99
+gcd(E,E')=157
+gcd(A,B)=159
+gcd(A,E)=80
+gcd(B,E)=90
+gcd(rad_Q(D),derivative)=106*T + 76
+N=59 p=199 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=105
+gcd(B,B')=65*T + 169
+gcd(E,E')=10
+gcd(A,B)=42
+gcd(A,E)=10
+gcd(B,E)=18
+gcd(rad_Q(D),derivative)=10*T + 26
+N=59 p=211 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=108
+gcd(B,B')=139*T + 71
+gcd(E,E')=155
+gcd(A,B)=55
+gcd(A,E)=136
+gcd(B,E)=168*T + 131
+gcd(rad_Q(D),derivative)=87*T^3 + 28*T^2 + 72*T + 81
+N=59 p=223 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=25
+gcd(B,B')=17*T + 91
+gcd(E,E')=144
+gcd(A,B)=76
+gcd(A,E)=53
+gcd(B,E)=83
+gcd(rad_Q(D),derivative)=15*T + 159
+N=59 p=227 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=201
+gcd(B,B')=14
+gcd(E,E')=194
+gcd(A,B)=151
+gcd(A,E)=69
+gcd(B,E)=89*T + 169
+gcd(rad_Q(D),derivative)=226*T^3 + 224*T^2 + 10*T + 101
+N=59 p=239 flags=["Res_AB"]
+gcd(A,A')=166
+gcd(B,B')=55
+gcd(E,E')=124
+gcd(A,B)=180*T^2 + 43*T + 54
+gcd(A,E)=49
+gcd(B,E)=108
+gcd(rad_Q(D),derivative)=205
+N=59 p=251 flags=["Res_AB"]
+gcd(A,A')=240
+gcd(B,B')=218
+gcd(E,E')=52
+gcd(A,B)=165*T^2 + 167*T + 175
+gcd(A,E)=128
+gcd(B,E)=41
+gcd(rad_Q(D),derivative)=42
+N=59 p=311 flags=["Res_AB"]
+gcd(A,A')=277
+gcd(B,B')=100
+gcd(E,E')=156
+gcd(A,B)=278*T^2 + 55*T + 93
+gcd(A,E)=10
+gcd(B,E)=223
+gcd(rad_Q(D),derivative)=29
+N=59 p=359 flags=["Res_AB"]
+gcd(A,A')=147
+gcd(B,B')=237
+gcd(E,E')=205
+gcd(A,B)=352*T^2 + 67*T + 178
+gcd(A,E)=25
+gcd(B,E)=269
+gcd(rad_Q(D),derivative)=264
+N=71 p=5 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=2*T^12 + 3*T^11 + 4*T^10 + 3*T^9 + T^8 + T^7 + T^6 + 3*T^5 + T^4 + T^3 + 4*T + 1
+gcd(B,B')=4
+gcd(E,E')=4
+gcd(A,B)=3
+gcd(A,E)=3
+gcd(B,E)=4
+gcd(rad_Q(D),derivative)=4*T^41 + 3*T^40 + T^39 + T^38 + 2*T^37 + T^36 + T^35 + 2*T^33 + 4*T^32 + 2*T^31 + 2*T^30 + 4*T^28 + 4*T^26 + 2*T^25 + 4*T^24 + 3*T^23 + T^19 + 4*T^18 + T^17 + T^16 + 2*T^12 + 3*T^11 + 3*T^10 + T^9 + T^8 + 4*T^7 + T^6 + 3*T^5
+N=71 p=7 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=5
+gcd(B,B')=3*T^11 + 5*T^10 + 5*T^9 + 6*T^8 + 2*T^7 + 5*T^5 + 2*T^4 + 3*T^3 + T^2 + 6*T
+gcd(E,E')=3
+gcd(A,B)=6
+gcd(A,E)=2
+gcd(B,E)=T^14 + 4*T^13 + 5*T^12 + 4*T^11 + 2*T^9 + 6*T^8 + T^7 + T^6 + 4*T^5 + 2*T^3 + 5*T^2 + 4*T + 3
+gcd(rad_Q(D),derivative)=3*T^29 + T^28 + T^25 + T^24 + 4*T^23 + 3*T^22 + 6*T^20 + 3*T^18 + T^17 + 4*T^16 + 5*T^15 + 2*T^14 + 6*T^12 + 3*T^11 + 4*T^10 + T^8 + 4*T^6 + 3*T^5 + 2*T^4 + 2*T^3 + 5*T^2 + 6*T
+N=71 p=11 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=5*T^2 + 7*T + 5
+gcd(B,B')=8*T^6 + 5*T^5 + T^4 + 9*T^3 + 9*T^2 + 7*T + 4
+gcd(E,E')=8
+gcd(A,B)=9*T^15 + 4*T^14 + 8*T^13 + 5*T^12 + 10*T^11 + 2*T^10 + 7*T^9 + 5*T^8 + 10*T^7 + 7*T^6 + 2*T^5 + 4*T^4 + 10*T^3 + 6*T^2 + 4*T + 7
+gcd(A,E)=5*T^5 + 4*T^4 + 10*T^3 + 6*T^2 + 4*T + 8
+gcd(B,E)=2*T^9 + 2*T^8 + 8*T^7 + 8*T^6 + 10*T^4 + 10*T^3 + 9*T^2 + 5*T
+gcd(rad_Q(D),derivative)=8*T^27 + 4*T^26 + 4*T^25 + 8*T^24 + 6*T^23 + 2*T^22 + T^21 + T^20 + 2*T^19 + 9*T^17 + T^16 + 4*T^15 + 4*T^14 + 10*T^13 + 2*T^12 + 4*T^11 + 8*T^10 + 6*T^9 + 8*T^8 + 7*T^6 + 10*T^5 + T^4 + T^3 + 5*T^2 + T
+N=71 p=17 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=2*T + 15
+gcd(B,B')=6
+gcd(E,E')=8
+gcd(A,B)=8
+gcd(A,E)=11*T^3 + 6*T^2 + 15*T + 6
+gcd(B,E)=6
+gcd(rad_Q(D),derivative)=15*T^5 + 6*T^4 + 16*T^3 + 11*T^2 + T + 2
+N=71 p=19 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=3*T^7 + 2*T^6 + 9*T^5 + 17*T^4 + 4*T^3 + 3*T^2 + 5*T + 14
+gcd(E,E')=12
+gcd(A,B)=4
+gcd(A,E)=11
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=10*T^7 + 13*T^6 + 11*T^5 + 6*T^4 + 7*T^3 + 10*T^2 + 4*T + 15
+N=71 p=23 flags=["disc_A", "disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=4*T^2 + 2*T + 1
+gcd(B,B')=20*T^5 + 19*T^4 + 5*T^3 + 11*T^2 + 2*T + 13
+gcd(E,E')=11
+gcd(A,B)=13*T^5 + 16*T^4 + 10*T^3 + 18*T^2 + 11*T + 15
+gcd(A,E)=17*T^3 + 7*T^2 + 20
+gcd(B,E)=16*T^4 + 12*T^3 + 10*T^2 + 10*T + 15
+gcd(rad_Q(D),derivative)=9*T^17 + 4*T^16 + 10*T^15 + 13*T^14 + 5*T^13 + 12*T^12 + 15*T^11 + 5*T^10 + 12*T^9 + 13*T^8 + 7*T^7 + 12*T^6 + 19*T^5 + 2*T^4 + 22*T^3 + 8*T^2 + 22*T + 18
+N=71 p=29 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=4*T + 21
+gcd(B,B')=6
+gcd(E,E')=24
+gcd(A,B)=28
+gcd(A,E)=3
+gcd(B,E)=28
+gcd(rad_Q(D),derivative)=12*T^4 + 4*T^3 + 9*T^2 + 25*T + 9
+N=71 p=31 flags=["disc_B", "Res_BE", "disc_rad_D"]
+gcd(A,A')=24
+gcd(B,B')=23*T^3 + 17*T^2 + 18*T + 28
+gcd(E,E')=23
+gcd(A,B)=5
+gcd(A,E)=18
+gcd(B,E)=8*T^2 + 5*T + 27
+gcd(rad_Q(D),derivative)=T^8 + 5*T^7 + 28*T^6 + 12*T^5 + 15*T^4 + 22*T^3 + 6*T^2 + 15*T + 3
+N=71 p=37 flags=["disc_rad_D"]
+gcd(A,A')=33
+gcd(B,B')=25
+gcd(E,E')=9
+gcd(A,B)=11
+gcd(A,E)=28
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=36*T^2 + 19*T + 35
+N=71 p=41 flags=["disc_A", "Res_AE", "disc_rad_D"]
+gcd(A,A')=36*T^2 + 40*T + 34
+gcd(B,B')=34
+gcd(E,E')=39
+gcd(A,B)=25
+gcd(A,E)=20*T + 18
+gcd(B,E)=24
+gcd(rad_Q(D),derivative)=2*T^5 + 19*T^4 + 31*T^3 + 21*T + 36
+N=71 p=43 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=23
+gcd(B,B')=4*T + 30
+gcd(E,E')=33
+gcd(A,B)=41
+gcd(A,E)=16
+gcd(B,E)=9
+gcd(rad_Q(D),derivative)=6*T + 2
+N=71 p=47 flags=["Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=15
+gcd(E,E')=4
+gcd(A,B)=44*T^4 + 46*T^3 + 12*T^2 + 42*T + 34
+gcd(A,E)=32*T + 14
+gcd(B,E)=9*T^2 + 20*T + 9
+gcd(rad_Q(D),derivative)=19*T^3 + 13*T^2 + 44*T + 23
+N=71 p=53 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=8
+gcd(B,B')=23
+gcd(E,E')=7
+gcd(A,B)=12
+gcd(A,E)=15*T + 19
+gcd(B,E)=16
+gcd(rad_Q(D),derivative)=23*T + 15
+N=71 p=59 flags=["disc_B", "Res_AB", "Res_AE", "Res_BE", "disc_rad_D"]
+gcd(A,A')=44
+gcd(B,B')=44*T + 12
+gcd(E,E')=47
+gcd(A,B)=56*T^2 + 30*T + 15
+gcd(A,E)=19*T^2 + 3*T + 39
+gcd(B,E)=52*T + 8
+gcd(rad_Q(D),derivative)=39*T^5 + 40*T^4 + 18*T^3 + 43*T^2 + 30*T + 48
+N=71 p=67 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=19
+gcd(B,B')=54
+gcd(E,E')=53
+gcd(A,B)=22
+gcd(A,E)=35
+gcd(B,E)=39*T^2 + 8*T + 61
+gcd(rad_Q(D),derivative)=45*T^3 + 51*T^2 + 29*T + 13
+N=71 p=79 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=32
+gcd(B,B')=28*T^2 + 44*T + 24
+gcd(E,E')=27
+gcd(A,B)=50
+gcd(A,E)=8
+gcd(B,E)=72
+gcd(rad_Q(D),derivative)=76*T^2 + 63*T + 20
+N=71 p=83 flags=["Res_AB"]
+gcd(A,A')=62
+gcd(B,B')=29
+gcd(E,E')=57
+gcd(A,B)=47*T^2 + 50
+gcd(A,E)=31
+gcd(B,E)=64
+gcd(rad_Q(D),derivative)=70
+N=71 p=89 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=33*T + 50
+gcd(B,B')=17
+gcd(E,E')=5
+gcd(A,B)=88
+gcd(A,E)=47
+gcd(B,E)=77
+gcd(rad_Q(D),derivative)=88*T^2 + 59*T + 42
+N=71 p=101 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=17*T + 99
+gcd(B,B')=65
+gcd(E,E')=65
+gcd(A,B)=98
+gcd(A,E)=23
+gcd(B,E)=43
+gcd(rad_Q(D),derivative)=7*T^2 + 34*T + 99
+N=71 p=103 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=29
+gcd(B,B')=56*T + 24
+gcd(E,E')=47
+gcd(A,B)=89
+gcd(A,E)=14
+gcd(B,E)=1
+gcd(rad_Q(D),derivative)=37*T + 60
+N=71 p=113 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=49
+gcd(B,B')=67
+gcd(E,E')=4
+gcd(A,B)=25
+gcd(A,E)=34*T + 23
+gcd(B,E)=106
+gcd(rad_Q(D),derivative)=31*T + 11
+N=71 p=127 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=119
+gcd(B,B')=12*T + 103
+gcd(E,E')=33
+gcd(A,B)=109
+gcd(A,E)=124
+gcd(B,E)=44
+gcd(rad_Q(D),derivative)=126*T + 2
+N=71 p=131 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=36
+gcd(B,B')=120*T + 96
+gcd(E,E')=98
+gcd(A,B)=101
+gcd(A,E)=41
+gcd(B,E)=11
+gcd(rad_Q(D),derivative)=29*T + 128
+N=71 p=137 flags=["disc_A", "disc_rad_D"]
+gcd(A,A')=131*T + 50
+gcd(B,B')=57
+gcd(E,E')=88
+gcd(A,B)=82
+gcd(A,E)=74
+gcd(B,E)=69
+gcd(rad_Q(D),derivative)=79*T^2 + 99*T + 67
+N=71 p=139 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=6
+gcd(B,B')=67*T^2 + 42*T + 45
+gcd(E,E')=130
+gcd(A,B)=41
+gcd(A,E)=46
+gcd(B,E)=25
+gcd(rad_Q(D),derivative)=21*T^2 + 92*T + 39
+N=71 p=149 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=60
+gcd(B,B')=58
+gcd(E,E')=54
+gcd(A,B)=147
+gcd(A,E)=122*T + 71
+gcd(B,E)=119
+gcd(rad_Q(D),derivative)=47*T + 53
+N=71 p=163 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=82
+gcd(B,B')=6
+gcd(E,E')=122
+gcd(A,B)=32
+gcd(A,E)=21
+gcd(B,E)=35*T + 93
+gcd(rad_Q(D),derivative)=139*T + 48
+N=71 p=167 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=81
+gcd(B,B')=112*T + 11
+gcd(E,E')=163
+gcd(A,B)=110
+gcd(A,E)=137
+gcd(B,E)=116
+gcd(rad_Q(D),derivative)=98*T + 114
+N=71 p=197 flags=["Res_AE", "disc_rad_D"]
+gcd(A,A')=136
+gcd(B,B')=110
+gcd(E,E')=143
+gcd(A,B)=59
+gcd(A,E)=T + 10
+gcd(B,E)=55
+gcd(rad_Q(D),derivative)=105*T + 65
+N=71 p=199 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=112
+gcd(B,B')=138*T^2 + 148*T + 28
+gcd(E,E')=181
+gcd(A,B)=192
+gcd(A,E)=116
+gcd(B,E)=63
+gcd(rad_Q(D),derivative)=80*T^2 + 31*T + 22
+N=71 p=211 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=115
+gcd(B,B')=163*T + 19
+gcd(E,E')=33
+gcd(A,B)=159
+gcd(A,E)=185
+gcd(B,E)=78
+gcd(rad_Q(D),derivative)=25*T + 100
+N=71 p=223 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=16
+gcd(B,B')=172*T + 17
+gcd(E,E')=140
+gcd(A,B)=189
+gcd(A,E)=144
+gcd(B,E)=78
+gcd(rad_Q(D),derivative)=163*T + 20
+N=71 p=227 flags=["Res_AB"]
+gcd(A,A')=105
+gcd(B,B')=224
+gcd(E,E')=58
+gcd(A,B)=10*T^2 + 86*T + 103
+gcd(A,E)=134
+gcd(B,E)=103
+gcd(rad_Q(D),derivative)=147
+N=71 p=239 flags=["disc_B", "Res_AB", "disc_rad_D"]
+gcd(A,A')=28
+gcd(B,B')=89*T + 57
+gcd(E,E')=74
+gcd(A,B)=237*T + 27
+gcd(A,E)=4
+gcd(B,E)=232
+gcd(rad_Q(D),derivative)=188*T + 158
+N=71 p=271 flags=["disc_B", "disc_rad_D"]
+gcd(A,A')=68
+gcd(B,B')=179*T + 98
+gcd(E,E')=215
+gcd(A,B)=236
+gcd(A,E)=31
+gcd(B,E)=153
+gcd(rad_Q(D),derivative)=267*T + 181
+N=71 p=283 flags=["Res_BE", "disc_rad_D"]
+gcd(A,A')=154
+gcd(B,B')=45
+gcd(E,E')=184
+gcd(A,B)=276
+gcd(A,E)=7
+gcd(B,E)=32*T + 169
+gcd(rad_Q(D),derivative)=88*T^2 + 153*T + 98
