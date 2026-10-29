@@ -56,3 +56,19 @@ Following a review by Google Gemini, Appendix A was condensed: the former survey
 ## Conjecture 6 (added in the merged version)
 
 The degree formula follows from Lemma 3.1 (D = 1 + g(X_0(Np)/<w_N>) in genus zero), Riemann-Hurwitz, the genus formula for X_0(Np), and the fixed-point counts of w_N (formula (4.1) for N >= 5; the exceptional Q = 3 term of Im-Jeon-Kim, Proposition 2.1, for N = 3). Nakaya proved N = 3; Morton proved N = 5 (JNT 227 (2021), Section 7) and N = 7 (IJNT 19 (2023), Section 3). Proposition 6.2 gives the total count at every prime level N >= 5, and Corollary 6.3 the factorization type over F_p. The degree checks are in verification/c6_degrees.py, verification/c6_direct.gp and verification/conjecture6_second_implementation/; all agreed (see README).
+
+## Revision of 29 October 2026 (Section 7 scrutiny; release v1.2)
+
+A source check of Section 7 against Morton's proofs, a step-by-step review of the argument, and a check of the Conjecture 4 package (see SOURCE_AUDIT.md, fourth pass) led to these changes:
+
+- Abstract: the Conjecture 4 sentence now refers to the double cover X_0(N) → X_0(N)^+, not "the same model".
+- Proof of Proposition 7.1: Deuring's criterion, as stated by Morton, replaces the citation of Beneish–Wen, Proposition 3.16; a clause justifies that b_N is monic (Nakaya states this only for a_N).
+- Remark 6.4: credits Morton (JNT 218, Theorem 6.1) and Hajouji (Proposition 2.9(1), Section 2.5) for Question 1; the argument here is presented as another route.
+- Remark 8.4: credits Morton's Theorem 6 for Conjecture 2, and Hajouji's Table 1 and its observed symmetry, which Corollary 6.3 explains for N, p ≥ 5; reports the 105-pair agreement.
+- Appendix A.7: the degree at N = 2 is compared with the value from Proposition 7.1, not Corollary 1.3; the 246 flagged pairs are split into 239 and 7; the discriminant of E_N has no prime factor other than 2, 3 and N.
+- Remarks 6.4 and 8.4 use 𝔖 instead of S. The bibliography adds Hajouji and states that Morton's Fricke-paper numbers are from arXiv v1.
+- AI declaration: ChatGPT-6.1 Sol is credited with investigating and drafting Section 7; Claude with the comparison with Hajouji's table.
+- The two \newpage commands were removed, since the new text left nearly empty pages.
+
+Remark numbers in earlier entries above (for example "Remark 7.3") refer to the numbering before Section 7 was added; that remark is now 8.3.
+

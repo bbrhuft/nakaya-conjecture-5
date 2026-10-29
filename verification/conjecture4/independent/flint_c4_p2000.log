@@ -1,0 +1,16 @@
+N= 2  A,B,E rederived match stored: True  pairs=301  failures=0
+N= 3  A,B,E rederived match stored: True  pairs=301  failures=0
+N= 5  A,B,E rederived match stored: True  pairs=300  failures=0
+N= 7  A,B,E rederived match stored: True  pairs=300  failures=0
+N=11  A,B,E rederived match stored: True  pairs=300  failures=0
+N=13  A,B,E rederived match stored: True  pairs=300  failures=0
+N=17  A,B,E rederived match stored: True  pairs=300  failures=0
+N=19  A,B,E rederived match stored: True  pairs=300  failures=0
+N=23  A,B,E rederived match stored: True  pairs=300  failures=0
+N=29  A,B,E rederived match stored: True  pairs=300  failures=0
+N=31  A,B,E rederived match stored: True  pairs=300  failures=0
+N=41  A,B,E rederived match stored: True  pairs=300  failures=0
+N=47  A,B,E rederived match stored: True  pairs=300  failures=0
+N=59  A,B,E rederived match stored: True  pairs=300  failures=0
+N=71  A,B,E rederived match stored: True  pairs=300  failures=0
+TOTAL pairs=4502 failures=0 (p <= 2000)
