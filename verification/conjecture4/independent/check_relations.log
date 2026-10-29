@@ -1,0 +1,20 @@
+N=2 stored R_N equals Morton's R_N: 1
+N=3 stored R_N equals Morton's R_N: 1
+N=5 stored R_N equals Morton's R_N: 1
+N=7 stored R_N equals Morton's R_N: 1
+N=2 Phi_N(j,j')=0 on 20/20 random fibres
+N=3 Phi_N(j,j')=0 on 20/20 random fibres
+N=5 Phi_N(j,j')=0 on 20/20 random fibres
+N=7 Phi_N(j,j')=0 on 20/20 random fibres
+N=11 Phi_N(j,j')=0 on 20/20 random fibres
+N=13 Phi_N(j,j')=0 on 20/20 random fibres
+N=17 Phi_N(j,j')=0 on 20/20 random fibres
+N=19 Phi_N(j,j')=0 on 20/20 random fibres
+N=23 Phi_N(j,j')=0 on 20/20 random fibres
+N=29 Phi_N(j,j')=0 on 20/20 random fibres
+N=31 Phi_N(j,j')=0 on 20/20 random fibres
+N=41 Phi_N(j,j')=0 on 20/20 random fibres
+N=47 Phi_N(j,j')=0 on 20/20 random fibres
+N=59 Phi_N(j,j')=0 on 20/20 random fibres
+N=71 Phi_N(j,j')=0 on 20/20 random fibres
+ALL RELATIONS CONSISTENT WITH PHI_N

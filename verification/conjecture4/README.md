@@ -4,7 +4,10 @@ The corrected identity passed all 1,127 pairs at the fifteen levels and primes
 5 <= p <= 400, p != N. This includes 1,051 odd-level pairs and 76 at level 2.
 All 246 collision-flagged pairs passed; no pairs were skipped. A complete
 geometric proof, with the integral specialization argument, is in the report.
-The source paper has not been edited.
+The proof now appears as Section 7 of the paper (Proposition 7.1); the report
+is kept as written, and where the two differ the paper takes precedence.
+Independent re-checks (FLINT, Morton and Phi_N comparisons) are in
+`independent/` (added for release v1.2; not listed in SHA256SUMS.json).
 
 ## Run
 
